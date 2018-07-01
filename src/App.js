@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { NavLink, Switch, Route} from 'react-router-dom'
+import Responsive from 'react-responsive-decorator'
 
 import Terms from './components/Terms'
 import Privacy from './components/Privacy'
@@ -38,51 +39,80 @@ class App extends Component {
 export default App;
 
 
-
-class Display extends Component {
+// @Responsive
+const Display = Responsive(class Display extends Component {
+  
+  constructor (props) {
+    super(props)
+    this.state = {
+      isHidden: false
+    }
+  }
+  
 
   componentDidMount() {
-    Particles.init({
-      // normal options
-      selector: '.background',
-      maxParticles: 70,
-      connectParticles: true,
-      color: '#7952b3',
+    this.props.media({ minWidth: 768 }, () => {
+      this.setState({
+        isHidden: false
+      });
+      
+      Particles.init({
+        // normal options
+        selector: '.background',
+        maxParticles: 70,
+        connectParticles: true,
+        color: '#7952b3',
 
-      // options for breakpoints
-      responsive: [
-        {
-          breakpoint: 768,
-          options: {
-            maxParticles: 50,
-          }
-        }, {
-          breakpoint: 425,
-          options: {
-            maxParticles: 50,
-          }
-        }, {
-          breakpoint: 320,
-          options: {
-            maxParticles: 0
-          }
-        }
-      ]
+        // // options for breakpoints
+        // responsive: [
+        //   {
+        //     breakpoint: 768,
+        //     options: {
+        //       maxParticles: 50,
+        //     }
+        //   }, {
+        //     breakpoint: 425,
+        //     options: {
+        //       maxParticles: 50,
+        //     }
+        //   }, {
+        //     breakpoint: 320,
+        //     options: {
+        //       maxParticles: 0
+        //     }
+        //   }
+        // ]
+      });
+      
     });
+    
+    this.props.media({ maxWidth: 768 }, () => {
+      this.setState({
+        isHidden: true
+      });
+    });
+
   }
 
   componentWillUnmount() {
-    Particles.destroy();
+    this.props.media({ minWidth: 768 }, () => {
+      Particles.destroy();
+    });
   }
 
   render() {
+    const {isHidden} = this.state;
+    console.log(isHidden);
     return (
-      <div className="canvas-container">
-        <canvas className="background" id="canvas"></canvas>
+      <div>
+        {isHidden ? <div></div> :
+        <div className="canvas-container">
+          <canvas className="background" id="canvas"></canvas>
+        </div>}
       </div>
     );
   }
-}
+})
 
 // function outerHeight() {
 //   var el = document.getElementById("canvas")
