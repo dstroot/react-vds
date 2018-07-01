@@ -40,7 +40,6 @@ class ParticlesComp extends Component {
 
   render() {
     const {isHidden} = this.state;
-    console.log(isHidden);
     return (
       <div>
         {isHidden ? <div></div> :
