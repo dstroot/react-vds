@@ -1,7 +1,7 @@
 import React from 'react';
-import './NotFound.css';
+import './PageNotFound.css';
 
-function NotFound(props) {
+function PageNotFound(props) {
     const {image} = props;
     return (
       <div className="FourOhFour">
@@ -11,4 +11,4 @@ function NotFound(props) {
     )
 }
 
-export default NotFound;
+export default PageNotFound;

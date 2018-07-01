@@ -10,7 +10,7 @@ class ScrollToTopOnMount extends Component {
   }
 }
 
-const Terms = () => {
+const PageTerms = () => {
   return (
     <div>
       <ScrollToTopOnMount/>
@@ -173,4 +173,4 @@ const Terms = () => {
   )
 }
 
-export default Terms;
+export default PageTerms;

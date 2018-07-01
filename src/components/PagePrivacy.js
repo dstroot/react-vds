@@ -10,7 +10,7 @@ class ScrollToTopOnMount extends Component {
   }
 }
 
-const Privacy = () => {
+const PagePrivacy = () => {
   return (
     <div>
       <ScrollToTopOnMount/>
@@ -163,4 +163,4 @@ const Privacy = () => {
   )
 }
 
-export default Privacy;
+export default PagePrivacy;
