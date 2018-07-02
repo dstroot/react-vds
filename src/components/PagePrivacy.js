@@ -1,19 +1,10 @@
-import React, {Component} from 'react';
-
-class ScrollToTopOnMount extends Component {
-  componentDidMount() {
-    window.scrollTo(0, 0)
-  }
-
-  render() {
-    return null
-  }
-}
+import React from 'react';
+import ScrollToTop from './ScrollToTop'
 
 const PagePrivacy = () => {
   return (
     <div>
-      <ScrollToTopOnMount/>
+      <ScrollToTop />
       <div className="mini-tron">
         <div className="container">
           <h1 className="bd-text-purple-bright">Your privacy is vital to us!</h1>
