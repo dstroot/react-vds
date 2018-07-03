@@ -5,14 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#000000">
-    
-    <!--
-      manifest.json provides metadata used when your web app is added to the
-      homescreen on Android. See https://developers.google.com/web/fundamentals/engage-and-retain/web-app-manifest/
-    -->
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json">
     <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico">
-    
     <meta name="apple-mobile-web-app-capable" content="yes">
     <title>Verite Data Science, LLC &middot; Welcome!</title>
     <link rel="stylesheet" href="/css/main.min.css">
@@ -32,6 +26,7 @@
     </noscript>
     <div id="root"></div>
     <script defer src="https://use.fontawesome.com/releases/v5.0.2/js/all.js"></script>
+    <!-- Needed for IE support :( -->
+    <script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script>
   </body>
 </html>
-

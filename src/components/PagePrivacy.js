@@ -1,5 +1,6 @@
 import React from 'react';
 import ScrollToTop from './ScrollToTop'
+import './page.css'
 
 const PagePrivacy = () => {
   return (
