@@ -1,10 +1,8 @@
 import React from 'react';
-import ScrollToTop from './ScrollToTop'
 
 const About = () => {
   return (
     <div>
-      <ScrollToTop />
       <main className="bd-masthead" id="content" role="main">
         <div className="container">
           <div className="row">

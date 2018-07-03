@@ -1,10 +1,8 @@
 import React from 'react';
-import ScrollToTop from './ScrollToTop'
 
 const PageTerms = () => {
   return (
     <div>
-      <ScrollToTop />
       <div className="mini-tron">
         <div className="container">
           <h1 className="bd-text-purple-bright">Verite Data Science, LLC Terms of Use</h1>

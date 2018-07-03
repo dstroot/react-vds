@@ -1,11 +1,9 @@
 import React from 'react';
-import ScrollToTop from './ScrollToTop'
 import './page.css'
 
 const PagePrivacy = () => {
   return (
     <div>
-      <ScrollToTop />
       <div className="mini-tron">
         <div className="container">
           <h1 className="bd-text-purple-bright">Your privacy is vital to us!</h1>
