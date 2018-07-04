@@ -12,7 +12,7 @@ const Masthead = () => {
             <ParticlesComp />
           </div>
           <div className="col-md-6 order-md-1 text-center text-md-left pr-md-5">
-            <h1 className="display-3 mb-3 animation-fast animated fadeInDown bd-text-purple-bright"><img className="d-inline-block align-top" src={logo} width="75" height="75" alt=""/> Verite Data Science</h1>
+            <h1 className="display-4 mb-3 animation-fast animated fadeInDown bd-text-purple-bright"><img className="d-inline-block align-top" src={logo} width="55" height="55" alt=""/> Verite Data Science</h1>
             <p className="lead bd-text-purple-bright">INNOVATION, POWERED BY DATA</p>
             <p className="lead">Our clients demand deep industry knowledge and experience, coupled with innovation and the ability to roll up our sleeves and make business transformation happen. As technology rapidly evolves, it’s more important than ever to have an innovation advisor on your side. Whether it’s time to create a new vision or put one into place, we can help.</p>
             <div className="d-flex flex-column flex-md-row lead mb-3">
