@@ -12,12 +12,12 @@ const Masthead = () => {
             <ParticlesComp />
           </div>
           <div className="col-md-6 order-md-1 text-center text-md-left pr-md-5">
-            <h1 className="display-4 mb-3 animation-fast animated fadeInDown bd-text-purple-bright">
+            <h1 className="display-4 mb-3 animated fadeInDown bd-text-purple-bright">
               <img
                 className="d-inline-block align-top"
                 src={logo}
-                width="55"
-                height="55"
+                width="50"
+                height="50"
                 alt=""
               />{' '}
               Verite Data Science
