@@ -2,9 +2,7 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 
 const Footer = () => {
-  // evergreen copyright year
-  const d = new Date();
-  const year = d.getFullYear();
+  const year = new Date(); // evergreen copyright year
   return (
     <footer className="bg-gray-lighter text-secondary mt-4">
       <div className="container font-weight-light">
@@ -31,7 +29,8 @@ const Footer = () => {
         <div className="row">
           <div className="col-sm-8">
             <p className="small">
-              Copyright © {year} Verite Data Science, LLC, all rights reserved.
+              Copyright © {year.getFullYear()} Verite Data Science, LLC, all
+              rights reserved.
             </p>
           </div>
         </div>
