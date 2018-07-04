@@ -1,22 +1,21 @@
 import React, { Component } from 'react';
-import Responsive from 'react-responsive-decorator'
-import Particles from 'particlesjs'
-  
+import Responsive from 'react-responsive-decorator';
+import Particles from 'particlesjs';
+
 class ParticlesComp extends Component {
-  
-  constructor (props) {
-    super(props)
+  constructor(props) {
+    super(props);
     this.state = {
-      isHidden: false
-    }
+      isHidden: false,
+    };
   }
-  
+
   componentDidMount() {
     this.props.media({ minWidth: 768 }, () => {
       this.setState({
-        isHidden: false
+        isHidden: false,
       });
-      
+
       Particles.init({
         selector: '.background',
         maxParticles: 70,
@@ -24,10 +23,10 @@ class ParticlesComp extends Component {
         color: '#7952b3',
       });
     });
-    
+
     this.props.media({ maxWidth: 768 }, () => {
       this.setState({
-        isHidden: true
+        isHidden: true,
       });
     });
   }
@@ -39,13 +38,16 @@ class ParticlesComp extends Component {
   }
 
   render() {
-    const {isHidden} = this.state;
+    const { isHidden } = this.state;
     return (
       <div>
-        {isHidden ? <div></div> :
-        <div className="canvas-container">
-          <canvas className="background" id="canvas"></canvas>
-        </div>}
+        {isHidden ? (
+          <div />
+        ) : (
+          <div className="canvas-container">
+            <canvas className="background" id="canvas" />
+          </div>
+        )}
       </div>
     );
   }

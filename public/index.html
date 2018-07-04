@@ -19,12 +19,58 @@
       ga('create', 'UA-XXXXX-X', 'auto');
       ga('send', 'pageview');
     </script>
+    <!--
+    Add the loader class directly to the app container, but with the :empty 
+    pseudo class. The spinner will be visible, as long as nothing is 
+    rendered into the container
+    -->
+    <style>
+      .loader:empty {
+        position: absolute;
+        top: calc(50% - 4em);
+        left: calc(50% - 4em);
+        width: 6em;
+        height: 6em;
+        border: .5em solid rgba(0, 0, 0, 0.1);
+        border-left: .5em solid #563d7c;
+        border-radius: 50%;
+        -webkit-animation: load8 3s infinite linear;
+        -moz-animation: load8 3s infinite linear;
+        animation: load8 3s infinite linear;
+      }
+      
+      @-webkit-keyframes load8 {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+      @-moz-keyframes load8 {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+      @keyframes load8 {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+    </style>
   </head>
   <body class="d-flex flex-column">
     <noscript>
-      You need to enable JavaScript to run this app.
+      You need to enable JavaScript to run this app. :(
     </noscript>
-    <div id="root"></div>
+    <!-- add class loader to container -->
+    <div id="root" class="loader"></div>
     <script defer src="https://use.fontawesome.com/releases/v5.0.2/js/all.js"></script>
     <!-- Needed for IE support :( -->
     <script type='text/javascript' src="https://cdn.polyfill.io/v2/polyfill.min.js"></script>
