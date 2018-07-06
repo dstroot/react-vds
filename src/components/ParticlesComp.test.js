@@ -7,3 +7,5 @@ test('ParticlesComp renders the terms page', () => {
   let tree = component.toJSON();
   expect(tree).toMatchSnapshot();
 });
+
+// https://stackoverflow.com/questions/39146252/how-do-i-test-react-responsive-components-with-enzyme

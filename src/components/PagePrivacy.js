@@ -1,5 +1,5 @@
 import React from 'react';
-import './page.css';
+// import './page.css';
 
 const PagePrivacy = () => {
   return (

@@ -1,0 +1,14 @@
+//
+// Footer
+//
+
+footer {
+  a {
+    color: $bd-purple-bright;
+    &:hover,
+    &:focus {
+      color: $bd-purple-bright;
+      text-decoration: none;
+    }
+  }
+}

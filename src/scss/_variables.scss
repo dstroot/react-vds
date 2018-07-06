@@ -1,0 +1,62 @@
+// Local docs variables
+$bd-purple:          #563d7c;
+$bd-purple-bright:   lighten(saturate($bd-purple, 5%), 15%);
+$bd-purple-light:    #cdbfe3;
+$bd-purple-lightest: #f5f2f9;
+$bd-graphite:        #2a2730;
+$bd-graphite-light:  lighten($bd-graphite, 40%);
+$bd-yellow:          #ffe484;
+$bd-danger:          #d9534f;
+$bd-warning:         #f0ad4e;
+$bd-info:            #5bc0de;
+
+// $font-family-sans-serif: 'San Francisco', -apple-system, BlinkMacSystemFont, '.SFNSText-Regular', Roboto, 'Helvetica Neue', Helvetica, Arial, sans-serif !default;
+
+// https://furbo.org/2018/03/28/system-fonts-in-css/
+// In many cases, you’ll also have to take backward compatibility into
+// account — not every visitor has the latest & greatest browser. This
+// CSS should cover all the bases:
+
+$font-family-sans-serif: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif !default;
+
+
+.bg-purple {
+  background-color: $bd-purple;
+}
+
+.card {
+  margin-bottom: 2rem;
+}
+
+// grow effect
+.thumbnail {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    max-width: 100%;
+}
+
+.thumbnail img {
+    max-width: 100%;
+    width: inherit;
+    transition: all 750ms ease;
+}
+
+.thumbnail img:hover {
+    transform: scale(1.05);
+}
+
+/* The hero image */
+.hero-image {
+    /* The image used */
+    background-image: url("/img/landing/hero-1920x960.jpg");
+
+    /* Set a specific height */
+    min-height: 40vh;
+
+    /* Position and center the image to scale nicely on all screens */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
