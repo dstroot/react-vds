@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ParticlesComp renders the terms page 1`] = `
+<div>
+  <div
+    className="canvas-container"
+  >
+    <canvas
+      className="background"
+      id="canvas"
+    />
+  </div>
+</div>
+`;

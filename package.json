@@ -20,6 +20,7 @@
   },
   "devDependencies": {
     "eslint-plugin-prettier": "2.6.1",
-    "prettier": "1.13.7"
+    "prettier": "1.13.7",
+    "react-test-renderer": "^16.4.1"
   }
 }

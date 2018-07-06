@@ -1,0 +1,72 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Masthead renders a masthead 1`] = `
+<main
+  className="bd-masthead"
+  id="content"
+  role="main"
+>
+  <div
+    className="container"
+  >
+    <div
+      className="row"
+    >
+      <div
+        className="col-6 mx-auto col-md-6 order-md-2 d-none d-md-block"
+      >
+        <div>
+          <div
+            className="canvas-container"
+          >
+            <canvas
+              className="background"
+              id="canvas"
+            />
+          </div>
+        </div>
+      </div>
+      <div
+        className="col-md-6 order-md-1 text-center text-md-left pr-md-5"
+      >
+        <h1
+          className="display-4 mb-3 animated fadeInDown bd-text-purple-bright"
+        >
+          <img
+            alt=""
+            className="d-inline-block align-top"
+            height="50"
+            src="logo.png"
+            width="50"
+          />
+           
+          Verite Data Science
+        </h1>
+        <p
+          className="lead bd-text-purple-bright"
+        >
+          INNOVATION, POWERED BY DATA
+        </p>
+        <p
+          className="lead"
+        >
+          Our clients demand deep industry knowledge and experience, coupled with innovation and the ability to roll up our sleeves and make business transformation happen. As technology rapidly evolves, it’s more important than ever to have an innovation advisor on your side. Whether it’s time to create a new vision or put one into place, we can help.
+        </p>
+        <div
+          className="d-flex flex-column flex-md-row lead mb-3"
+        >
+          <a
+            aria-current={null}
+            className="btn btn-lg btn-bd-purple mb-3 mb-md-0 mr-md-3"
+            href="/about"
+            onClick={[Function]}
+            style={undefined}
+          >
+            Learn More
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+`;
