@@ -10,6 +10,10 @@ class ParticlesComp extends Component {
     };
   }
 
+  shouldComponentUpdate(nextState) {
+    return nextState.isHidden !== this.state.isHidden;
+  }
+
   componentDidMount() {
     this.props.media({ minWidth: 768 }, () => {
       this.setState({

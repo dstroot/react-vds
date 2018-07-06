@@ -13,8 +13,8 @@ import PageAbout from './components/PageAbout';
 import PageNotFound from './components/PageNotFound';
 
 // other assets
-// import './main.min.css';
 import './scss/main.scss';
+import 'animate.css';
 
 class App extends Component {
   render() {

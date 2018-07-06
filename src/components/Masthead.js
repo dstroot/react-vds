@@ -1,7 +1,8 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import ParticlesComp from './ParticlesComp';
+// import ParticlesComp from './ParticlesComp';
 import logo from '../media/logo.png';
+import Particles from 'react-particles-js';
 
 const Masthead = () => {
   return (
@@ -9,7 +10,76 @@ const Masthead = () => {
       <div className="container">
         <div className="row">
           <div className="col-6 mx-auto col-md-6 order-md-2 d-none d-md-block">
-            <ParticlesComp />
+            {/* <ParticlesComp /> */}
+            <Particles
+              params={{
+                particles: {
+                  number: {
+                    value: 50,
+                    density: {
+                      enable: true,
+                      value_area: 500,
+                    },
+                  },
+                  color: {
+                    value: '#7256ad',
+                  },
+                  shape: {
+                    type: 'circle',
+                    stroke: {
+                      width: 1,
+                      color: '#7256ad',
+                    },
+                    polygon: {
+                      nb_sides: 5,
+                    },
+                  },
+                  opacity: {
+                    value: 0.9,
+                    random: false,
+                    anim: {
+                      enable: false,
+                      speed: 0.5,
+                      opacity_min: 0.1,
+                      sync: false,
+                    },
+                  },
+                  size: {
+                    value: 3,
+                    random: true,
+                    anim: {
+                      enable: false,
+                      speed: 30,
+                      size_min: 0.1,
+                      sync: false,
+                    },
+                  },
+                  line_linked: {
+                    enable: true,
+                    distance: 110,
+                    color: '#7256ad',
+                    opacity: 0.9,
+                    width: 1,
+                  },
+                  move: {
+                    enable: true,
+                    speed: 2,
+                    direction: 'none',
+                    random: true,
+                    straight: false,
+                    out_mode: 'out',
+                    bounce: false,
+                    attract: {
+                      enable: false,
+                      rotateX: 600,
+                      rotateY: 1200,
+                    },
+                  },
+                },
+                retina_detect: true,
+              }}
+              className={'canvas-container'}
+            />
           </div>
           <div className="col-md-6 order-md-1 text-center text-md-left pr-md-5">
             <h1 className="display-4 mb-3 animated fadeInDown bd-text-purple-bright">
