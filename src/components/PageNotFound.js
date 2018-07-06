@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-// import './PageNotFound.css';
 
 function PageNotFound(props) {
   const { image } = props;
