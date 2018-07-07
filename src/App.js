@@ -19,26 +19,26 @@ import 'animate.css';
 class App extends Component {
   render() {
     return (
-      <div>
-        <Navigation />
-
-        <Switch>
-          {/* if the path matches the component will render */}
-          <Route exact path="/" component={PageLanding} />
-          <Route path="/terms" component={PageTerms} />
-          <Route path="/privacy" component={PagePrivacy} />
-          <Route path="/about" component={PageAbout} />
-          {/* when none of the above match, <NoMatch> will be rendered */}
-          <Route
-            component={props => (
-              <PageNotFound
-                {...props}
-                image={'https://i.giphy.com/media/sMABNWsUWPC1y/giphy.gif'}
-              />
-            )}
-          />
-        </Switch>
-
+      <div className="site">
+        <div className="site-content">
+          <Navigation />
+          <Switch>
+            {/* if the path matches the component will render */}
+            <Route exact path="/" component={PageLanding} />
+            <Route path="/terms" component={PageTerms} />
+            <Route path="/privacy" component={PagePrivacy} />
+            <Route path="/about" component={PageAbout} />
+            {/* when none of the above match, <NoMatch> will be rendered */}
+            <Route
+              component={props => (
+                <PageNotFound
+                  {...props}
+                  image={'https://i.giphy.com/media/sMABNWsUWPC1y/giphy.gif'}
+                />
+              )}
+            />
+          </Switch>
+        </div>
         <Footer />
       </div>
     );

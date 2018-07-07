@@ -3,7 +3,6 @@ import ReactDOM from 'react-dom';
 import { BrowserRouter as Router } from 'react-router-dom';
 import ScrollToTop from './components/ScrollToTop';
 import registerServiceWorker from './registerServiceWorker';
-
 import App from './App';
 
 ReactDOM.render(

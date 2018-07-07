@@ -1,6 +1,5 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-// import ParticlesComp from './ParticlesComp';
 import logo from '../media/logo.png';
 import Particles from 'react-particles-js';
 
@@ -9,8 +8,7 @@ const Masthead = () => {
     <main className="bd-masthead" id="content" role="main">
       <div className="container">
         <div className="row">
-          <div className="col-6 mx-auto col-md-6 order-md-2 d-none d-md-block">
-            {/* <ParticlesComp /> */}
+          <div className="col-5 mx-auto col-md-5 order-md-2 d-none d-md-block">
             <Particles
               params={{
                 particles: {
@@ -81,7 +79,7 @@ const Masthead = () => {
               className={'canvas-container'}
             />
           </div>
-          <div className="col-md-6 order-md-1 text-center text-md-left pr-md-5">
+          <div className="col-md-7 order-md-1 text-center text-md-left pr-md-5">
             <h1 className="display-4 mb-3 animated fadeInDown bd-text-purple-bright">
               <img
                 className="d-inline-block align-top"
@@ -106,7 +104,7 @@ const Masthead = () => {
             <div className="d-flex flex-column flex-md-row lead mb-3">
               <NavLink
                 to="/about"
-                className="btn btn-lg btn-bd-purple mb-3 mb-md-0 mr-md-3"
+                className="btn btn-lg btn-bd-purple mb-2 mb-md-0 mr-md-2"
               >
                 Learn More
               </NavLink>
