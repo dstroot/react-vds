@@ -20,8 +20,9 @@ class App extends Component {
   render() {
     return (
       <div className="site">
-        <div className="site-content">
-          <Navigation />
+        <Navigation className="site-header" />
+        <div className="site-content site-content--full">
+          {/* <Navigation /> */}
           <Switch>
             {/* if the path matches the component will render */}
             <Route exact path="/" component={PageLanding} />
@@ -39,7 +40,7 @@ class App extends Component {
             />
           </Switch>
         </div>
-        <Footer />
+        <Footer className="site-footer" />
       </div>
     );
   }

@@ -1,0 +1,17 @@
+// grow effect
+.thumbnail {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  max-width: 100%;
+}
+
+.thumbnail img {
+  max-width: 100%;
+  width: inherit;
+  transition: all 750ms ease;
+}
+
+.thumbnail img:hover {
+  transform: scale(1.05);
+}

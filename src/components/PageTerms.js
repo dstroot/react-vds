@@ -36,10 +36,10 @@ const PageTerms = () => {
             </p>
           </div>
           <div className="col-sm-4 hidden-xs">
-            <h4 className="text-muted">Basically,</h4>
-            <h4 className="bd-text-purple-bright">
+            <h5 className="text-muted">Basically,</h5>
+            <h5 className="bd-text-purple-bright">
               By using Verite Data Science, LLC you agree to all our terms.
-            </h4>
+            </h5>
           </div>
         </div>
         <hr className="soften" />
@@ -72,12 +72,12 @@ const PageTerms = () => {
             </p>
           </div>
           <div className="col-sm-4 hidden-xs">
-            <h4 className="text-muted">Basically,</h4>
-            <h4 className="bd-text-purple-bright">
+            <h5 className="text-muted">Basically,</h5>
+            <h5 className="bd-text-purple-bright">
               We provide services to create online polls and we will develop
               more features and services in the future. At times things can go
               wrong and the service may be interrupted.
-            </h4>
+            </h5>
           </div>
         </div>
         <hr className="soften" />
@@ -116,11 +116,11 @@ const PageTerms = () => {
             </p>
           </div>
           <div className="col-sm-4 hidden-xs">
-            <h4 className="text-muted">Basically,</h4>
-            <h4 className="bd-text-purple-bright">
+            <h5 className="text-muted">Basically,</h5>
+            <h5 className="bd-text-purple-bright">
               To fully use the services you need to create your own account,
               without violating anyone elses rights.
-            </h4>
+            </h5>
           </div>
         </div>
         <hr className="soften" />
@@ -212,12 +212,12 @@ const PageTerms = () => {
             </p>
           </div>
           <div className="col-sm-4 hidden-xs">
-            <h4 className="text-muted">Basically,</h4>
-            <h4 className="bd-text-purple-bright">
+            <h5 className="text-muted">Basically,</h5>
+            <h5 className="bd-text-purple-bright">
               You cannot use our site to harass people, send spam, and do other
               crazy stuff. Be reasonable and responsible, don't do anything
               stupid and you'll be fine.
-            </h4>
+            </h5>
           </div>
         </div>
         <hr className="soften" />
@@ -265,11 +265,11 @@ const PageTerms = () => {
             </p>
           </div>
           <div className="col-sm-4 hidden-xs">
-            <h4 className="text-muted">Basically,</h4>
-            <h4 className="bd-text-purple-bright">
+            <h5 className="text-muted">Basically,</h5>
+            <h5 className="bd-text-purple-bright">
               We respect copyright. If anything is wrong, please send us an
               email with all the details.
-            </h4>
+            </h5>
           </div>
         </div>
         <hr className="soften" />
@@ -290,10 +290,10 @@ const PageTerms = () => {
             </p>
           </div>
           <div className="col-sm-4 hidden-xs">
-            <h4 className="text-muted">Basically,</h4>
-            <h4 className="bd-text-purple-bright">
+            <h5 className="text-muted">Basically,</h5>
+            <h5 className="bd-text-purple-bright">
               As we respect others, please respect our trademarks and brands.
-            </h4>
+            </h5>
           </div>
         </div>
         <hr className="soften" />
@@ -328,10 +328,10 @@ const PageTerms = () => {
             </p>
           </div>
           <div className="col-sm-4 hidden-xs">
-            <h4 className="text-muted">Basically,</h4>
-            <h4 className="bd-text-purple-bright">
+            <h5 className="text-muted">Basically,</h5>
+            <h5 className="bd-text-purple-bright">
               We are not liable if something goes wrong.
-            </h4>
+            </h5>
           </div>
         </div>
         <hr className="soften" />
@@ -360,11 +360,11 @@ const PageTerms = () => {
             </p>
           </div>
           <div className="col-sm-4 hidden-xs">
-            <h4 className="text-muted">Basically,</h4>
-            <h4 className="bd-text-purple-bright">
+            <h5 className="text-muted">Basically,</h5>
+            <h5 className="bd-text-purple-bright">
               Again, we are not liable. But we may pay you $100 if our server
               flies into your window.
-            </h4>
+            </h5>
           </div>
         </div>
         <hr className="soften" />
@@ -401,11 +401,11 @@ const PageTerms = () => {
             </p>
           </div>
           <div className="col-sm-4 hidden-xs">
-            <h4 className="text-muted">Basically,</h4>
-            <h4 className="bd-text-purple-bright">
+            <h5 className="text-muted">Basically,</h5>
+            <h5 className="bd-text-purple-bright">
               All manner of crazy things can happen — we are not responsible,
               really.
-            </h4>
+            </h5>
           </div>
         </div>
         <hr className="soften" />
@@ -433,11 +433,11 @@ const PageTerms = () => {
             </p>
           </div>
           <div className="col-sm-4 hidden-xs">
-            <h4 className="text-muted">Basically,</h4>
-            <h4 className="bd-text-purple-bright">
+            <h5 className="text-muted">Basically,</h5>
+            <h5 className="bd-text-purple-bright">
               We may stop providing services at any time. You can stop using
               your account or close it at any time as well.
-            </h4>
+            </h5>
           </div>
         </div>
         <hr className="soften" />
@@ -458,10 +458,10 @@ const PageTerms = () => {
             </p>
           </div>
           <div className="col-sm-4 hidden-xs">
-            <h4 className="text-muted">Basically,</h4>
-            <h4 className="bd-text-purple-bright">
+            <h5 className="text-muted">Basically,</h5>
+            <h5 className="bd-text-purple-bright">
               If these terms of use change, we will notify you.
-            </h4>
+            </h5>
           </div>
         </div>
       </div>

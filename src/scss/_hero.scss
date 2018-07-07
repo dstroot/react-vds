@@ -1,0 +1,15 @@
+/* The hero image */
+
+.hero-image {
+  /* The image used */
+  background-image: url('/img/landing/hero-1920x960.jpg');
+
+  /* Set a specific height */
+  min-height: 40vh;
+
+  /* Position and center the image to scale nicely on all screens */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}

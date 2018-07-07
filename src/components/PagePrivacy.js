@@ -119,14 +119,14 @@ const PagePrivacy = () => {
             </ol>
           </div>
           <div className="col-sm-4 hidden-xs">
-            <h4 className="text-muted">Basically,</h4>
-            <h4 className="bd-text-purple-bright">
+            <h5 className="text-muted">Basically,</h5>
+            <h5 className="bd-text-purple-bright">
               We collect information to make the Verite Data Science, LLC
               website useful for you such as your registration and user profile
               data.<br />
               <br />Our servers also collect log information used to make the
               website faster and better.
-            </h4>
+            </h5>
           </div>
         </div>
         <hr className="soften" />
@@ -156,11 +156,11 @@ const PagePrivacy = () => {
             </p>
           </div>
           <div className="col-sm-4 hidden-xs">
-            <h4 className="text-muted">Basically,</h4>
-            <h4 className="bd-text-purple-bright">
+            <h5 className="text-muted">Basically,</h5>
+            <h5 className="bd-text-purple-bright">
               We will send you emails based on your profile settings. From time
               to time, we may send emails to all our users.
-            </h4>
+            </h5>
           </div>
         </div>
         <hr className="soften" />
@@ -188,10 +188,10 @@ const PagePrivacy = () => {
             </p>
           </div>
           <div className="col-sm-4 hidden-xs">
-            <h4 className="text-muted">Basically,</h4>
-            <h4 className="bd-text-purple-bright">
+            <h5 className="text-muted">Basically,</h5>
+            <h5 className="bd-text-purple-bright">
               To remember you, our system will give you a cookie. It's safe.
-            </h4>
+            </h5>
           </div>
         </div>
         <hr className="soften" />
@@ -238,11 +238,11 @@ const PagePrivacy = () => {
             </ul>
           </div>
           <div className="col-sm-4 hidden-xs">
-            <h4 className="text-muted">Basically,</h4>
-            <h4 className="bd-text-purple-bright">
+            <h5 className="text-muted">Basically,</h5>
+            <h5 className="bd-text-purple-bright">
               We do not sell your information to anyone. We may release other
               information to authorities where required by law.
-            </h4>
+            </h5>
           </div>
         </div>
         <hr className="soften" />
@@ -267,11 +267,11 @@ const PagePrivacy = () => {
             </ul>
           </div>
           <div className="col-sm-4 hidden-xs">
-            <h4 className="text-muted">Basically,</h4>
-            <h4 className="bd-text-purple-bright">
+            <h5 className="text-muted">Basically,</h5>
+            <h5 className="bd-text-purple-bright">
               Your account is protected by a hashed, encrypted password. We do
               not know what your password is and you must keep it safe.
-            </h4>
+            </h5>
           </div>
         </div>
         <hr className="soften" />
@@ -303,15 +303,15 @@ const PagePrivacy = () => {
             </ul>
           </div>
           <div className="col-sm-4 hidden-xs">
-            <h4 className="text-muted">Basically,</h4>
-            <h4 className="bd-text-purple-bright">
+            <h5 className="text-muted">Basically,</h5>
+            <h5 className="bd-text-purple-bright">
               You can choose not to share information with us, but your
               experience of the site may be limited.
-            </h4>
-            <h4 className="bd-text-purple-bright">
+            </h5>
+            <h5 className="bd-text-purple-bright">
               Until your account is deleted, you may still receive system
               emails.
-            </h4>
+            </h5>
           </div>
         </div>
         <hr className="soften" />
@@ -333,11 +333,11 @@ const PagePrivacy = () => {
             </p>
           </div>
           <div className="col-sm-4 hidden-xs">
-            <h4 className="text-muted">Basically,</h4>
-            <h4 className="bd-text-purple-bright">
+            <h5 className="text-muted">Basically,</h5>
+            <h5 className="bd-text-purple-bright">
               Please register only if you are 18 or older. Otherwise obtain your
               parents' permission first.
-            </h4>
+            </h5>
           </div>
         </div>
         <hr className="soften" />
@@ -358,10 +358,10 @@ const PagePrivacy = () => {
             </p>
           </div>
           <div className="col-sm-4 hidden-xs">
-            <h4 className="text-muted">Basically,</h4>
-            <h4 className="bd-text-purple-bright">
+            <h5 className="text-muted">Basically,</h5>
+            <h5 className="bd-text-purple-bright">
               This policy may change. If it does we will let you know.
-            </h4>
+            </h5>
           </div>
         </div>
       </div>

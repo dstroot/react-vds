@@ -22,36 +22,3 @@ $font-family-sans-serif: system-ui, -apple-system, BlinkMacSystemFont,
 .bg-purple {
   background-color: $bd-purple;
 }
-
-// grow effect
-.thumbnail {
-  position: relative;
-  display: inline-block;
-  overflow: hidden;
-  max-width: 100%;
-}
-
-.thumbnail img {
-  max-width: 100%;
-  width: inherit;
-  transition: all 750ms ease;
-}
-
-.thumbnail img:hover {
-  transform: scale(1.05);
-}
-
-// /* The hero image */
-// .hero-image {
-//     /* The image used */
-//     background-image: url("/img/landing/hero-1920x960.jpg");
-//
-//     /* Set a specific height */
-//     min-height: 40vh;
-//
-//     /* Position and center the image to scale nicely on all screens */
-//     background-position: center;
-//     background-repeat: no-repeat;
-//     background-size: cover;
-//     position: relative;
-// }
