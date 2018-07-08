@@ -5,16 +5,16 @@ exports[`PageContact renders the landing page 1`] = `
   className="container"
 >
   <div
-    className="position-relative text-center bd-text-purple-bright"
+    className="position-relative bd-text-purple-bright"
   >
     <div
-      className="col-md-5 mx-auto mt-5"
+      className="col-md-10 mx-auto mt-5"
     >
-      <h1
-        className="display-4"
+      <h2
+        className="font-weight-light"
       >
         Thanks for Reaching Out!
-      </h1>
+      </h2>
       <p
         className="lead"
       >
@@ -33,11 +33,11 @@ exports[`PageContact renders the landing page 1`] = `
       <div
         className="col-md-6 mb-3 offset-md-3"
       >
-        <h2
-          className="mt-5"
+        <h3
+          className="mt-3 font-weight-light"
         >
-          Contact Us
-        </h2>
+          Contact Us:
+        </h3>
         <div
           className="form-group"
         >
@@ -48,6 +48,7 @@ exports[`PageContact renders the landing page 1`] = `
           </label>
           <input
             className="form-control"
+            data-parse="trim"
             name="name"
             placeholder="Please enter your name"
             required={true}
@@ -56,7 +57,7 @@ exports[`PageContact renders the landing page 1`] = `
           <div
             className="invalid-feedback"
           >
-            Please enter something.
+            Please enter your name.
           </div>
           <div
             class="valid-feedback"
@@ -100,6 +101,7 @@ exports[`PageContact renders the landing page 1`] = `
           </label>
           <textarea
             className="form-control"
+            data-parse="trim"
             name="message"
             placeholder="Please enter a short message"
             required={true}
@@ -107,7 +109,7 @@ exports[`PageContact renders the landing page 1`] = `
           <div
             className="invalid-feedback"
           >
-            Please enter something.
+            Please let us know how we can help!
           </div>
           <div
             class="valid-feedback"
