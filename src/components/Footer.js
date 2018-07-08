@@ -18,6 +18,9 @@ const Footer = () => {
             <h4>Links</h4>
             <ul className="list-unstyled">
               <li>
+                <NavLink to="/contact">Contact Us</NavLink>
+              </li>
+              <li>
                 <NavLink to="/privacy">Privacy</NavLink>
               </li>
               <li>

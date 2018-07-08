@@ -1,0 +1,149 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PageContact renders the landing page 1`] = `
+<div
+  className="container"
+>
+  <div
+    className="position-relative text-center bd-text-purple-bright"
+  >
+    <div
+      className="col-md-5 mx-auto mt-5"
+    >
+      <h1
+        className="display-4"
+      >
+        Thanks for Reaching Out!
+      </h1>
+      <p
+        className="lead"
+      >
+        We would love to meet and learn more about your team, your unique environment, and your planned journey.
+      </p>
+    </div>
+  </div>
+  <form
+    className=""
+    noValidate={true}
+    onSubmit={[Function]}
+  >
+    <div
+      className="form-row"
+    >
+      <div
+        className="col-md-6 mb-3 offset-md-3"
+      >
+        <h2
+          className="mt-5"
+        >
+          Contact Us
+        </h2>
+        <div
+          className="form-group"
+        >
+          <label
+            htmlFor="email"
+          >
+            Name
+          </label>
+          <input
+            className="form-control"
+            name="name"
+            placeholder="Please enter your name"
+            required={true}
+            type="text"
+          />
+          <div
+            className="invalid-feedback"
+          >
+            Please enter something.
+          </div>
+          <div
+            class="valid-feedback"
+          >
+            Looks good!
+          </div>
+        </div>
+        <div
+          className="form-group"
+        >
+          <label
+            htmlFor="email"
+          >
+            Email address
+          </label>
+          <input
+            className="form-control"
+            name="_replyto"
+            placeholder="Please enter your email"
+            required={true}
+            type="email"
+          />
+          <div
+            className="invalid-feedback"
+          >
+            Please enter a valid email address.
+          </div>
+          <div
+            class="valid-feedback"
+          >
+            Looks good!
+          </div>
+        </div>
+        <div
+          className="form-group"
+        >
+          <label
+            htmlFor="email"
+          >
+            Short Message
+          </label>
+          <textarea
+            className="form-control"
+            name="message"
+            placeholder="Please enter a short message"
+            required={true}
+          />
+          <div
+            className="invalid-feedback"
+          >
+            Please enter something.
+          </div>
+          <div
+            class="valid-feedback"
+          >
+            Looks good!
+          </div>
+        </div>
+        <input
+          name="_subject"
+          type="hidden"
+          value="Website Contact"
+        />
+        <input
+          className="invisible"
+          name="_gotcha"
+          type="text"
+        />
+        <br />
+        <button
+          className="btn btn-primary"
+          type="submit"
+        >
+          Submit
+        </button>
+      </div>
+    </div>
+  </form>
+  <div
+    className="row"
+  >
+    <div
+      className="col-md-6 offset-md-3"
+    >
+      
+      
+    </div>
+  </div>
+</div>
+`;

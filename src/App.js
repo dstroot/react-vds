@@ -11,6 +11,7 @@ import PageTerms from './components/PageTerms';
 import PagePrivacy from './components/PagePrivacy';
 import PageAbout from './components/PageAbout';
 import PageNotFound from './components/PageNotFound';
+import PageContact from './components/PageContact';
 
 // other assets
 import './scss/main.scss';
@@ -29,6 +30,7 @@ class App extends Component {
             <Route path="/terms" component={PageTerms} />
             <Route path="/privacy" component={PagePrivacy} />
             <Route path="/about" component={PageAbout} />
+            <Route path="/contact" component={PageContact} />
             {/* when none of the above match, <NoMatch> will be rendered */}
             <Route
               component={props => (
