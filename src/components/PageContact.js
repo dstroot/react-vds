@@ -5,6 +5,35 @@ import React, { Component } from 'react';
 // https://daveceddia.com/ajax-requests-in-react/
 // https://blog.hellojs.org/fetching-api-data-with-react-js-460fe8bbf8f2
 
+const inputParsers = {
+  date(input) {
+    const [month, day, year] = input.split('/');
+    return `${year}-${month}-${day}`;
+  },
+  uppercase(input) {
+    return input.toUpperCase();
+  },
+  trim(input) {
+    return input.trim();
+  },
+  number(input) {
+    return parseFloat(input);
+  },
+};
+
+// Handle HTTP errors since fetch doesn't
+// https://www.tjvantoll.com/2015/09/13/fetch-and-errors/
+function checkStatus(res) {
+  if (res.ok) {
+    if (res.status >= 200 && res.status < 300) {
+      return res;
+    } else {
+      throw new Error(`Request rejected with status ${res.status}`);
+    }
+  }
+  throw new Error('Network response was not ok.');
+}
+
 class PageContact extends Component {
   constructor(props) {
     super(props);
@@ -33,6 +62,18 @@ class PageContact extends Component {
     // get form data
     const form = event.target;
     const data = new FormData(form);
+
+    // run parsers
+    for (let name of data.keys()) {
+      const input = form.elements[name];
+      const parserName = input.dataset.parse;
+
+      if (parserName) {
+        const parser = inputParsers[parserName];
+        const parsedValue = parser(data.get(name));
+        data.set(name, parsedValue);
+      }
+    }
 
     // check form data validity
     if (!form.checkValidity()) {
@@ -72,9 +113,9 @@ class PageContact extends Component {
 
     return (
       <div className="container">
-        <div className="position-relative text-center bd-text-purple-bright">
-          <div className="col-md-5 mx-auto mt-5">
-            <h1 className="display-4">Thanks for Reaching Out!</h1>
+        <div className="position-relative bd-text-purple-bright">
+          <div className="col-md-10 mx-auto mt-5">
+            <h2 className="font-weight-light">Thanks for Reaching Out!</h2>
             <p className="lead">
               We would love to meet and learn more about your team, your unique
               environment, and your planned journey.
@@ -89,7 +130,7 @@ class PageContact extends Component {
         >
           <div className="form-row">
             <div className="col-md-6 mb-3 offset-md-3">
-              <h2 className="mt-5">Contact Us</h2>
+              <h3 className="mt-3 font-weight-light">Contact Us:</h3>
               <div className="form-group">
                 <label htmlFor="email">Name</label>
                 <input
@@ -97,9 +138,10 @@ class PageContact extends Component {
                   type="text"
                   className="form-control"
                   placeholder="Please enter your name"
+                  data-parse="trim"
                   required
                 />
-                <div className="invalid-feedback">Please enter something.</div>
+                <div className="invalid-feedback">Please enter your name.</div>
                 <div class="valid-feedback">Looks good!</div>
               </div>
               <div className="form-group">
@@ -122,9 +164,12 @@ class PageContact extends Component {
                   name="message"
                   className="form-control"
                   placeholder="Please enter a short message"
+                  data-parse="trim"
                   required
                 />
-                <div className="invalid-feedback">Please enter something.</div>
+                <div className="invalid-feedback">
+                  Please let us know how we can help!
+                </div>
                 <div class="valid-feedback">Looks good!</div>
               </div>
               <input type="hidden" name="_subject" value="Website Contact" />
@@ -153,16 +198,3 @@ class PageContact extends Component {
 }
 
 export default PageContact;
-
-// Handle HTTP errors since fetch doesn't
-// https://www.tjvantoll.com/2015/09/13/fetch-and-errors/
-function checkStatus(res) {
-  if (res.ok) {
-    if (res.status >= 200 && res.status < 300) {
-      return res;
-    } else {
-      throw new Error(`Request rejected with status ${res.status}`);
-    }
-  }
-  throw new Error('Network response was not ok.');
-}
