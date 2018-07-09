@@ -112,6 +112,7 @@ class PageContact extends Component {
   // not be able to respond to submit events triggered from the keyboard
   // (by pressing enter). That’s bad UX. By using the onSubmit callback
   // we cover both cases.
+  // TODO https://stackoverflow.com/questions/13643417/how-to-validate-pattern-matching-in-textarea
   render() {
     const { wasValidated } = this.state;
 
@@ -144,6 +145,7 @@ class PageContact extends Component {
                   type="text"
                   className="form-control"
                   placeholder="Please enter your name"
+                  pattern=".*\S+.*"
                   data-parse="trim"
                   required
                 />
@@ -174,6 +176,7 @@ class PageContact extends Component {
                   name="message"
                   className="form-control"
                   placeholder="Please enter a short message"
+                  pattern=".*\S+.*"
                   data-parse="trim"
                   required
                 />
