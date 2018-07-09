@@ -117,8 +117,8 @@ class PageContact extends Component {
 
     return (
       <div className="container">
-        <div className="position-relative bd-text-purple-bright">
-          <div className="col-md-10 mx-auto mt-5">
+        <div className="row">
+          <div className="col-md-8 offset-md-2 text-center mt-5 bd-text-purple-bright">
             <h2 className="font-weight-light">Thanks for Reaching Out!</h2>
             <p className="lead">
               We would love to meet and learn more about your team, your unique
