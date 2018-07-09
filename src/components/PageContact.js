@@ -21,14 +21,14 @@ const inputParsers = {
   },
 };
 
-// Handle HTTP errors since fetch doesn't
+// Handle HTTP errors since fetch doesn't... :(
 // https://www.tjvantoll.com/2015/09/13/fetch-and-errors/
-function checkStatus(res) {
-  if (res.ok) {
-    if (res.status >= 200 && res.status < 300) {
-      return res;
+function checkStatus(response) {
+  if (response.ok) {
+    if (response.status >= 200 && response.status < 300) {
+      return response;
     } else {
-      throw new Error(`Request rejected with status ${res.status}`);
+      throw new Error(`Request rejected with status ${response.status}`);
     }
   }
   throw new Error('Network response was not ok.');
@@ -67,7 +67,6 @@ class PageContact extends Component {
     for (let name of data.keys()) {
       const input = form.elements[name];
       const parserName = input.dataset.parse;
-
       if (parserName) {
         const parser = inputParsers[parserName];
         const parsedValue = parser(data.get(name));
@@ -88,11 +87,16 @@ class PageContact extends Component {
     // https://formspree.io/
     fetch('//formspree.io/dan.stroot@veritedatascience.com', {
       method: 'POST',
-      body: data,
+      mode: 'cors', // no-cors, cors, *same-origin
+      headers: {
+        // 'Content-Type': 'application/json; charset=utf-8',
+        'Content-Type': 'application/x-www-form-urlencoded',
+      },
+      body: data, // body data type must match headers
     })
       .then(checkStatus)
-      .catch(err => {
-        this.setState({ errorMsg: err.toString() });
+      .catch(error => {
+        this.setState({ errorMsg: error.toString() });
       });
 
     // all done
@@ -131,6 +135,8 @@ class PageContact extends Component {
           <div className="form-row">
             <div className="col-md-6 mb-3 offset-md-3">
               <h3 className="mt-3 font-weight-light">Contact Us:</h3>
+
+              {/* Name */}
               <div className="form-group">
                 <label htmlFor="email">Name</label>
                 <input
@@ -142,8 +148,10 @@ class PageContact extends Component {
                   required
                 />
                 <div className="invalid-feedback">Please enter your name.</div>
-                <div class="valid-feedback">Looks good!</div>
+                <div className="valid-feedback">Looks good!</div>
               </div>
+
+              {/* email address */}
               <div className="form-group">
                 <label htmlFor="email">Email address</label>
                 <input
@@ -156,8 +164,10 @@ class PageContact extends Component {
                 <div className="invalid-feedback">
                   Please enter a valid email address.
                 </div>
-                <div class="valid-feedback">Looks good!</div>
+                <div className="valid-feedback">Looks good!</div>
               </div>
+
+              {/* message area */}
               <div className="form-group">
                 <label htmlFor="email">Short Message</label>
                 <textarea
@@ -170,17 +180,21 @@ class PageContact extends Component {
                 <div className="invalid-feedback">
                   Please let us know how we can help!
                 </div>
-                <div class="valid-feedback">Looks good!</div>
+                <div className="valid-feedback">Looks good!</div>
               </div>
+
+              {/* hidden inputs */}
               <input type="hidden" name="_subject" value="Website Contact" />
               <input type="text" name="_gotcha" className="invisible" />
               <br />
+
               <button type="submit" className="btn btn-primary">
                 Submit
               </button>
             </div>
           </div>
         </form>
+
         {/* feedback area */}
         <div className="row">
           <div className="col-md-6 offset-md-3">
