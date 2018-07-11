@@ -1,4 +1,9 @@
 import React, { Component } from 'react';
+import {
+  logResult,
+  validateResponse,
+  readResponseAsText,
+} from '../utils/fetchUtils';
 
 // https://medium.com/@everdimension/how-to-handle-forms-with-just-react-ac066c48bd4f
 // https://developer.mozilla.org/en-US/docs/Web/API/FormData
@@ -21,22 +26,9 @@ import React, { Component } from 'react';
 //   },
 // };
 
-// Handle HTTP errors since fetch doesn't... :(
-// https://www.tjvantoll.com/2015/09/13/fetch-and-errors/
-function checkStatus(response) {
-  if (response.ok) {
-    if (response.status >= 200 && response.status < 300) {
-      return response;
-    } else {
-      throw new Error(`Request rejected with status ${response.status}`);
-    }
-  }
-  throw new Error('Network response was not ok.');
-}
-
 class PageContact extends Component {
-  constructor(props) {
-    super(props);
+  constructor() {
+    super();
     this.state = {
       wasValidated: false,
       errorMsg: '',
@@ -49,7 +41,7 @@ class PageContact extends Component {
 
   // https://reactjs.org/docs/forms.html
   // Textarea does not implement pattern validation like `text` does.
-  // A "required" value passes validation with only spaces.  This
+  // A "required" value passes validation with *only* spaces.  This
   // adds back pattern validation.
   handleTextarea(event) {
     const pattern = event.target.getAttribute('pattern');
@@ -107,8 +99,6 @@ class PageContact extends Component {
     if (!form.checkValidity()) {
       this.setState({ wasValidated: true });
       return;
-    } else {
-      this.setState({ wasValidated: false });
     }
 
     // fetch to post data
@@ -116,14 +106,16 @@ class PageContact extends Component {
     // https://formspree.io/
     fetch('//formspree.io/dan.stroot@veritedatascience.com', {
       method: 'POST',
-      mode: 'cors', // no-cors, cors, *same-origin
+      mode: 'cors', // This is optional - mode's default value is 'cors'
       headers: {
         // 'Content-Type': 'application/json; charset=utf-8',
         'Content-Type': 'application/x-www-form-urlencoded',
       },
-      body: data, // body data type must match headers
+      body: data, // JSON.stringify(data),  // body data type must match headers
     })
-      .then(checkStatus)
+      .then(validateResponse)
+      .then(readResponseAsText)
+      .then(logResult)
       .catch(error => {
         this.setState({ errorMsg: error.toString() });
       });
@@ -134,6 +126,7 @@ class PageContact extends Component {
         successMsg: `Thanks! We'll be in contact soon!`,
       });
     }
+    this.setState({ wasValidated: false });
     form.reset();
   }
 
@@ -141,7 +134,6 @@ class PageContact extends Component {
   // not be able to respond to submit events triggered from the keyboard
   // (by pressing enter). That’s bad UX. By using the onSubmit callback
   // we cover both cases.
-  // TODO https://stackoverflow.com/questions/13643417/how-to-validate-pattern-matching-in-textarea
   render() {
     const { wasValidated } = this.state;
 
@@ -233,10 +225,10 @@ class PageContact extends Component {
         <div className="row">
           <div className="col-md-6 offset-md-3">
             {this.state.errorMsg && (
-              <p className="lead mt-2 text-error">{this.state.errorMsg}</p>
+              <h4 className="mt-2 text-error">{this.state.errorMsg}</h4>
             )}
             {this.state.successMsg && (
-              <p className="lead mt-2 text-success">{this.state.successMsg}</p>
+              <h4 className="mt-2 text-success">{this.state.successMsg}</h4>
             )}
           </div>
         </div>

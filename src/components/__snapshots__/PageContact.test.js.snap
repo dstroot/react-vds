@@ -5,10 +5,10 @@ exports[`PageContact renders the landing page 1`] = `
   className="container"
 >
   <div
-    className="position-relative bd-text-purple-bright"
+    className="row"
   >
     <div
-      className="col-md-10 mx-auto mt-5"
+      className="col-md-8 offset-md-2 text-center mt-5 bd-text-purple-bright"
     >
       <h2
         className="font-weight-light"
@@ -47,9 +47,11 @@ exports[`PageContact renders the landing page 1`] = `
             Name
           </label>
           <input
+            autoFocus={true}
             className="form-control"
             data-parse="trim"
             name="name"
+            pattern=".*\\\\S+.*"
             placeholder="Please enter your name"
             required={true}
             type="text"
@@ -60,7 +62,7 @@ exports[`PageContact renders the landing page 1`] = `
             Please enter your name.
           </div>
           <div
-            class="valid-feedback"
+            className="valid-feedback"
           >
             Looks good!
           </div>
@@ -86,7 +88,7 @@ exports[`PageContact renders the landing page 1`] = `
             Please enter a valid email address.
           </div>
           <div
-            class="valid-feedback"
+            className="valid-feedback"
           >
             Looks good!
           </div>
@@ -103,6 +105,8 @@ exports[`PageContact renders the landing page 1`] = `
             className="form-control"
             data-parse="trim"
             name="message"
+            onChange={[Function]}
+            pattern=".*\\\\S+.*"
             placeholder="Please enter a short message"
             required={true}
           />
@@ -112,7 +116,7 @@ exports[`PageContact renders the landing page 1`] = `
             Please let us know how we can help!
           </div>
           <div
-            class="valid-feedback"
+            className="valid-feedback"
           >
             Looks good!
           </div>
