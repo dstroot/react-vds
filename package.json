@@ -5,6 +5,8 @@
   "dependencies": {
     "animate.css": "^3.6.1",
     "bootstrap": "^4.1.1",
+    "form-serialize": "^0.7.2",
+    "form-serialize-json": "^1.0.8",
     "prop-types": "^15.6.2",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",

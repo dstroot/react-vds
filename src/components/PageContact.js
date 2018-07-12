@@ -4,27 +4,14 @@ import {
   validateResponse,
   readResponseAsText,
 } from '../utils/fetchUtils';
+import { toJSONString } from '../utils/formUtils';
+// import { serializeJson } from 'form-serialize-json';
+// import { serialize } from 'form-serialize';
 
 // https://medium.com/@everdimension/how-to-handle-forms-with-just-react-ac066c48bd4f
 // https://developer.mozilla.org/en-US/docs/Web/API/FormData
 // https://daveceddia.com/ajax-requests-in-react/
 // https://blog.hellojs.org/fetching-api-data-with-react-js-460fe8bbf8f2
-
-// const inputParsers = {
-//   date(input) {
-//     const [month, day, year] = input.split('/');
-//     return `${year}-${month}-${day}`;
-//   },
-//   uppercase(input) {
-//     return input.toUpperCase();
-//   },
-//   trim(input) {
-//     return input.trim();
-//   },
-//   number(input) {
-//     return parseFloat(input);
-//   },
-// };
 
 class PageContact extends Component {
   constructor() {
@@ -41,14 +28,13 @@ class PageContact extends Component {
 
   // https://reactjs.org/docs/forms.html
   // Textarea does not implement pattern validation like `text` does.
-  // A "required" value passes validation with *only* spaces.  This
-  // adds back pattern validation.
+  // A "required" value passes validation with *only* spaces. This will
+  // enable the pattern attribute on a textarea and trigger HTML5 validation.
   handleTextarea(event) {
     const pattern = event.target.getAttribute('pattern');
+    const input = event.target.value;
 
-    // This will enable the pattern attribute on a textarea
-    // and trigger the Html5 validation. It also takes into account
-    // patterns that have the ^ or $ operators and does a global
+    // Handles patterns that have the ^ or $ operators and does a global
     // match using the g Regex flag:
     if (typeof pattern !== typeof undefined && pattern !== false) {
       var patternRegex = new RegExp(
@@ -57,7 +43,6 @@ class PageContact extends Component {
       );
 
       const errorMessage = 'does not match the required pattern';
-      const input = event.target.value;
       const hasError = !input.match(patternRegex);
 
       if (typeof event.target.setCustomValidity === 'function') {
@@ -82,7 +67,13 @@ class PageContact extends Component {
 
     // get form data
     const form = event.target;
-    const data = new FormData(form);
+    // const data = new FormData(form);
+    // const formJSON = formToJSON(form);
+
+    const json = toJSONString(form);
+
+    // enumerateFormInputs(form);
+    // console.log(json);
 
     // // run parsers
     // for (let name of data.keys()) {
@@ -101,6 +92,10 @@ class PageContact extends Component {
       return;
     }
 
+    this.setState({
+      successMsg: `Thanks! We'll be in contact soon!`,
+    });
+
     // fetch to post data
     // https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch
     // https://formspree.io/
@@ -108,25 +103,20 @@ class PageContact extends Component {
       method: 'POST',
       mode: 'cors', // This is optional - mode's default value is 'cors'
       headers: {
-        // 'Content-Type': 'application/json; charset=utf-8',
-        'Content-Type': 'application/x-www-form-urlencoded',
+        'Content-Type': 'application/json; charset=utf-8',
+        // 'Content-Type': 'application/x-www-form-urlencoded',
       },
-      body: data, // JSON.stringify(data),  // body data type must match headers
+      body: json, // data, // JSON.stringify(data),  // body data type must match headers
     })
       .then(validateResponse)
       .then(readResponseAsText)
       .then(logResult)
       .catch(error => {
-        this.setState({ errorMsg: error.toString() });
+        this.setState({ errorMsg: 'Error: ' + error.toString() });
+        this.setState({ successMsg: '' });
       });
 
     // all done
-    if (this.state.errorMsg === '') {
-      this.setState({
-        successMsg: `Thanks! We'll be in contact soon!`,
-      });
-    }
-    this.setState({ wasValidated: false });
     form.reset();
   }
 
@@ -225,7 +215,7 @@ class PageContact extends Component {
         <div className="row">
           <div className="col-md-6 offset-md-3">
             {this.state.errorMsg && (
-              <h4 className="mt-2 text-error">{this.state.errorMsg}</h4>
+              <h4 className="mt-2 text-danger">{this.state.errorMsg}</h4>
             )}
             {this.state.successMsg && (
               <h4 className="mt-2 text-success">{this.state.successMsg}</h4>
