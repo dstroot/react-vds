@@ -1,12 +1,8 @@
 import React, { Component } from 'react';
-import {
-  logResult,
-  validateResponse,
-  readResponseAsText,
-} from '../utils/fetchUtils';
+import { validateResponse } from '../utils/fetchUtils';
 import { toJSONString } from '../utils/formUtils';
-// import { serializeJson } from 'form-serialize-json';
-// import { serialize } from 'form-serialize';
+import ReactNotification from 'react-notifications-component';
+import '../../node_modules/react-notifications-component/dist/theme.css';
 
 // https://medium.com/@everdimension/how-to-handle-forms-with-just-react-ac066c48bd4f
 // https://developer.mozilla.org/en-US/docs/Web/API/FormData
@@ -18,8 +14,8 @@ class PageContact extends Component {
     super();
     this.state = {
       wasValidated: false,
-      errorMsg: '',
-      successMsg: '',
+      // errorMsg: '',
+      // successMsg: '',
     };
 
     this.handleTextarea = this.handleTextarea.bind(this);
@@ -67,13 +63,7 @@ class PageContact extends Component {
 
     // get form data
     const form = event.target;
-    // const data = new FormData(form);
-    // const formJSON = formToJSON(form);
-
     const json = toJSONString(form);
-
-    // enumerateFormInputs(form);
-    // console.log(json);
 
     // // run parsers
     // for (let name of data.keys()) {
@@ -101,23 +91,43 @@ class PageContact extends Component {
     // https://formspree.io/
     fetch('//formspree.io/dan.stroot@veritedatascience.com', {
       method: 'POST',
-      mode: 'cors', // This is optional - mode's default value is 'cors'
       headers: {
         'Content-Type': 'application/json; charset=utf-8',
-        // 'Content-Type': 'application/x-www-form-urlencoded',
       },
-      body: json, // data, // JSON.stringify(data),  // body data type must match headers
+      body: json,
     })
       .then(validateResponse)
-      .then(readResponseAsText)
-      .then(logResult)
+      // .then(readResponseAsText)
+      // .then(logResult)
       .catch(error => {
-        this.setState({ errorMsg: 'Error: ' + error.toString() });
-        this.setState({ successMsg: '' });
+        // this.setState({ errorMsg: 'Error: ' + error.toString() });
+        // this.setState({ successMsg: '' });
+        this.notificationDOMRef.addNotification({
+          title: 'Bummer!',
+          message: 'Something went wrong. Please try again.',
+          type: 'error',
+          insert: 'bottom',
+          container: 'bottom-right',
+          animationIn: ['animated', 'fadeIn'],
+          animationOut: ['animated', 'fadeOut'],
+          dismiss: { duration: 6000 },
+          dismissable: { click: true },
+        });
       });
 
     // all done
     form.reset();
+    this.notificationDOMRef.addNotification({
+      title: 'Thank You!',
+      message: 'We will be in touch very soon!',
+      type: 'success',
+      insert: 'bottom',
+      container: 'bottom-right',
+      animationIn: ['animated', 'fadeIn'],
+      animationOut: ['animated', 'fadeOut'],
+      dismiss: { duration: 6000 },
+      dismissable: { click: true },
+    });
   }
 
   // Don’t add an onClick listener to the button. If we did, we would
@@ -159,7 +169,6 @@ class PageContact extends Component {
                   pattern=".*\S+.*"
                   data-parse="trim"
                   required
-                  autoFocus
                 />
                 <div className="invalid-feedback">Please enter your name.</div>
                 <div className="valid-feedback">Looks good!</div>
@@ -210,9 +219,9 @@ class PageContact extends Component {
             </div>
           </div>
         </form>
-
+        <ReactNotification ref={input => (this.notificationDOMRef = input)} />
         {/* feedback area */}
-        <div className="row">
+        {/* <div className="row">
           <div className="col-md-6 offset-md-3">
             {this.state.errorMsg && (
               <h4 className="mt-2 text-danger">{this.state.errorMsg}</h4>
@@ -221,10 +230,19 @@ class PageContact extends Component {
               <h4 className="mt-2 text-success">{this.state.successMsg}</h4>
             )}
           </div>
-        </div>
+        </div> */}
       </div>
     );
   }
 }
+
+// const CustomMessage = () => {
+//   return (
+//     <div>
+//       <i class="fas fa-check-square" /> Thanks so much! We will be in touch
+//       soon!
+//     </div>
+//   );
+// };
 
 export default PageContact;
