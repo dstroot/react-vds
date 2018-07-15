@@ -20,7 +20,7 @@ exports[`PagePrivacy renders the privacy page 1`] = `
           <tr>
             <td>
               <i
-                className="fa fa-check bd-text-purple-bright"
+                className="fa"
               />
             </td>
             <td>
@@ -30,7 +30,7 @@ exports[`PagePrivacy renders the privacy page 1`] = `
           <tr>
             <td>
               <i
-                className="fa fa-check bd-text-purple-bright"
+                className="fa"
               />
             </td>
             <td>
@@ -40,7 +40,7 @@ exports[`PagePrivacy renders the privacy page 1`] = `
           <tr>
             <td>
               <i
-                className="fa fa-check bd-text-purple-bright"
+                className="fa"
               />
             </td>
             <td>
@@ -50,7 +50,7 @@ exports[`PagePrivacy renders the privacy page 1`] = `
           <tr>
             <td>
               <i
-                className="fa fa-check bd-text-purple-bright"
+                className="fa"
               />
             </td>
             <td>

@@ -12,10 +12,23 @@ import PagePrivacy from './components/PagePrivacy';
 import PageAbout from './components/PageAbout';
 import PageNotFound from './components/PageNotFound';
 import PageContact from './components/PageContact';
+import PageToast from './components/PageToast';
 
 // other assets
 import './scss/main.scss';
 import 'animate.css';
+
+// Font Awesome
+// https://fontawesome.com/icons?d=gallery
+// https://github.com/FortAwesome/react-fontawesome
+// https://fontawesome.com/how-to-use/on-the-web/using-with/react
+import { library } from '@fortawesome/fontawesome-svg-core';
+import {
+  faCheck,
+  faCheckCircle,
+  faExclamationTriangle,
+} from '@fortawesome/free-solid-svg-icons';
+library.add(faCheck, faCheckCircle, faExclamationTriangle);
 
 class App extends Component {
   render() {
@@ -31,6 +44,7 @@ class App extends Component {
             <Route path="/privacy" component={PagePrivacy} />
             <Route path="/about" component={PageAbout} />
             <Route path="/contact" component={PageContact} />
+            <Route path="/toast" component={PageToast} />
             {/* when none of the above match, <NoMatch> will be rendered */}
             <Route
               component={props => (

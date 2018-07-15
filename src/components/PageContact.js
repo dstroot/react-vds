@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import { validateResponse } from '../utils/fetchUtils';
-import { toJSONString } from '../utils/formUtils';
-import ReactNotification from 'react-notifications-component';
-import '../../node_modules/react-notifications-component/dist/theme.css';
+import { formToJSONString } from '../utils/formUtils';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 // https://medium.com/@everdimension/how-to-handle-forms-with-just-react-ac066c48bd4f
 // https://developer.mozilla.org/en-US/docs/Web/API/FormData
@@ -13,9 +12,10 @@ class PageContact extends Component {
   constructor() {
     super();
     this.state = {
-      wasValidated: false,
-      // errorMsg: '',
-      // successMsg: '',
+      valid: true,
+      submitted: false,
+      successfulSubmit: false,
+      message: '',
     };
 
     this.handleTextarea = this.handleTextarea.bind(this);
@@ -23,36 +23,68 @@ class PageContact extends Component {
   }
 
   // https://reactjs.org/docs/forms.html
-  // Textarea does not implement pattern validation like `text` does.
-  // A "required" value passes validation with *only* spaces. This will
-  // enable the pattern attribute on a textarea and trigger HTML5 validation.
+  // `Textarea` does not implement pattern validation like `text` does.
+  // A "required" value passes validation with *only* spaces. This function
+  // will enable the pattern attribute on a textarea and trigger
+  // HTML5 validation. TODO extract to formUtils
   handleTextarea(event) {
+    const errorMessage = 'input does not match the required pattern';
     const pattern = event.target.getAttribute('pattern');
     const input = event.target.value;
 
-    // Handles patterns that have the ^ or $ operators and does a global
-    // match using the g Regex flag:
+    // Handles patterns that have the ^ or $ operators and does
+    // a global match using the g Regex flag:
     if (typeof pattern !== typeof undefined && pattern !== false) {
       var patternRegex = new RegExp(
         '^' + pattern.replace(/^\^|\$$/g, '') + '$',
         'g'
       );
 
-      const errorMessage = 'does not match the required pattern';
       const hasError = !input.match(patternRegex);
-
       if (typeof event.target.setCustomValidity === 'function') {
         event.target.setCustomValidity(hasError ? errorMessage : '');
       }
     }
   }
 
+  renderSuccess() {
+    return (
+      <div className="row">
+        <div className="col-md-6 offset-md-3 mt-3">
+          <div className="notification-custom-success rounded">
+            <div className="notification-custom-icon rounded">
+              <FontAwesomeIcon icon="check-circle" size="3x" />
+            </div>
+            <div className="notification-custom-content">
+              <p className="notification-title">Thank You</p>
+              <p className="notification-message">We will be in touch soon!</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+  }
+
+  renderFailure() {
+    return (
+      <div className="row">
+        <div className="col-md-6 offset-md-3 mt-3">
+          <div className="notification-custom-failure rounded">
+            <div className="notification-custom-icon rounded">
+              <FontAwesomeIcon icon="exclamation-triangle" size="3x" />
+            </div>
+            <div className="notification-custom-content">
+              <p className="notification-title">Bummer</p>
+              <p className="notification-message">Something went wrong!</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+  }
+
   handleSubmit(event) {
     event.preventDefault();
-
-    // clean up state
-    this.setState({ successMsg: '' });
-    this.setState({ errorMsg: '' });
 
     // NOTE: When you add name attributes to your inputs, you add structure
     // to your form. This structure can be serialized by the native FormData
@@ -61,11 +93,24 @@ class PageContact extends Component {
     // FormData constructor and you get a serialized interpretation of the
     // inputs which can be sent to the server.
 
-    // get form data
+    // get form
     const form = event.target;
-    const json = toJSONString(form);
+
+    // check form data validity first
+    if (!form.checkValidity()) {
+      this.setState({ valid: false });
+      // remove focus on button
+      if (document.activeElement !== document.body)
+        document.activeElement.blur();
+      return;
+    }
+    this.setState({ valid: true });
+
+    // convert form data to JSON
+    const json = formToJSONString(form);
 
     // // run parsers
+    // const data = new formData(form)
     // for (let name of data.keys()) {
     //   const input = form.elements[name];
     //   const parserName = input.dataset.parse;
@@ -75,16 +120,6 @@ class PageContact extends Component {
     //     data.set(name, parsedValue);
     //   }
     // }
-
-    // check form data validity
-    if (!form.checkValidity()) {
-      this.setState({ wasValidated: true });
-      return;
-    }
-
-    this.setState({
-      successMsg: `Thanks! We'll be in contact soon!`,
-    });
 
     // fetch to post data
     // https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch
@@ -97,37 +132,31 @@ class PageContact extends Component {
       body: json,
     })
       .then(validateResponse)
-      // .then(readResponseAsText)
-      // .then(logResult)
-      .catch(error => {
-        // this.setState({ errorMsg: 'Error: ' + error.toString() });
-        // this.setState({ successMsg: '' });
-        this.notificationDOMRef.addNotification({
-          title: 'Bummer!',
-          message: 'Something went wrong. Please try again.',
-          type: 'error',
-          insert: 'bottom',
-          container: 'bottom-right',
-          animationIn: ['animated', 'fadeIn'],
-          animationOut: ['animated', 'fadeOut'],
-          dismiss: { duration: 6000 },
-          dismissable: { click: true },
+      .then(res => {
+        // Update state to trigger a re-render.
+        this.setState({
+          submitted: true,
+          successfulSubmit: true,
+          message: `Thanks! We'll be in touch!`,
         });
+        form.reset();
+        // remove focus on button
+        if (document.activeElement !== document.body)
+          document.activeElement.blur();
+        return;
+      })
+      .catch(error => {
+        this.setState({
+          submitted: true,
+          successfulSubmit: false,
+          message: `Something went wrong. ${error.toString()}`,
+        });
+        form.reset();
+        // remove focus on button
+        if (document.activeElement !== document.body)
+          document.activeElement.blur();
+        return;
       });
-
-    // all done
-    form.reset();
-    this.notificationDOMRef.addNotification({
-      title: 'Thank You!',
-      message: 'We will be in touch very soon!',
-      type: 'success',
-      insert: 'bottom',
-      container: 'bottom-right',
-      animationIn: ['animated', 'fadeIn'],
-      animationOut: ['animated', 'fadeOut'],
-      dismiss: { duration: 6000 },
-      dismissable: { click: true },
-    });
   }
 
   // Don’t add an onClick listener to the button. If we did, we would
@@ -135,7 +164,7 @@ class PageContact extends Component {
   // (by pressing enter). That’s bad UX. By using the onSubmit callback
   // we cover both cases.
   render() {
-    const { wasValidated } = this.state;
+    const { valid, submitted, successfulSubmit } = this.state;
 
     return (
       <div className="container">
@@ -152,10 +181,14 @@ class PageContact extends Component {
         <form
           onSubmit={this.handleSubmit}
           noValidate
-          className={wasValidated ? 'was-validated' : ''}
+          className={!valid ? 'was-validated' : ''}
         >
           <div className="form-row">
-            <div className="col-md-6 mb-3 offset-md-3">
+            <div className="col-md-6 offset-md-3">
+              {/* hidden inputs */}
+              <input type="text" name="_gotcha" className="invisible" />
+              <input type="hidden" name="_subject" value="Website Contact" />
+
               <h3 className="mt-3 font-weight-light">Contact Us:</h3>
 
               {/* Name */}
@@ -178,16 +211,32 @@ class PageContact extends Component {
               <div className="form-group">
                 <label htmlFor="email">Email address</label>
                 <input
-                  name="_replyto"
+                  name="email"
                   type="email"
                   className="form-control"
-                  placeholder="Please enter your email"
+                  placeholder="you@youremail.com"
                   required
                 />
                 <div className="invalid-feedback">
                   Please enter a valid email address.
                 </div>
                 <div className="valid-feedback">Looks good!</div>
+              </div>
+
+              {/* phone */}
+              <div className="form-group">
+                <label htmlFor="email">Phone Number</label>
+                <input
+                  name="phone"
+                  type="tel"
+                  pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                  className="form-control"
+                  placeholder="123-456-7890"
+                />
+                <div className="invalid-feedback">
+                  Please enter a valid phone number.
+                </div>
+                <div className="valid-feedback">optional</div>
               </div>
 
               {/* message area */}
@@ -208,41 +257,18 @@ class PageContact extends Component {
                 <div className="valid-feedback">Looks good!</div>
               </div>
 
-              {/* hidden inputs */}
-              <input type="hidden" name="_subject" value="Website Contact" />
-              <input type="text" name="_gotcha" className="invisible" />
-              <br />
-
               <button type="submit" className="btn btn-primary">
-                Submit
+                <FontAwesomeIcon icon="check" /> &nbsp; Submit
               </button>
             </div>
           </div>
         </form>
-        <ReactNotification ref={input => (this.notificationDOMRef = input)} />
-        {/* feedback area */}
-        {/* <div className="row">
-          <div className="col-md-6 offset-md-3">
-            {this.state.errorMsg && (
-              <h4 className="mt-2 text-danger">{this.state.errorMsg}</h4>
-            )}
-            {this.state.successMsg && (
-              <h4 className="mt-2 text-success">{this.state.successMsg}</h4>
-            )}
-          </div>
-        </div> */}
+
+        {submitted && successfulSubmit ? this.renderSuccess() : ''}
+        {submitted && !successfulSubmit ? this.renderFailure() : ''}
       </div>
     );
   }
 }
-
-// const CustomMessage = () => {
-//   return (
-//     <div>
-//       <i class="fas fa-check-square" /> Thanks so much! We will be in touch
-//       soon!
-//     </div>
-//   );
-// };
 
 export default PageContact;

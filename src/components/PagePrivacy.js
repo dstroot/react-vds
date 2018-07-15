@@ -1,4 +1,5 @@
 import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const PagePrivacy = () => {
   return (
@@ -12,7 +13,10 @@ const PagePrivacy = () => {
             <tbody>
               <tr>
                 <td>
-                  <i className="fa fa-check bd-text-purple-bright" />
+                  <FontAwesomeIcon
+                    icon="check"
+                    className="bd-text-purple-bright"
+                  />
                 </td>
                 <td>
                   We don&#8217;t ask you for any personal information unless we
@@ -21,7 +25,10 @@ const PagePrivacy = () => {
               </tr>
               <tr>
                 <td>
-                  <i className="fa fa-check bd-text-purple-bright" />
+                  <FontAwesomeIcon
+                    icon="check"
+                    className="bd-text-purple-bright"
+                  />
                 </td>
                 <td>
                   We don&#8217;t share your personal information with anyone
@@ -31,7 +38,10 @@ const PagePrivacy = () => {
               </tr>
               <tr>
                 <td>
-                  <i className="fa fa-check bd-text-purple-bright" />
+                  <FontAwesomeIcon
+                    icon="check"
+                    className="bd-text-purple-bright"
+                  />
                 </td>
                 <td>
                   We don&#8217;t store personal information on our servers
@@ -40,7 +50,10 @@ const PagePrivacy = () => {
               </tr>
               <tr>
                 <td>
-                  <i className="fa fa-check bd-text-purple-bright" />
+                  <FontAwesomeIcon
+                    icon="check"
+                    className="bd-text-purple-bright"
+                  />
                 </td>
                 <td>
                   Any personal data we do store on your behalf you have the

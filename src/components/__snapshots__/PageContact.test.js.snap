@@ -47,7 +47,6 @@ exports[`PageContact renders the landing page 1`] = `
             Name
           </label>
           <input
-            autoFocus={true}
             className="form-control"
             data-parse="trim"
             name="name"
@@ -142,14 +141,26 @@ exports[`PageContact renders the landing page 1`] = `
     </div>
   </form>
   <div
-    className="row"
+    className="react-notification-root"
   >
     <div
-      className="col-md-6 offset-md-3"
-    >
-      
-      
-    </div>
+      className="notification-container-top-left"
+    />
+    <div
+      className="notification-container-top-right"
+    />
+    <div
+      className="notification-container-bottom-left"
+    />
+    <div
+      className="notification-container-bottom-right"
+    />
   </div>
+  <button
+    className="btn btn-primary"
+    onClick={[Function]}
+  >
+    Add Awesome Notification
+  </button>
 </div>
 `;

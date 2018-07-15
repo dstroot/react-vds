@@ -14,12 +14,10 @@ export const inputParsers = {
   },
 };
 
+// works great, non ie11 compliant
 export const formToJSON = form => {
   let output = {};
-  // let inputs = Array.from(new FormData(form));
-
   new FormData(form).forEach((value, key) => {
-    // inputs.forEach((value, key) => {
     // Check if property already exist
     if (Object.prototype.hasOwnProperty.call(output, key)) {
       let current = output[key];
@@ -44,7 +42,7 @@ export const enumerateFormInputs = form => {
 };
 
 // this version works in IE 11
-export const toJSONString = form => {
+export const formToJSONString = form => {
   var obj = {};
   var elements = form.querySelectorAll('input, select, textarea');
   for (var i = 0; i < elements.length; ++i) {
@@ -60,4 +58,9 @@ export const toJSONString = form => {
   return JSON.stringify(obj);
 };
 
-export default { enumerateFormInputs, inputParsers, formToJSON, toJSONString };
+export default {
+  enumerateFormInputs,
+  inputParsers,
+  formToJSON,
+  formToJSONString,
+};

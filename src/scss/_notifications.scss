@@ -1,0 +1,57 @@
+.notification-custom-success {
+  width: 100%;
+  display: flex;
+  background-color: #28a745;
+  color: #fff;
+  margin-left: -5px;
+
+  .notification-custom-content {
+    padding: 10px;
+
+    .notification-title {
+      font-size: 1.3em;
+      padding: 0;
+      margin: 0;
+    }
+
+    .notification-message {
+      font-size: 1em;
+      padding: 0;
+      margin: 0;
+    }
+  }
+
+  .notification-custom-icon {
+    border-left: 8px solid darken(#28a745, 15%);
+    padding: 13px 5px 0px 15px; //TRBL
+  }
+}
+
+.notification-custom-failure {
+  width: 100%;
+  display: flex;
+  background-color: #ff4136;
+  color: #fff;
+  margin-left: -5px;
+
+  .notification-custom-content {
+    padding: 10px;
+
+    .notification-title {
+      font-size: 1.3em;
+      padding: 0;
+      margin: 0;
+    }
+
+    .notification-message {
+      font-size: 1em;
+      padding: 0;
+      margin: 0;
+    }
+  }
+
+  .notification-custom-icon {
+    border-left: 8px solid darken(#ff4136, 15%);
+    padding: 13px 5px 0px 15px; //TRBL
+  }
+}
