@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import { validateResponse } from '../utils/fetchUtils';
 import { formToJSONString, matchPattern } from '../utils/formUtils';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -261,6 +262,11 @@ const Button = props => {
   if (submitted && success === 'no') {
     return <FailedButton />;
   }
+};
+
+Button.propTypes = {
+  submitted: PropTypes.bool.isRequired,
+  success: PropTypes.string.isRequired,
 };
 
 const unclick = () => {
