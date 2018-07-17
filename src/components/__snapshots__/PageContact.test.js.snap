@@ -31,8 +31,18 @@ exports[`PageContact renders the landing page 1`] = `
       className="form-row"
     >
       <div
-        className="col-md-6 mb-3 offset-md-3"
+        className="col-md-6 offset-md-3"
       >
+        <input
+          className="invisible"
+          name="_gotcha"
+          type="text"
+        />
+        <input
+          name="_subject"
+          type="hidden"
+          value="Website Contact"
+        />
         <h3
           className="mt-3 font-weight-light"
         >
@@ -76,8 +86,8 @@ exports[`PageContact renders the landing page 1`] = `
           </label>
           <input
             className="form-control"
-            name="_replyto"
-            placeholder="Please enter your email"
+            name="email"
+            placeholder="you@youremail.com"
             required={true}
             type="email"
           />
@@ -90,6 +100,32 @@ exports[`PageContact renders the landing page 1`] = `
             className="valid-feedback"
           >
             Looks good!
+          </div>
+        </div>
+        <div
+          className="form-group"
+        >
+          <label
+            htmlFor="email"
+          >
+            Phone Number
+          </label>
+          <input
+            className="form-control"
+            name="phone"
+            pattern="^[0-9-+s()]*$"
+            placeholder="(123) 456-7890"
+            type="tel"
+          />
+          <div
+            className="invalid-feedback"
+          >
+            Please enter a valid phone number.
+          </div>
+          <div
+            className="valid-feedback"
+          >
+            optional
           </div>
         </div>
         <div
@@ -120,47 +156,26 @@ exports[`PageContact renders the landing page 1`] = `
             Looks good!
           </div>
         </div>
-        <input
-          name="_subject"
-          type="hidden"
-          value="Website Contact"
-        />
-        <input
-          className="invisible"
-          name="_gotcha"
-          type="text"
-        />
-        <br />
-        <button
-          className="btn btn-primary"
-          type="submit"
+        <div
+          className="form-row"
         >
-          Submit
-        </button>
+          <div
+            className="col-md-5"
+          >
+            <button
+              className="btn btn-primary btn-block"
+              type="submit"
+            >
+              <i
+                className="fa"
+              />
+                 Submit
+            </button>
+          </div>
+        </div>
       </div>
     </div>
   </form>
-  <div
-    className="react-notification-root"
-  >
-    <div
-      className="notification-container-top-left"
-    />
-    <div
-      className="notification-container-top-right"
-    />
-    <div
-      className="notification-container-bottom-left"
-    />
-    <div
-      className="notification-container-bottom-right"
-    />
-  </div>
-  <button
-    className="btn btn-primary"
-    onClick={[Function]}
-  >
-    Add Awesome Notification
-  </button>
+  
 </div>
 `;

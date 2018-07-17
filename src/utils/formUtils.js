@@ -58,9 +58,35 @@ export const formToJSONString = form => {
   return JSON.stringify(obj);
 };
 
+// https://reactjs.org/docs/forms.html
+// `Textarea` does not implement pattern validation like `text` does.
+// A "required" value passes validation with *only* spaces. This function
+// will enable the pattern attribute on a textarea and trigger
+// HTML5 validation.
+export const matchPattern = event => {
+  const errorMessage = 'input does not match the required pattern';
+  const pattern = event.target.getAttribute('pattern');
+  const input = event.target.value;
+
+  // Handles patterns that have the ^ or $ operators and does
+  // a global match using the g Regex flag:
+  if (typeof pattern !== typeof undefined && pattern !== false) {
+    var patternRegex = new RegExp(
+      '^' + pattern.replace(/^\^|\$$/g, '') + '$',
+      'g'
+    );
+
+    const hasError = !input.match(patternRegex);
+    if (typeof event.target.setCustomValidity === 'function') {
+      event.target.setCustomValidity(hasError ? errorMessage : '');
+    }
+  }
+};
+
 export default {
   enumerateFormInputs,
   inputParsers,
   formToJSON,
   formToJSONString,
+  matchPattern,
 };

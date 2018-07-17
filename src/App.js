@@ -24,11 +24,12 @@ import 'animate.css';
 // https://fontawesome.com/how-to-use/on-the-web/using-with/react
 import { library } from '@fortawesome/fontawesome-svg-core';
 import {
+  faSpinner,
   faCheck,
   faCheckCircle,
   faExclamationTriangle,
 } from '@fortawesome/free-solid-svg-icons';
-library.add(faCheck, faCheckCircle, faExclamationTriangle);
+library.add(faSpinner, faCheck, faCheckCircle, faExclamationTriangle);
 
 class App extends Component {
   render() {

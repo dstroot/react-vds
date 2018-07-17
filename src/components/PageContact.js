@@ -1,89 +1,36 @@
 import React, { Component } from 'react';
 import { validateResponse } from '../utils/fetchUtils';
-import { formToJSONString } from '../utils/formUtils';
+import { formToJSONString, matchPattern } from '../utils/formUtils';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 // https://medium.com/@everdimension/how-to-handle-forms-with-just-react-ac066c48bd4f
 // https://developer.mozilla.org/en-US/docs/Web/API/FormData
 // https://daveceddia.com/ajax-requests-in-react/
+// https://daveceddia.com/where-initialize-state-react/
 // https://blog.hellojs.org/fetching-api-data-with-react-js-460fe8bbf8f2
 
+// NOTE: When the component class is created, the constructor is the
+// first method called, so it’s the right place to initialize everything
+// – state included. The class instance has already been created in
+// memory, so you can use this to set properties on it. This is the one
+// place where it is acceptable to have this.state on the left side of
+// an equal sign. Everywhere else, you should always use this.setState.
+
 class PageContact extends Component {
-  constructor() {
-    super();
-    this.state = {
-      valid: true,
-      submitted: false,
-      successfulSubmit: false,
-      message: '',
-    };
+  state = {
+    valid: true,
+    submitted: false,
+    success: '', // '', 'yes', 'no'
+    message: '',
+  };
 
-    this.handleTextarea = this.handleTextarea.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
-  }
+  // This function will enable the pattern attribute on a
+  // textarea and trigger HTML5 validation.
+  handleTextarea = event => {
+    matchPattern(event);
+  };
 
-  // https://reactjs.org/docs/forms.html
-  // `Textarea` does not implement pattern validation like `text` does.
-  // A "required" value passes validation with *only* spaces. This function
-  // will enable the pattern attribute on a textarea and trigger
-  // HTML5 validation. TODO extract to formUtils
-  handleTextarea(event) {
-    const errorMessage = 'input does not match the required pattern';
-    const pattern = event.target.getAttribute('pattern');
-    const input = event.target.value;
-
-    // Handles patterns that have the ^ or $ operators and does
-    // a global match using the g Regex flag:
-    if (typeof pattern !== typeof undefined && pattern !== false) {
-      var patternRegex = new RegExp(
-        '^' + pattern.replace(/^\^|\$$/g, '') + '$',
-        'g'
-      );
-
-      const hasError = !input.match(patternRegex);
-      if (typeof event.target.setCustomValidity === 'function') {
-        event.target.setCustomValidity(hasError ? errorMessage : '');
-      }
-    }
-  }
-
-  renderSuccess() {
-    return (
-      <div className="row">
-        <div className="col-md-6 offset-md-3 mt-3">
-          <div className="notification-custom-success rounded">
-            <div className="notification-custom-icon rounded">
-              <FontAwesomeIcon icon="check-circle" size="3x" />
-            </div>
-            <div className="notification-custom-content">
-              <p className="notification-title">Thank You</p>
-              <p className="notification-message">We will be in touch soon!</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    );
-  }
-
-  renderFailure() {
-    return (
-      <div className="row">
-        <div className="col-md-6 offset-md-3 mt-3">
-          <div className="notification-custom-failure rounded">
-            <div className="notification-custom-icon rounded">
-              <FontAwesomeIcon icon="exclamation-triangle" size="3x" />
-            </div>
-            <div className="notification-custom-content">
-              <p className="notification-title">Bummer</p>
-              <p className="notification-message">Something went wrong!</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    );
-  }
-
-  handleSubmit(event) {
+  handleSubmit = event => {
     event.preventDefault();
 
     // NOTE: When you add name attributes to your inputs, you add structure
@@ -100,30 +47,23 @@ class PageContact extends Component {
     if (!form.checkValidity()) {
       this.setState({ valid: false });
       // remove focus on button
-      if (document.activeElement !== document.body)
+      if (document.activeElement !== document.body) {
         document.activeElement.blur();
+      }
       return;
     }
-    this.setState({ valid: true });
+
+    // all good let's continue
+    this.setState({
+      valid: true,
+      submitted: true,
+      success: '',
+    });
 
     // convert form data to JSON
     const json = formToJSONString(form);
 
-    // // run parsers
-    // const data = new formData(form)
-    // for (let name of data.keys()) {
-    //   const input = form.elements[name];
-    //   const parserName = input.dataset.parse;
-    //   if (parserName) {
-    //     const parser = inputParsers[parserName];
-    //     const parsedValue = parser(data.get(name));
-    //     data.set(name, parsedValue);
-    //   }
-    // }
-
-    // fetch to post data
-    // https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch
-    // https://formspree.io/
+    // post data using fetch (ugh.. language)
     fetch('//formspree.io/dan.stroot@veritedatascience.com', {
       method: 'POST',
       headers: {
@@ -133,38 +73,30 @@ class PageContact extends Component {
     })
       .then(validateResponse)
       .then(res => {
-        // Update state to trigger a re-render.
         this.setState({
           submitted: true,
-          successfulSubmit: true,
-          message: `Thanks! We'll be in touch!`,
+          success: 'yes',
         });
         form.reset();
-        // remove focus on button
-        if (document.activeElement !== document.body)
-          document.activeElement.blur();
-        return;
+        unclick(); // remove focus on button
       })
       .catch(error => {
         this.setState({
           submitted: true,
-          successfulSubmit: false,
-          message: `Something went wrong. ${error.toString()}`,
+          success: 'no',
+          message: `${error.toString()}`,
         });
         form.reset();
-        // remove focus on button
-        if (document.activeElement !== document.body)
-          document.activeElement.blur();
-        return;
+        unclick(); // remove focus on button
       });
-  }
+  };
 
   // Don’t add an onClick listener to the button. If we did, we would
   // not be able to respond to submit events triggered from the keyboard
   // (by pressing enter). That’s bad UX. By using the onSubmit callback
   // we cover both cases.
   render() {
-    const { valid, submitted, successfulSubmit } = this.state;
+    const { valid, submitted, success, message } = this.state;
 
     return (
       <div className="container">
@@ -229,9 +161,9 @@ class PageContact extends Component {
                 <input
                   name="phone"
                   type="tel"
-                  pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                  pattern="^[0-9-+s()]*$"
                   className="form-control"
-                  placeholder="123-456-7890"
+                  placeholder="(123) 456-7890"
                 />
                 <div className="invalid-feedback">
                   Please enter a valid phone number.
@@ -257,18 +189,82 @@ class PageContact extends Component {
                 <div className="valid-feedback">Looks good!</div>
               </div>
 
-              <button type="submit" className="btn btn-primary">
-                <FontAwesomeIcon icon="check" /> &nbsp; Submit
-              </button>
+              {/* Submit button */}
+              <div className="form-row">
+                <div className="col-md-5">
+                  <Button submitted={submitted} success={success} />
+                </div>
+              </div>
             </div>
           </div>
         </form>
-
-        {submitted && successfulSubmit ? this.renderSuccess() : ''}
-        {submitted && !successfulSubmit ? this.renderFailure() : ''}
+        {message ? <p className="lead, text-danger">message</p> : ''}
       </div>
     );
   }
 }
 
 export default PageContact;
+
+/**
+ * Button logic
+ */
+
+const SubmitButton = () => {
+  return (
+    <button type="submit" className="btn btn-primary btn-block">
+      <FontAwesomeIcon icon="check" /> &nbsp; Submit
+    </button>
+  );
+};
+
+const SubmittedButton = () => {
+  return (
+    <button className="btn btn-primary btn-block">
+      <FontAwesomeIcon icon="spinner" spin /> &nbsp; Submitted
+    </button>
+  );
+};
+
+const SuccessButton = () => {
+  return (
+    <button className="btn btn-success btn-block">
+      <FontAwesomeIcon icon="check-circle" /> &nbsp; Thanks!
+    </button>
+  );
+};
+
+const FailedButton = () => {
+  return (
+    <button className="btn btn-danger btn-block">
+      <FontAwesomeIcon icon="exclamation-triangle" /> &nbsp; Failed!
+    </button>
+  );
+};
+
+const Button = props => {
+  const submitted = props.submitted;
+  const success = props.success;
+
+  if (!submitted) {
+    return <SubmitButton />;
+  }
+
+  if (submitted && success === '') {
+    return <SubmittedButton />;
+  }
+
+  if (submitted && success === 'yes') {
+    return <SuccessButton />;
+  }
+
+  if (submitted && success === 'no') {
+    return <FailedButton />;
+  }
+};
+
+const unclick = () => {
+  if (document.activeElement !== document.body) {
+    document.activeElement.blur();
+  }
+};

@@ -7,13 +7,7 @@ import 'react-notifications-component/dist/theme.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 class PageToast extends Component {
-  constructor() {
-    super();
-    this.state = {};
-    this.addNotification = this.addNotification.bind(this);
-  }
-
-  addNotification(e) {
+  addNotification = event => {
     this.notificationDOMRef.addNotification({
       width: 330,
       content: (
@@ -36,8 +30,8 @@ class PageToast extends Component {
       dismissable: { click: true },
     });
     // remove focus on button
-    e.target.blur();
-  }
+    event.target.blur();
+  };
 
   render() {
     return (
