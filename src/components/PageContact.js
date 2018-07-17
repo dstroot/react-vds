@@ -1,14 +1,19 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
 import { validateResponse } from '../utils/fetchUtils';
 import { formToJSONString, matchPattern } from '../utils/formUtils';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import Button from './Button';
 
 // https://medium.com/@everdimension/how-to-handle-forms-with-just-react-ac066c48bd4f
 // https://developer.mozilla.org/en-US/docs/Web/API/FormData
 // https://daveceddia.com/ajax-requests-in-react/
 // https://daveceddia.com/where-initialize-state-react/
 // https://blog.hellojs.org/fetching-api-data-with-react-js-460fe8bbf8f2
+
+const unclick = () => {
+  if (document.activeElement !== document.body) {
+    document.activeElement.blur();
+  }
+};
 
 // NOTE: When the component class is created, the constructor is the
 // first method called, so it’s the right place to initialize everything
@@ -21,7 +26,7 @@ class PageContact extends Component {
   state = {
     valid: true,
     submitted: false,
-    success: '', // '', 'yes', 'no'
+    success: 'wait', // 'wait', 'yes', 'no'
     message: '',
   };
 
@@ -47,10 +52,7 @@ class PageContact extends Component {
     // check form data validity first
     if (!form.checkValidity()) {
       this.setState({ valid: false });
-      // remove focus on button
-      if (document.activeElement !== document.body) {
-        document.activeElement.blur();
-      }
+      unclick(); // remove focus on button
       return;
     }
 
@@ -58,13 +60,12 @@ class PageContact extends Component {
     this.setState({
       valid: true,
       submitted: true,
-      success: '',
     });
 
     // convert form data to JSON
     const json = formToJSONString(form);
 
-    // post data using fetch (ugh.. language)
+    // post data using fetch (ugh... language)
     fetch('//formspree.io/dan.stroot@veritedatascience.com', {
       method: 'POST',
       headers: {
@@ -206,71 +207,3 @@ class PageContact extends Component {
 }
 
 export default PageContact;
-
-/**
- * Button logic
- */
-
-const SubmitButton = () => {
-  return (
-    <button type="submit" className="btn btn-primary btn-block">
-      <FontAwesomeIcon icon="check" /> &nbsp; Submit
-    </button>
-  );
-};
-
-const SubmittedButton = () => {
-  return (
-    <button className="btn btn-primary btn-block">
-      <FontAwesomeIcon icon="spinner" spin /> &nbsp; Submitted
-    </button>
-  );
-};
-
-const SuccessButton = () => {
-  return (
-    <button className="btn btn-success btn-block">
-      <FontAwesomeIcon icon="check-circle" /> &nbsp; Thanks!
-    </button>
-  );
-};
-
-const FailedButton = () => {
-  return (
-    <button className="btn btn-danger btn-block">
-      <FontAwesomeIcon icon="exclamation-triangle" /> &nbsp; Failed!
-    </button>
-  );
-};
-
-const Button = props => {
-  const submitted = props.submitted;
-  const success = props.success;
-
-  if (!submitted) {
-    return <SubmitButton />;
-  }
-
-  if (submitted && success === '') {
-    return <SubmittedButton />;
-  }
-
-  if (submitted && success === 'yes') {
-    return <SuccessButton />;
-  }
-
-  if (submitted && success === 'no') {
-    return <FailedButton />;
-  }
-};
-
-Button.propTypes = {
-  submitted: PropTypes.bool.isRequired,
-  success: PropTypes.string.isRequired,
-};
-
-const unclick = () => {
-  if (document.activeElement !== document.body) {
-    document.activeElement.blur();
-  }
-};

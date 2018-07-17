@@ -1,0 +1,46 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Button renders a failedButton 1`] = `
+<button
+  className="btn btn-danger btn-block"
+>
+  <i
+    className="fa"
+  />
+     Failed!
+</button>
+`;
+
+exports[`Button renders a submitButton 1`] = `
+<button
+  className="btn btn-primary btn-block"
+  type="submit"
+>
+  <i
+    className="fa"
+  />
+     Submit
+</button>
+`;
+
+exports[`Button renders a submittedButton 1`] = `
+<button
+  className="btn btn-primary btn-block"
+>
+  <i
+    className="fa"
+  />
+     Submitted
+</button>
+`;
+
+exports[`Button renders a successButton 1`] = `
+<button
+  className="btn btn-success btn-block"
+>
+  <i
+    className="fa"
+  />
+     Thanks!
+</button>
+`;
