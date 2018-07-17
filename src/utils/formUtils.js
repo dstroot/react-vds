@@ -14,6 +14,25 @@ export const inputParsers = {
   },
 };
 
+// use input parsers above
+// https://medium.com/@everdimension/how-to-handle-forms-with-just-react-ac066c48bd4f
+export const formDataParser = form => {
+  const data = new FormData(form);
+
+  for (let name of data.keys()) {
+    const input = form.elements[name];
+    const parserName = input.dataset.parse;
+
+    if (parserName) {
+      const parser = inputParsers[parserName];
+      const parsedValue = parser(data.get(name));
+      data.set(name, parsedValue);
+    }
+  }
+
+  return data;
+};
+
 // works great, non ie11 compliant
 export const formToJSON = form => {
   let output = {};
@@ -41,7 +60,7 @@ export const enumerateFormInputs = form => {
   }
 };
 
-// this version works in IE 11
+// this version works in IE 11 but doesn't handle array elements
 export const formToJSONString = form => {
   var obj = {};
   var elements = form.querySelectorAll('input, select, textarea');
@@ -59,10 +78,11 @@ export const formToJSONString = form => {
 };
 
 // https://reactjs.org/docs/forms.html
+
 // `Textarea` does not implement pattern validation like `text` does.
 // A "required" value passes validation with *only* spaces. This function
 // will enable the pattern attribute on a textarea and trigger
-// HTML5 validation.
+// HTML5 validation. Cool right!å
 export const matchPattern = event => {
   const errorMessage = 'input does not match the required pattern';
   const pattern = event.target.getAttribute('pattern');
@@ -86,6 +106,7 @@ export const matchPattern = event => {
 export default {
   enumerateFormInputs,
   inputParsers,
+  formDataParser,
   formToJSON,
   formToJSONString,
   matchPattern,
