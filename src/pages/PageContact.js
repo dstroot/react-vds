@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { validateResponse } from '../utils/fetchUtils';
 import { formToJSONString, matchPattern } from '../utils/formUtils';
-import Button from './Button';
+import Button from '../components/Button';
 
 // https://medium.com/@everdimension/how-to-handle-forms-with-just-react-ac066c48bd4f
 // https://developer.mozilla.org/en-US/docs/Web/API/FormData

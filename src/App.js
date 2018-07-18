@@ -6,13 +6,13 @@ import Navigation from './components/Navigation';
 import Footer from './components/Footer';
 
 // pages
-import PageLanding from './components/PageLanding';
-import PageTerms from './components/PageTerms';
-import PagePrivacy from './components/PagePrivacy';
-import PageAbout from './components/PageAbout';
-import PageNotFound from './components/PageNotFound';
-import PageContact from './components/PageContact';
-import PageToast from './components/PageToast';
+import PageLanding from './pages/PageLanding';
+import PageTerms from './pages/PageTerms';
+import PagePrivacy from './pages/PagePrivacy';
+import PageAbout from './pages/PageAbout';
+import PageNotFound from './pages/PageNotFound';
+import PageContact from './pages/PageContact';
+import PageToast from './pages/PageToast';
 
 // other assets
 import './scss/main.scss';

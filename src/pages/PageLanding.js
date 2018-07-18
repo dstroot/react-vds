@@ -1,6 +1,6 @@
 import React from 'react';
-import Masthead from './Masthead';
-import Content from './Content';
+import Masthead from '../components/Masthead';
+import Content from '../components/Content';
 // import ContactUs from './ContactUs';
 
 // React also allows us to create pure, stateless components using a normal
