@@ -5,6 +5,9 @@ import ScrollToTop from './components/ScrollToTop';
 import registerServiceWorker from './registerServiceWorker';
 import App from './App';
 
+// NOTE: For routes to work properly in React, you need
+// to wrap your whole application in a Router.
+
 ReactDOM.render(
   <Router>
     <ScrollToTop>
@@ -15,3 +18,8 @@ ReactDOM.render(
 );
 
 registerServiceWorker();
+
+// Turn on hot module reloading, which will make it so that changes
+// you make automatically update in the app without needing to
+// refresh the whole page:
+if (module.hot) module.hot.accept();
