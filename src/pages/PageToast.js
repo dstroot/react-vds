@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import ContactUs from '../components/ContactUs';
+import ContactUs from 'ContactUs';
 
 // notificatiions
 import ReactNotification from 'react-notifications-component';

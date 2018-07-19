@@ -12,6 +12,7 @@ const Button = props => {
 
   if (!submitted) {
     return <SubmitButton />;
+    // return <TestButton icon="check" type="primary" message="submit" />;
   }
 
   if (submitted && success === 'wait') {
@@ -35,6 +36,16 @@ Button.propTypes = {
 /**
  * Buttons
  */
+
+// TODO use props = fewer components
+
+// const TestButton = ({ icon, type, message }) => {
+//   return (
+//     <button type="submit" className={`btn btn-block btn-${type}`}>
+//       <FontAwesomeIcon icon={icon} /> &nbsp; {message}
+//     </button>
+//   );
+// };
 
 const SubmitButton = () => {
   return (

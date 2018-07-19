@@ -3,7 +3,7 @@ export const logResult = result => {
 };
 
 export const logError = error => {
-  console.log('Looks like there was a problem: \n', error);
+  console.log('Error: \n', error);
 };
 
 // Handle HTTP errors since fetch doesn't... :(

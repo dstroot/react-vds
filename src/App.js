@@ -29,6 +29,7 @@ import {
   faCheckCircle,
   faExclamationTriangle,
 } from '@fortawesome/free-solid-svg-icons';
+// library of Font Awesome Icons
 library.add(faSpinner, faCheck, faCheckCircle, faExclamationTriangle);
 
 class App extends Component {

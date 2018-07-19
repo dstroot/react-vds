@@ -1,8 +1,8 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import logo from '../media/logo.png';
+import logo from 'logo.png';
 import Particles from 'react-particles-js';
-import ErrorBoundary from './ErrorBoundary';
+import ErrorBoundary from 'ErrorBoundary';
 
 const Masthead = () => {
   return (

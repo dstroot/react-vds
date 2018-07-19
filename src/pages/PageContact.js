@@ -1,7 +1,7 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 import { validateResponse } from '../utils/fetchUtils';
-import { formToJSONString, matchPattern } from '../utils/formUtils';
-import Button from '../components/Button';
+import { formToJSONString, matchPattern } from 'formUtils';
+import Button from 'Button';
 
 // https://medium.com/@everdimension/how-to-handle-forms-with-just-react-ac066c48bd4f
 // https://developer.mozilla.org/en-US/docs/Web/API/FormData
@@ -15,14 +15,14 @@ const unclick = () => {
   }
 };
 
-// NOTE: When the component class is created, the constructor is the
-// first method called, so it’s the right place to initialize everything
-// – state included. The class instance has already been created in
-// memory, so you can use this to set properties on it. This is the one
-// place where it is acceptable to have this.state on the left side of
-// an equal sign. Everywhere else, you should always use this.setState.
+// NOTE: If your React component’s render() function renders the same result
+// given the same props and state, you can use React.PureComponent for a
+// performance boost in some cases. The best use case for PureComponent
+// are presentational components which have no child components and no
+// dependencies on the global state in the application.
+// https://reactjs.org/docs/react-api.html#reactpurecomponent
 
-class PageContact extends Component {
+class PageContact extends PureComponent {
   state = {
     valid: true,
     submitted: false,
@@ -30,8 +30,8 @@ class PageContact extends Component {
     message: '',
   };
 
-  // This function will enable the pattern attribute on a
-  // textarea and trigger HTML5 validation.
+  // This function will enable the pattern attribute
+  // on a textarea and trigger HTML5 validation.
   handleTextarea = event => {
     matchPattern(event);
   };

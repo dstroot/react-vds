@@ -21,5 +21,8 @@ registerServiceWorker();
 
 // Turn on hot module reloading, which will make it so that changes
 // you make automatically update in the app without needing to
-// refresh the whole page:
+// refresh the whole page. This is only standard Webpack HMR that
+// doesn’t preserve state between reloads. See:
+// https://daveceddia.com/hot-reloading-create-react-app/
+
 if (module.hot) module.hot.accept();

@@ -1,15 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-function PageNotFound(props) {
-  const { image } = props;
+const PageNotFound = ({ image }) => {
   return (
-    <div className="FourOhFour">
-      <div className="bg" style={{ backgroundImage: 'url(' + image + ')' }} />
-      <h1 className="code">404</h1>
+    <div className="hero" style={{ backgroundImage: `url(${image})` }}>
+      <div className="d-flex justify-content-center color-wash">
+        <h1 className="m-auto display-1 text-white">404</h1>
+      </div>
     </div>
   );
-}
+};
 
 // https://codeburst.io/validating-props-easily-with-react-proptypes-96e80208207
 PageNotFound.propTypes = {

@@ -1,3 +1,9 @@
+Stuff I have tweaked, learned, added:
+
+https://daveceddia.com/hot-reloading-create-react-app/
+https://daveceddia.com/react-project-structure/
+https://medium.com/@dan_abramov/smart-and-dumb-components-7ca2f9a7c7d0
+
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
 https://github.com/facebook/create-react-app/pull/4195

@@ -1,5 +1,5 @@
 import React from 'react';
-import bg from '../media/startup-3.jpg';
+import bg from 'startup-3.jpg';
 
 const ContactUs = () => {
   return (
