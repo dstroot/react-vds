@@ -1,5 +1,12 @@
 import React from 'react';
 
+// The simplest way to define a component is to write a JavaScript function.
+// We call such components “functional” because they are literally JavaScript
+// functions. They can also accept a single “props” (which stands for
+// properties) object argument with data.
+
+// NOTE: Always start component names with a capital letter. React treats
+// components starting with lowercase letters as DOM tags.
 const About = () => {
   return (
     <main className="bd-masthead" id="content" role="main">
