@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { Helmet } from 'react-helmet';
 import Masthead from 'Masthead';
 import Content from 'Content';
 // import ContactUs from './ContactUs';
@@ -26,6 +26,10 @@ import Content from 'Content';
 const PageLanding = () => {
   return (
     <div>
+      <Helmet>
+        <title>Verite Data Science &middot; Welcome!</title>
+        <link rel="canonical" href="https://veritedatascience.com" />
+      </Helmet>
       <Masthead />
       <Content />
       {/* <ContactUs /> */}

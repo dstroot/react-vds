@@ -11,20 +11,29 @@ const Button = props => {
   const success = props.success;
 
   if (!submitted) {
-    return <SubmitButton />;
-    // return <TestButton icon="check" type="primary" message="submit" />;
+    return <StyledButton icon="check" color="primary" message="Submit" />;
   }
 
   if (submitted && success === 'wait') {
-    return <SubmittedButton />;
+    return (
+      <StyledButton icon="spinner" spin color="primary" message="Submitted" />
+    );
   }
 
   if (submitted && success === 'yes') {
-    return <SuccessButton />;
+    return (
+      <StyledButton icon="check-circle" color="success" message="Thanks!" />
+    );
   }
 
   if (submitted && success === 'no') {
-    return <FailedButton />;
+    return (
+      <StyledButton
+        icon="exclamation-triangle"
+        color="danger"
+        message="Failed!"
+      />
+    );
   }
 };
 
@@ -37,46 +46,27 @@ Button.propTypes = {
  * Buttons
  */
 
-// TODO use props = fewer components
+const StyledButton = ({ icon, color, spin, message }) => {
+  const componentClasses = ['btn', 'btn-block', 'btn-' + color];
 
-// const TestButton = ({ icon, type, message }) => {
-//   return (
-//     <button type="submit" className={`btn btn-block btn-${type}`}>
-//       <FontAwesomeIcon icon={icon} /> &nbsp; {message}
-//     </button>
-//   );
-// };
+  if (spin) {
+    icon = <FontAwesomeIcon icon={icon} spin />;
+  } else {
+    icon = <FontAwesomeIcon icon={icon} />;
+  }
 
-const SubmitButton = () => {
   return (
-    <button type="submit" className="btn btn-primary btn-block">
-      <FontAwesomeIcon icon="check" /> &nbsp; Submit
+    <button type="submit" className={componentClasses.join(' ')}>
+      {icon} &nbsp; {message}
     </button>
   );
 };
 
-const SubmittedButton = () => {
-  return (
-    <button className="btn btn-primary btn-block">
-      <FontAwesomeIcon icon="spinner" spin /> &nbsp; Submitted
-    </button>
-  );
-};
-
-const SuccessButton = () => {
-  return (
-    <button className="btn btn-success btn-block">
-      <FontAwesomeIcon icon="check-circle" /> &nbsp; Thanks!
-    </button>
-  );
-};
-
-const FailedButton = () => {
-  return (
-    <button className="btn btn-danger btn-block">
-      <FontAwesomeIcon icon="exclamation-triangle" /> &nbsp; Failed!
-    </button>
-  );
+StyledButton.propTypes = {
+  icon: PropTypes.string.isRequired,
+  color: PropTypes.string.isRequired,
+  spin: PropTypes.bool,
+  message: PropTypes.string.isRequired,
 };
 
 export default Button;

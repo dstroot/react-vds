@@ -65,7 +65,7 @@ exports[`Masthead renders a masthead 1`] = `
             onClick={[Function]}
             style={undefined}
           >
-            Learn More
+            Learn About Verite Data Science
           </a>
         </div>
       </div>

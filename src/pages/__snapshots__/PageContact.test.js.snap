@@ -163,13 +163,14 @@ exports[`PageContact renders the landing page 1`] = `
             className="col-md-5"
           >
             <button
-              className="btn btn-primary btn-block"
+              className="btn btn-block btn-primary"
               type="submit"
             >
               <i
                 className="fa"
               />
-                 Submit
+                 
+              Submit
             </button>
           </div>
         </div>

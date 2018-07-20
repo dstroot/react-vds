@@ -1,4 +1,5 @@
 import React from 'react';
+import { Helmet } from 'react-helmet';
 
 // The simplest way to define a component is to write a JavaScript function.
 // We call such components “functional” because they are literally JavaScript
@@ -10,6 +11,10 @@ import React from 'react';
 const About = () => {
   return (
     <main className="bd-masthead" id="content" role="main">
+      <Helmet>
+        <title>Verite Data Science &middot; About</title>
+        <link rel="canonical" href="https://veritedatascience.com/about" />
+      </Helmet>
       <div className="container">
         <div className="row">
           <div className="col-md-12">

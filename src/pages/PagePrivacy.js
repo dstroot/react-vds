@@ -1,9 +1,14 @@
 import React from 'react';
+import { Helmet } from 'react-helmet';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const PagePrivacy = () => {
   return (
     <div>
+      <Helmet>
+        <title>Verite Data Science &middot; Privacy</title>
+        <link rel="canonical" href="https://veritedatascience.com/privacy" />
+      </Helmet>
       <div className="mini-tron">
         <div className="container">
           <h1 className="bd-text-purple-bright">

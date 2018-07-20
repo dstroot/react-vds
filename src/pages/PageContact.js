@@ -1,6 +1,7 @@
 import React, { PureComponent } from 'react';
 import { validateResponse } from '../utils/fetchUtils';
 import { formToJSONString, matchPattern } from 'formUtils';
+import { Helmet } from 'react-helmet';
 import Button from 'Button';
 
 // https://medium.com/@everdimension/how-to-handle-forms-with-just-react-ac066c48bd4f
@@ -102,6 +103,10 @@ class PageContact extends PureComponent {
 
     return (
       <div className="container">
+        <Helmet>
+          <title>Verite Data Science &middot; Contact</title>
+          <link rel="canonical" href="https://veritedatascience.com/contact" />
+        </Helmet>
         <div className="row">
           <div className="col-md-8 offset-md-2 text-center mt-5 bd-text-purple-bright">
             <h2 className="font-weight-light">Thanks for Reaching Out!</h2>

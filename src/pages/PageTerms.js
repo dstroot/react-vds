@@ -1,8 +1,13 @@
 import React from 'react';
+import { Helmet } from 'react-helmet';
 
 const PageTerms = () => {
   return (
     <div>
+      <Helmet>
+        <title>Verite Data Science &middot; Terms</title>
+        <link rel="canonical" href="https://veritedatascience.com/terms" />
+      </Helmet>
       <div className="mini-tron">
         <div className="container">
           <h1 className="bd-text-purple-bright">

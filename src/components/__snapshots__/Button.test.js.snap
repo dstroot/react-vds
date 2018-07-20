@@ -2,45 +2,52 @@
 
 exports[`Button renders a failedButton 1`] = `
 <button
-  className="btn btn-danger btn-block"
->
-  <i
-    className="fa"
-  />
-     Failed!
-</button>
-`;
-
-exports[`Button renders a submitButton 1`] = `
-<button
-  className="btn btn-primary btn-block"
+  className="btn btn-block btn-danger"
   type="submit"
 >
   <i
     className="fa"
   />
-     Submit
+     
+  Failed!
+</button>
+`;
+
+exports[`Button renders a submitButton 1`] = `
+<button
+  className="btn btn-block btn-primary"
+  type="submit"
+>
+  <i
+    className="fa"
+  />
+     
+  Submit
 </button>
 `;
 
 exports[`Button renders a submittedButton 1`] = `
 <button
-  className="btn btn-primary btn-block"
+  className="btn btn-block btn-primary"
+  type="submit"
 >
   <i
     className="fa"
   />
-     Submitted
+     
+  Submitted
 </button>
 `;
 
 exports[`Button renders a successButton 1`] = `
 <button
-  className="btn btn-success btn-block"
+  className="btn btn-block btn-success"
+  type="submit"
 >
   <i
     className="fa"
   />
-     Thanks!
+     
+  Thanks!
 </button>
 `;
