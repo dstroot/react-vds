@@ -17,14 +17,14 @@
             "key": "Content-Security-Policy",
             "value": "script-src 'self' https://cdn.polyfill.io"
           },
-          { "key": "x-frame-options", "value": "SAMEORIGIN" },
-          { "key": "X-XSS-Protection", "value": "1; mode=block" },
-          { "key": "X-Content-Type-Options", "value": "nosniff" },
-          { "key": "Referrer-Policy", "value": "same-origin" },
           {
             "key": "Feature-Policy",
             "value": "camera 'none'; microphone 'none'"
-          }
+          },
+          { "key": "x-frame-options", "value": "SAMEORIGIN" },
+          { "key": "X-XSS-Protection", "value": "1; mode=block" },
+          { "key": "X-Content-Type-Options", "value": "nosniff" },
+          { "key": "Referrer-Policy", "value": "same-origin" }
         ]
       }
     ],
