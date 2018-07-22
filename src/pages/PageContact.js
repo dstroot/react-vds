@@ -61,12 +61,14 @@ class PageContact extends PureComponent {
     this.setState({
       valid: true,
       submitted: true,
+      message: '',
     });
 
     // convert form data to JSON
     const json = formToJSONString(form);
 
     // post data using fetch (ugh... language)
+    // http://localhost:5000/verite-data-science/us-central1/contact
     fetch('//formspree.io/dan.stroot@veritedatascience.com', {
       method: 'POST',
       headers: {
@@ -205,7 +207,11 @@ class PageContact extends PureComponent {
             </div>
           </div>
         </form>
-        {message ? <p className="lead, text-danger">message</p> : ''}
+        <div className="row">
+          <div className="col-md-6 offset-md-3">
+            {message ? <p className="text-danger">{message}</p> : ''}
+          </div>
+        </div>
       </div>
     );
   }
