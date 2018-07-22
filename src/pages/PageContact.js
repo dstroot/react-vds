@@ -177,7 +177,7 @@ class PageContact extends PureComponent {
                 <div className="invalid-feedback">
                   Please enter a valid phone number.
                 </div>
-                <div className="valid-feedback">optional</div>
+                <div className="valid-feedback">Optional</div>
               </div>
 
               {/* message area */}
