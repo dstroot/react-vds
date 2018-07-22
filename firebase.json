@@ -21,10 +21,13 @@
             "key": "Feature-Policy",
             "value": "camera 'none'; microphone 'none'"
           },
+          {
+            "key": "Referrer-Policy",
+            "value": "strict-origin-when-cross-origin"
+          },
           { "key": "x-frame-options", "value": "SAMEORIGIN" },
           { "key": "X-XSS-Protection", "value": "1; mode=block" },
-          { "key": "X-Content-Type-Options", "value": "nosniff" },
-          { "key": "Referrer-Policy", "value": "same-origin" }
+          { "key": "X-Content-Type-Options", "value": "nosniff" }
         ]
       }
     ],
