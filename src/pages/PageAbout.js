@@ -8,6 +8,7 @@ import { Helmet } from 'react-helmet';
 
 // NOTE: Always start component names with a capital letter. React treats
 // components starting with lowercase letters as DOM tags.
+
 const About = () => {
   return (
     <main className="bd-masthead" id="content" role="main">

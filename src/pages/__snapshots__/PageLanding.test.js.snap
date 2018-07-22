@@ -66,7 +66,7 @@ exports[`PageLanding renders the landing page 1`] = `
               onClick={[Function]}
               style={undefined}
             >
-              Learn About Verite Data Science
+              About Verite Data Science
             </a>
           </div>
         </div>

@@ -4,7 +4,7 @@ import logo from 'logo.png';
 import Particles from 'react-particles-js';
 import ErrorBoundary from 'ErrorBoundary';
 
-// import 'animate.css';
+// import 'animate.css' components
 import 'animate.css/source/_base.css';
 import 'animate.css/source/fading_entrances/fadeInDown.css';
 
@@ -19,7 +19,7 @@ const Masthead = () => {
                 params={{
                   particles: {
                     number: {
-                      value: 50,
+                      value: 55,
                       density: {
                         enable: true,
                         value_area: 500,
@@ -113,7 +113,7 @@ const Masthead = () => {
                 to="/about"
                 className="btn btn-lg btn-bd-purple mb-2 mb-md-0 mr-md-2"
               >
-                Learn About Verite Data Science
+                About Verite Data Science
               </NavLink>
             </div>
           </div>

@@ -125,7 +125,7 @@ exports[`PageContact renders the landing page 1`] = `
           <div
             className="valid-feedback"
           >
-            optional
+            Optional
           </div>
         </div>
         <div
@@ -177,6 +177,14 @@ exports[`PageContact renders the landing page 1`] = `
       </div>
     </div>
   </form>
-  
+  <div
+    className="row"
+  >
+    <div
+      className="col-md-6 offset-md-3"
+    >
+      
+    </div>
+  </div>
 </div>
 `;

@@ -9,8 +9,7 @@ import Content from 'Content';
 // only has a render function. Instead of making a full-blown component
 // just to render some content to the screen, we can create a pure one instead.
 // Pure components are the simplest, fastest components we can write. They are
-// easy to write, simple to reason about, and the quickest component we
-// can write.
+// easy to write, simple to reason about.
 //
 // Advantages to using functional components in React are:
 //  - We can do away with the heavy lifting of components, no constructor,
