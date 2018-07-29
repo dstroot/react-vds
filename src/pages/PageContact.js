@@ -110,8 +110,10 @@ class PageContact extends PureComponent {
           <link rel="canonical" href="https://veritedatascience.com/contact" />
         </Helmet>
         <div className="row">
-          <div className="col-md-8 offset-md-2 text-center mt-5 text-primary">
-            <h2 className="font-weight-light">Thanks for Reaching Out!</h2>
+          <div className="col-md-8 offset-md-2 text-center mt-5">
+            <h2 className="font-weight-light text-primary">
+              Thanks for Reaching Out!
+            </h2>
             <p className="lead">
               We would love to meet and learn more about your team, your unique
               environment, and your planned journey.
