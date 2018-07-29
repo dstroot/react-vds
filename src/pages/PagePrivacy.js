@@ -11,17 +11,12 @@ const PagePrivacy = () => {
       </Helmet>
       <div className="mini-tron">
         <div className="container">
-          <h1 className="bd-text-purple-bright">
-            Your privacy is vital to us!
-          </h1>
+          <h1 className="text-primary">Your privacy is vital to us!</h1>
           <table className="table white privacy">
             <tbody>
               <tr>
                 <td>
-                  <FontAwesomeIcon
-                    icon="check"
-                    className="bd-text-purple-bright"
-                  />
+                  <FontAwesomeIcon icon="check" className="text-primary" />
                 </td>
                 <td>
                   We don&#8217;t ask you for any personal information unless we
@@ -30,10 +25,7 @@ const PagePrivacy = () => {
               </tr>
               <tr>
                 <td>
-                  <FontAwesomeIcon
-                    icon="check"
-                    className="bd-text-purple-bright"
-                  />
+                  <FontAwesomeIcon icon="check" className="text-primary" />
                 </td>
                 <td>
                   We don&#8217;t share your personal information with anyone
@@ -43,10 +35,7 @@ const PagePrivacy = () => {
               </tr>
               <tr>
                 <td>
-                  <FontAwesomeIcon
-                    icon="check"
-                    className="bd-text-purple-bright"
-                  />
+                  <FontAwesomeIcon icon="check" className="text-primary" />
                 </td>
                 <td>
                   We don&#8217;t store personal information on our servers
@@ -55,10 +44,7 @@ const PagePrivacy = () => {
               </tr>
               <tr>
                 <td>
-                  <FontAwesomeIcon
-                    icon="check"
-                    className="bd-text-purple-bright"
-                  />
+                  <FontAwesomeIcon icon="check" className="text-primary" />
                 </td>
                 <td>
                   Any personal data we do store on your behalf you have the
@@ -78,7 +64,7 @@ const PagePrivacy = () => {
       <div className="container">
         <div className="row">
           <div className="col-sm-8">
-            <h4 className="bd-text-purple-bright">
+            <h4 className="text-primary">
               Information Collected by Verite Data Science, LLC
             </h4>
             <p>
@@ -138,7 +124,7 @@ const PagePrivacy = () => {
           </div>
           <div className="col-sm-4 hidden-xs">
             <h5 className="text-muted">Basically,</h5>
-            <h5 className="bd-text-purple-bright">
+            <h5 className="text-primary">
               We collect information to make the Verite Data Science, LLC
               website useful for you such as your registration and user profile
               data.<br />
@@ -150,7 +136,7 @@ const PagePrivacy = () => {
         <hr className="soften" />
         <div className="row">
           <div className="col-sm-8">
-            <h4 className="bd-text-purple-bright">E-mail Communications</h4>
+            <h4 className="text-primary">E-mail Communications</h4>
             <p>
               Verite Data Science, LLC is very concerned about your privacy and
               we will never provide your email address to a third party without
@@ -175,7 +161,7 @@ const PagePrivacy = () => {
           </div>
           <div className="col-sm-4 hidden-xs">
             <h5 className="text-muted">Basically,</h5>
-            <h5 className="bd-text-purple-bright">
+            <h5 className="text-primary">
               We will send you emails based on your profile settings. From time
               to time, we may send emails to all our users.
             </h5>
@@ -184,7 +170,7 @@ const PagePrivacy = () => {
         <hr className="soften" />
         <div className="row">
           <div className="col-sm-8">
-            <h4 className="bd-text-purple-bright">Cookies</h4>
+            <h4 className="text-primary">Cookies</h4>
             <p>
               Cookies are alphanumeric identifiers that are saved by your Web
               browser to enable our systems to recognize your browser and tell
@@ -207,7 +193,7 @@ const PagePrivacy = () => {
           </div>
           <div className="col-sm-4 hidden-xs">
             <h5 className="text-muted">Basically,</h5>
-            <h5 className="bd-text-purple-bright">
+            <h5 className="text-primary">
               To remember you, our system will give you a cookie. It's safe.
             </h5>
           </div>
@@ -215,7 +201,7 @@ const PagePrivacy = () => {
         <hr className="soften" />
         <div className="row">
           <div className="col-sm-8">
-            <h4 className="bd-text-purple-bright">Sharing Your Information</h4>
+            <h4 className="text-primary">Sharing Your Information</h4>
             <p>
               Rest assured that we neither rent nor sell your personal
               information to anyone and that we will share your personal
@@ -257,7 +243,7 @@ const PagePrivacy = () => {
           </div>
           <div className="col-sm-4 hidden-xs">
             <h5 className="text-muted">Basically,</h5>
-            <h5 className="bd-text-purple-bright">
+            <h5 className="text-primary">
               We do not sell your information to anyone. We may release other
               information to authorities where required by law.
             </h5>
@@ -266,9 +252,7 @@ const PagePrivacy = () => {
         <hr className="soften" />
         <div className="row">
           <div className="col-sm-8">
-            <h4 className="bd-text-purple-bright">
-              Keeping Information Secure
-            </h4>
+            <h4 className="text-primary">Keeping Information Secure</h4>
             <ul>
               <li>
                 Your Verite Data Science, LLC account information is protected
@@ -286,7 +270,7 @@ const PagePrivacy = () => {
           </div>
           <div className="col-sm-4 hidden-xs">
             <h5 className="text-muted">Basically,</h5>
-            <h5 className="bd-text-purple-bright">
+            <h5 className="text-primary">
               Your account is protected by a hashed, encrypted password. We do
               not know what your password is and you must keep it safe.
             </h5>
@@ -295,7 +279,7 @@ const PagePrivacy = () => {
         <hr className="soften" />
         <div className="row">
           <div className="col-sm-8">
-            <h4 className="bd-text-purple-bright">
+            <h4 className="text-primary">
               Control Display and Use of Your Information
             </h4>
             <ul>
@@ -322,11 +306,11 @@ const PagePrivacy = () => {
           </div>
           <div className="col-sm-4 hidden-xs">
             <h5 className="text-muted">Basically,</h5>
-            <h5 className="bd-text-purple-bright">
+            <h5 className="text-primary">
               You can choose not to share information with us, but your
               experience of the site may be limited.
             </h5>
-            <h5 className="bd-text-purple-bright">
+            <h5 className="text-primary">
               Until your account is deleted, you may still receive system
               emails.
             </h5>
@@ -335,9 +319,7 @@ const PagePrivacy = () => {
         <hr className="soften" />
         <div className="row">
           <div className="col-sm-8">
-            <h4 className="bd-text-purple-bright">
-              Children Under 18 Years of Age
-            </h4>
+            <h4 className="text-primary">Children Under 18 Years of Age</h4>
             <p>
               You must be 14 years and older to register to use the Verite Data
               Science, LLC website. As a result, Verite Data Science, LLC does
@@ -352,7 +334,7 @@ const PagePrivacy = () => {
           </div>
           <div className="col-sm-4 hidden-xs">
             <h5 className="text-muted">Basically,</h5>
-            <h5 className="bd-text-purple-bright">
+            <h5 className="text-primary">
               Please register only if you are 18 or older. Otherwise obtain your
               parents' permission first.
             </h5>
@@ -361,9 +343,7 @@ const PagePrivacy = () => {
         <hr className="soften" />
         <div className="row">
           <div className="col-sm-8">
-            <h4 className="bd-text-purple-bright">
-              Changes to this Privacy Policy
-            </h4>
+            <h4 className="text-primary">Changes to this Privacy Policy</h4>
             <p>
               Verite Data Science, LLC may amend this Privacy Policy from time
               to time, at its sole discretion. Use of information we collect now
@@ -377,7 +357,7 @@ const PagePrivacy = () => {
           </div>
           <div className="col-sm-4 hidden-xs">
             <h5 className="text-muted">Basically,</h5>
-            <h5 className="bd-text-purple-bright">
+            <h5 className="text-primary">
               This policy may change. If it does we will let you know.
             </h5>
           </div>

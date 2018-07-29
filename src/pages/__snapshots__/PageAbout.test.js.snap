@@ -16,7 +16,7 @@ exports[`PageAbout renders the about page 1`] = `
         className="col-md-12"
       >
         <h1
-          className="display-4 mb-3 bd-text-purple-bright"
+          className="display-4 mb-3 text-primary"
         >
           About Us
         </h1>

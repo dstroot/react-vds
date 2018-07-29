@@ -8,7 +8,7 @@ exports[`PageContact renders the landing page 1`] = `
     className="row"
   >
     <div
-      className="col-md-8 offset-md-2 text-center mt-5 bd-text-purple-bright"
+      className="col-md-8 offset-md-2 text-center mt-5 text-primary"
     >
       <h2
         className="font-weight-light"

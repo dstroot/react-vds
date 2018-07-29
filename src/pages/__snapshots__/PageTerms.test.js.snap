@@ -9,7 +9,7 @@ exports[`PageTerms renders the terms page 1`] = `
       className="container"
     >
       <h1
-        className="bd-text-purple-bright"
+        className="text-primary"
       >
         Verite Data Science, LLC Terms of Use
       </h1>
@@ -28,7 +28,7 @@ exports[`PageTerms renders the terms page 1`] = `
         className="col-sm-8"
       >
         <h4
-          className="bd-text-purple-bright"
+          className="text-primary"
         >
           Acceptance Of Terms
         </h4>
@@ -48,7 +48,7 @@ exports[`PageTerms renders the terms page 1`] = `
           Basically,
         </h5>
         <h5
-          className="bd-text-purple-bright"
+          className="text-primary"
         >
           By using Verite Data Science, LLC you agree to all our terms.
         </h5>
@@ -64,7 +64,7 @@ exports[`PageTerms renders the terms page 1`] = `
         className="col-sm-8"
       >
         <h4
-          className="bd-text-purple-bright"
+          className="text-primary"
         >
           Description Of Service
         </h4>
@@ -84,7 +84,7 @@ exports[`PageTerms renders the terms page 1`] = `
           Basically,
         </h5>
         <h5
-          className="bd-text-purple-bright"
+          className="text-primary"
         >
           We provide services to create online polls and we will develop more features and services in the future. At times things can go wrong and the service may be interrupted.
         </h5>
@@ -100,7 +100,7 @@ exports[`PageTerms renders the terms page 1`] = `
         className="col-sm-8"
       >
         <h4
-          className="bd-text-purple-bright"
+          className="text-primary"
         >
           Registration
         </h4>
@@ -126,7 +126,7 @@ exports[`PageTerms renders the terms page 1`] = `
           Basically,
         </h5>
         <h5
-          className="bd-text-purple-bright"
+          className="text-primary"
         >
           To fully use the services you need to create your own account, without violating anyone elses rights.
         </h5>
@@ -142,7 +142,7 @@ exports[`PageTerms renders the terms page 1`] = `
         className="col-sm-8"
       >
         <h4
-          className="bd-text-purple-bright"
+          className="text-primary"
         >
           User Conduct
         </h4>
@@ -203,7 +203,7 @@ exports[`PageTerms renders the terms page 1`] = `
           Basically,
         </h5>
         <h5
-          className="bd-text-purple-bright"
+          className="text-primary"
         >
           You cannot use our site to harass people, send spam, and do other crazy stuff. Be reasonable and responsible, don't do anything stupid and you'll be fine.
         </h5>
@@ -219,7 +219,7 @@ exports[`PageTerms renders the terms page 1`] = `
         className="col-sm-8"
       >
         <h4
-          className="bd-text-purple-bright"
+          className="text-primary"
         >
           Copyright Complaints
         </h4>
@@ -245,7 +245,7 @@ exports[`PageTerms renders the terms page 1`] = `
           Basically,
         </h5>
         <h5
-          className="bd-text-purple-bright"
+          className="text-primary"
         >
           We respect copyright. If anything is wrong, please send us an email with all the details.
         </h5>
@@ -261,7 +261,7 @@ exports[`PageTerms renders the terms page 1`] = `
         className="col-sm-8"
       >
         <h4
-          className="bd-text-purple-bright"
+          className="text-primary"
         >
           Trademarks
         </h4>
@@ -278,7 +278,7 @@ exports[`PageTerms renders the terms page 1`] = `
           Basically,
         </h5>
         <h5
-          className="bd-text-purple-bright"
+          className="text-primary"
         >
           As we respect others, please respect our trademarks and brands.
         </h5>
@@ -294,7 +294,7 @@ exports[`PageTerms renders the terms page 1`] = `
         className="col-sm-8"
       >
         <h4
-          className="bd-text-purple-bright"
+          className="text-primary"
         >
           Release And Indemnity
         </h4>
@@ -314,7 +314,7 @@ exports[`PageTerms renders the terms page 1`] = `
           Basically,
         </h5>
         <h5
-          className="bd-text-purple-bright"
+          className="text-primary"
         >
           We are not liable if something goes wrong.
         </h5>
@@ -330,7 +330,7 @@ exports[`PageTerms renders the terms page 1`] = `
         className="col-sm-8"
       >
         <h4
-          className="bd-text-purple-bright"
+          className="text-primary"
         >
           Limitation Of Liability
         </h4>
@@ -350,7 +350,7 @@ exports[`PageTerms renders the terms page 1`] = `
           Basically,
         </h5>
         <h5
-          className="bd-text-purple-bright"
+          className="text-primary"
         >
           Again, we are not liable. But we may pay you $100 if our server flies into your window.
         </h5>
@@ -366,7 +366,7 @@ exports[`PageTerms renders the terms page 1`] = `
         className="col-sm-8"
       >
         <h4
-          className="bd-text-purple-bright"
+          className="text-primary"
         >
           Miscellaneous
         </h4>
@@ -383,7 +383,7 @@ exports[`PageTerms renders the terms page 1`] = `
           Basically,
         </h5>
         <h5
-          className="bd-text-purple-bright"
+          className="text-primary"
         >
           All manner of crazy things can happen — we are not responsible, really.
         </h5>
@@ -399,7 +399,7 @@ exports[`PageTerms renders the terms page 1`] = `
         className="col-sm-8"
       >
         <h4
-          className="bd-text-purple-bright"
+          className="text-primary"
         >
           Termination
         </h4>
@@ -419,7 +419,7 @@ exports[`PageTerms renders the terms page 1`] = `
           Basically,
         </h5>
         <h5
-          className="bd-text-purple-bright"
+          className="text-primary"
         >
           We may stop providing services at any time. You can stop using your account or close it at any time as well.
         </h5>
@@ -435,7 +435,7 @@ exports[`PageTerms renders the terms page 1`] = `
         className="col-sm-8"
       >
         <h4
-          className="bd-text-purple-bright"
+          className="text-primary"
         >
           Change
         </h4>
@@ -452,7 +452,7 @@ exports[`PageTerms renders the terms page 1`] = `
           Basically,
         </h5>
         <h5
-          className="bd-text-purple-bright"
+          className="text-primary"
         >
           If these terms of use change, we will notify you.
         </h5>

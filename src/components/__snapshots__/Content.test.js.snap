@@ -32,7 +32,7 @@ exports[`Content renders some content 1`] = `
         className="card-body"
       >
         <h4
-          className="card-title bd-text-purple-bright"
+          className="card-title text-primary"
         >
           Cloud Migration
         </h4>
@@ -68,7 +68,7 @@ exports[`Content renders some content 1`] = `
         className="card-body"
       >
         <h4
-          className="card-title bd-text-purple-bright"
+          className="card-title text-primary"
         >
           Digital Workplace
         </h4>
@@ -98,7 +98,7 @@ exports[`Content renders some content 1`] = `
         className="card-body"
       >
         <h4
-          className="card-title bd-text-purple-bright"
+          className="card-title text-primary"
         >
           Intelligent Analytics
         </h4>

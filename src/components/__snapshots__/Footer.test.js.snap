@@ -4,6 +4,7 @@ exports[`Footer renders a footer 1`] = `
 <footer
   className="bg-gray-lighter text-secondary mt-4"
 >
+  <hr />
   <div
     className="container font-weight-light"
   >

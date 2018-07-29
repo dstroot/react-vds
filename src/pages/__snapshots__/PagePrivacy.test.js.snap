@@ -9,7 +9,7 @@ exports[`PagePrivacy renders the privacy page 1`] = `
       className="container"
     >
       <h1
-        className="bd-text-purple-bright"
+        className="text-primary"
       >
         Your privacy is vital to us!
       </h1>
@@ -74,7 +74,7 @@ exports[`PagePrivacy renders the privacy page 1`] = `
         className="col-sm-8"
       >
         <h4
-          className="bd-text-purple-bright"
+          className="text-primary"
         >
           Information Collected by Verite Data Science, LLC
         </h4>
@@ -119,7 +119,7 @@ exports[`PagePrivacy renders the privacy page 1`] = `
           Basically,
         </h5>
         <h5
-          className="bd-text-purple-bright"
+          className="text-primary"
         >
           We collect information to make the Verite Data Science, LLC website useful for you such as your registration and user profile data.
           <br />
@@ -138,7 +138,7 @@ exports[`PagePrivacy renders the privacy page 1`] = `
         className="col-sm-8"
       >
         <h4
-          className="bd-text-purple-bright"
+          className="text-primary"
         >
           E-mail Communications
         </h4>
@@ -161,7 +161,7 @@ exports[`PagePrivacy renders the privacy page 1`] = `
           Basically,
         </h5>
         <h5
-          className="bd-text-purple-bright"
+          className="text-primary"
         >
           We will send you emails based on your profile settings. From time to time, we may send emails to all our users.
         </h5>
@@ -177,7 +177,7 @@ exports[`PagePrivacy renders the privacy page 1`] = `
         className="col-sm-8"
       >
         <h4
-          className="bd-text-purple-bright"
+          className="text-primary"
         >
           Cookies
         </h4>
@@ -197,7 +197,7 @@ exports[`PagePrivacy renders the privacy page 1`] = `
           Basically,
         </h5>
         <h5
-          className="bd-text-purple-bright"
+          className="text-primary"
         >
           To remember you, our system will give you a cookie. It's safe.
         </h5>
@@ -213,7 +213,7 @@ exports[`PagePrivacy renders the privacy page 1`] = `
         className="col-sm-8"
       >
         <h4
-          className="bd-text-purple-bright"
+          className="text-primary"
         >
           Sharing Your Information
         </h4>
@@ -244,7 +244,7 @@ exports[`PagePrivacy renders the privacy page 1`] = `
           Basically,
         </h5>
         <h5
-          className="bd-text-purple-bright"
+          className="text-primary"
         >
           We do not sell your information to anyone. We may release other information to authorities where required by law.
         </h5>
@@ -260,7 +260,7 @@ exports[`PagePrivacy renders the privacy page 1`] = `
         className="col-sm-8"
       >
         <h4
-          className="bd-text-purple-bright"
+          className="text-primary"
         >
           Keeping Information Secure
         </h4>
@@ -282,7 +282,7 @@ exports[`PagePrivacy renders the privacy page 1`] = `
           Basically,
         </h5>
         <h5
-          className="bd-text-purple-bright"
+          className="text-primary"
         >
           Your account is protected by a hashed, encrypted password. We do not know what your password is and you must keep it safe.
         </h5>
@@ -298,7 +298,7 @@ exports[`PagePrivacy renders the privacy page 1`] = `
         className="col-sm-8"
       >
         <h4
-          className="bd-text-purple-bright"
+          className="text-primary"
         >
           Control Display and Use of Your Information
         </h4>
@@ -326,12 +326,12 @@ exports[`PagePrivacy renders the privacy page 1`] = `
           Basically,
         </h5>
         <h5
-          className="bd-text-purple-bright"
+          className="text-primary"
         >
           You can choose not to share information with us, but your experience of the site may be limited.
         </h5>
         <h5
-          className="bd-text-purple-bright"
+          className="text-primary"
         >
           Until your account is deleted, you may still receive system emails.
         </h5>
@@ -347,7 +347,7 @@ exports[`PagePrivacy renders the privacy page 1`] = `
         className="col-sm-8"
       >
         <h4
-          className="bd-text-purple-bright"
+          className="text-primary"
         >
           Children Under 18 Years of Age
         </h4>
@@ -364,7 +364,7 @@ exports[`PagePrivacy renders the privacy page 1`] = `
           Basically,
         </h5>
         <h5
-          className="bd-text-purple-bright"
+          className="text-primary"
         >
           Please register only if you are 18 or older. Otherwise obtain your parents' permission first.
         </h5>
@@ -380,7 +380,7 @@ exports[`PagePrivacy renders the privacy page 1`] = `
         className="col-sm-8"
       >
         <h4
-          className="bd-text-purple-bright"
+          className="text-primary"
         >
           Changes to this Privacy Policy
         </h4>
@@ -397,7 +397,7 @@ exports[`PagePrivacy renders the privacy page 1`] = `
           Basically,
         </h5>
         <h5
-          className="bd-text-purple-bright"
+          className="text-primary"
         >
           This policy may change. If it does we will let you know.
         </h5>

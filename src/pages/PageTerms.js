@@ -10,7 +10,7 @@ const PageTerms = () => {
       </Helmet>
       <div className="mini-tron">
         <div className="container">
-          <h1 className="bd-text-purple-bright">
+          <h1 className="text-primary">
             Verite Data Science, LLC Terms of Use
           </h1>
           <p>
@@ -22,7 +22,7 @@ const PageTerms = () => {
       <div className="container">
         <div className="row">
           <div className="col-sm-8">
-            <h4 className="bd-text-purple-bright">Acceptance Of Terms</h4>
+            <h4 className="text-primary">Acceptance Of Terms</h4>
             <p>
               The web pages available at Verite Data Science, LLC.com and all
               linked pages (“Site”), are owned and operated by Verite Data
@@ -42,7 +42,7 @@ const PageTerms = () => {
           </div>
           <div className="col-sm-4 hidden-xs">
             <h5 className="text-muted">Basically,</h5>
-            <h5 className="bd-text-purple-bright">
+            <h5 className="text-primary">
               By using Verite Data Science, LLC you agree to all our terms.
             </h5>
           </div>
@@ -50,7 +50,7 @@ const PageTerms = () => {
         <hr className="soften" />
         <div className="row">
           <div className="col-sm-8">
-            <h4 className="bd-text-purple-bright">Description Of Service</h4>
+            <h4 className="text-primary">Description Of Service</h4>
             <p>
               The Site is an online community which enables people to conduct
               and participate in instant group polling (“Services”). Services
@@ -78,7 +78,7 @@ const PageTerms = () => {
           </div>
           <div className="col-sm-4 hidden-xs">
             <h5 className="text-muted">Basically,</h5>
-            <h5 className="bd-text-purple-bright">
+            <h5 className="text-primary">
               We provide services to create online polls and we will develop
               more features and services in the future. At times things can go
               wrong and the service may be interrupted.
@@ -88,7 +88,7 @@ const PageTerms = () => {
         <hr className="soften" />
         <div className="row">
           <div className="col-sm-8">
-            <h4 className="bd-text-purple-bright">Registration</h4>
+            <h4 className="text-primary">Registration</h4>
             <p>
               As a condition to using Services, you are required to open an
               account with Verite Data Science, LLC and select a password and
@@ -122,7 +122,7 @@ const PageTerms = () => {
           </div>
           <div className="col-sm-4 hidden-xs">
             <h5 className="text-muted">Basically,</h5>
-            <h5 className="bd-text-purple-bright">
+            <h5 className="text-primary">
               To fully use the services you need to create your own account,
               without violating anyone elses rights.
             </h5>
@@ -131,7 +131,7 @@ const PageTerms = () => {
         <hr className="soften" />
         <div className="row">
           <div className="col-sm-8">
-            <h4 className="bd-text-purple-bright">User Conduct</h4>
+            <h4 className="text-primary">User Conduct</h4>
             <p>
               All Content posted or otherwise submitted to the Site is the sole
               responsibility of the account holder from which such Content
@@ -218,7 +218,7 @@ const PageTerms = () => {
           </div>
           <div className="col-sm-4 hidden-xs">
             <h5 className="text-muted">Basically,</h5>
-            <h5 className="bd-text-purple-bright">
+            <h5 className="text-primary">
               You cannot use our site to harass people, send spam, and do other
               crazy stuff. Be reasonable and responsible, don't do anything
               stupid and you'll be fine.
@@ -228,7 +228,7 @@ const PageTerms = () => {
         <hr className="soften" />
         <div className="row">
           <div className="col-sm-8">
-            <h4 className="bd-text-purple-bright">Copyright Complaints</h4>
+            <h4 className="text-primary">Copyright Complaints</h4>
             <p>
               Verite Data Science, LLC respects the intellectual property rights
               of others. It is our policy to respond promptly any claim that
@@ -271,7 +271,7 @@ const PageTerms = () => {
           </div>
           <div className="col-sm-4 hidden-xs">
             <h5 className="text-muted">Basically,</h5>
-            <h5 className="bd-text-purple-bright">
+            <h5 className="text-primary">
               We respect copyright. If anything is wrong, please send us an
               email with all the details.
             </h5>
@@ -280,7 +280,7 @@ const PageTerms = () => {
         <hr className="soften" />
         <div className="row">
           <div className="col-sm-8">
-            <h4 className="bd-text-purple-bright">Trademarks</h4>
+            <h4 className="text-primary">Trademarks</h4>
             <p>
               Verite Data Science, LLC, Verite Data Science, LLC.com and other
               Verite Data Science, LLC graphics, logos, designs, page headers,
@@ -296,7 +296,7 @@ const PageTerms = () => {
           </div>
           <div className="col-sm-4 hidden-xs">
             <h5 className="text-muted">Basically,</h5>
-            <h5 className="bd-text-purple-bright">
+            <h5 className="text-primary">
               As we respect others, please respect our trademarks and brands.
             </h5>
           </div>
@@ -304,7 +304,7 @@ const PageTerms = () => {
         <hr className="soften" />
         <div className="row">
           <div className="col-sm-8">
-            <h4 className="bd-text-purple-bright">Release And Indemnity</h4>
+            <h4 className="text-primary">Release And Indemnity</h4>
             <p>
               You hereby expressly and irrevocably release and forever discharge
               Verite Data Science, LLC, its affiliated and associated companies,
@@ -334,7 +334,7 @@ const PageTerms = () => {
           </div>
           <div className="col-sm-4 hidden-xs">
             <h5 className="text-muted">Basically,</h5>
-            <h5 className="bd-text-purple-bright">
+            <h5 className="text-primary">
               We are not liable if something goes wrong.
             </h5>
           </div>
@@ -342,7 +342,7 @@ const PageTerms = () => {
         <hr className="soften" />
         <div className="row">
           <div className="col-sm-8">
-            <h4 className="bd-text-purple-bright">Limitation Of Liability</h4>
+            <h4 className="text-primary">Limitation Of Liability</h4>
             <p>
               In no event shall Verite Data Science, LLC be liable under
               contract, tort, strict liability, negligence or other Legal theory
@@ -366,7 +366,7 @@ const PageTerms = () => {
           </div>
           <div className="col-sm-4 hidden-xs">
             <h5 className="text-muted">Basically,</h5>
-            <h5 className="bd-text-purple-bright">
+            <h5 className="text-primary">
               Again, we are not liable. But we may pay you $100 if our server
               flies into your window.
             </h5>
@@ -375,7 +375,7 @@ const PageTerms = () => {
         <hr className="soften" />
         <div className="row">
           <div className="col-sm-8">
-            <h4 className="bd-text-purple-bright">Miscellaneous</h4>
+            <h4 className="text-primary">Miscellaneous</h4>
             <p>
               No agency, partnership, joint venture, or employment is created as
               a result of the Terms and you do not have any authority of any
@@ -407,7 +407,7 @@ const PageTerms = () => {
           </div>
           <div className="col-sm-4 hidden-xs">
             <h5 className="text-muted">Basically,</h5>
-            <h5 className="bd-text-purple-bright">
+            <h5 className="text-primary">
               All manner of crazy things can happen — we are not responsible,
               really.
             </h5>
@@ -416,7 +416,7 @@ const PageTerms = () => {
         <hr className="soften" />
         <div className="row">
           <div className="col-sm-8">
-            <h4 className="bd-text-purple-bright">Termination</h4>
+            <h4 className="text-primary">Termination</h4>
             <p>
               Verite Data Science, LLC may terminate or suspend any and all
               Services and/or your Verite Data Science, LLC account immediately,
@@ -439,7 +439,7 @@ const PageTerms = () => {
           </div>
           <div className="col-sm-4 hidden-xs">
             <h5 className="text-muted">Basically,</h5>
-            <h5 className="bd-text-purple-bright">
+            <h5 className="text-primary">
               We may stop providing services at any time. You can stop using
               your account or close it at any time as well.
             </h5>
@@ -448,7 +448,7 @@ const PageTerms = () => {
         <hr className="soften" />
         <div className="row">
           <div className="col-sm-8">
-            <h4 className="bd-text-purple-bright">Change</h4>
+            <h4 className="text-primary">Change</h4>
             <p>
               Verite Data Science, LLC reserves the right, at its sole
               discretion, to modify or replace the terms at any time. If the
@@ -464,7 +464,7 @@ const PageTerms = () => {
           </div>
           <div className="col-sm-4 hidden-xs">
             <h5 className="text-muted">Basically,</h5>
-            <h5 className="bd-text-purple-bright">
+            <h5 className="text-primary">
               If these terms of use change, we will notify you.
             </h5>
           </div>

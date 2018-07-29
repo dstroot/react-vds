@@ -2,6 +2,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet';
 import Masthead from 'Masthead';
 import Content from 'Content';
+import ContactUs from 'ContactUs';
 // import ContactUs from './ContactUs';
 
 // React also allows us to create pure, stateless components using a normal
@@ -31,6 +32,7 @@ const PageLanding = () => {
       </Helmet>
       <Masthead />
       <Content />
+      <ContactUs />
       {/* <ContactUs /> */}
     </div>
   );

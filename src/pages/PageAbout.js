@@ -19,7 +19,7 @@ const About = () => {
       <div className="container">
         <div className="row">
           <div className="col-md-12">
-            <h1 className="display-4 mb-3 bd-text-purple-bright">About Us</h1>
+            <h1 className="display-4 mb-3 text-primary">About Us</h1>
             <p className="lead">
               We were formed to help businesses with very specific challenges in
               today's world. There are three specific challenges that many

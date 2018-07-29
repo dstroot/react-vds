@@ -13,9 +13,7 @@ const Content = () => {
             </svg>
           </div>
           <div className="card-body">
-            <h4 className="card-title bd-text-purple-bright">
-              Cloud Migration
-            </h4>
+            <h4 className="card-title text-primary">Cloud Migration</h4>
             <p className="card-text">
               Today cloud computing is a given. The next wave of cloud
               transformtion involves migrating your systems and applications to
@@ -35,9 +33,7 @@ const Content = () => {
             </svg>
           </div>
           <div className="card-body">
-            <h4 className="card-title bd-text-purple-bright">
-              Digital Workplace
-            </h4>
+            <h4 className="card-title text-primary">Digital Workplace</h4>
             <p className="card-text">
               Digital transformation isn’t solely driven by technology. The
               digtal workplace requires giving employees and partners access to
@@ -54,9 +50,7 @@ const Content = () => {
             </svg>
           </div>
           <div className="card-body">
-            <h4 className="card-title bd-text-purple-bright">
-              Intelligent Analytics
-            </h4>
+            <h4 className="card-title text-primary">Intelligent Analytics</h4>
             <p className="card-text">
               Data is the currency of business today. A data-powered enterprise
               integrates analytics and data to generate tangible outcomes by

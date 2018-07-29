@@ -12,7 +12,7 @@ import PagePrivacy from './pages/PagePrivacy';
 import PageAbout from './pages/PageAbout';
 import PageNotFound from './pages/PageNotFound';
 import PageContact from './pages/PageContact';
-// import PageToast from './pages/PageToast';
+import PageToast from './pages/PageToast';
 
 // css
 import './scss/main.scss';
@@ -45,7 +45,7 @@ class App extends Component {
             <Route path="/privacy" component={PagePrivacy} />
             <Route path="/about" component={PageAbout} />
             <Route path="/contact" component={PageContact} />
-            {/* <Route path="/toast" component={PageToast} /> */}
+            <Route path="/toast" component={PageToast} />
             {/* when none of the above match, <NoMatch> will be rendered */}
             <Route
               component={props => (

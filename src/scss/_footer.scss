@@ -5,10 +5,10 @@
 footer {
   // background-color: hsla(0, 0, 0, 0.045);
   a {
-    color: $bd-purple-bright;
+    color: theme-color('special');
     &:hover,
     &:focus {
-      color: $bd-purple-bright;
+      color: theme-color('special');
       text-decoration: none;
     }
   }
