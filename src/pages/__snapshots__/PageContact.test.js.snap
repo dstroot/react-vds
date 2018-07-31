@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`PageContact renders the landing page 1`] = `
+exports[`PageContact renders the contact page 1`] = `
 <div
   className="container"
 >
@@ -8,10 +8,10 @@ exports[`PageContact renders the landing page 1`] = `
     className="row"
   >
     <div
-      className="col-md-8 offset-md-2 text-center mt-5 text-primary"
+      className="col-md-8 offset-md-2 text-center mt-5"
     >
       <h2
-        className="font-weight-light"
+        className="font-weight-light text-primary"
       >
         Thanks for Reaching Out!
       </h2>
