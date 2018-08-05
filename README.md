@@ -11,3 +11,6 @@ Icons:
 https://www.emergeinteractive.com/insights/detail/The-Essentials-of-FavIcons-in-2017
 
 This project was bootstrapped with `create-react-app`. To learn about how to use create-react-app check out this [guide](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md).
+
+React Router Info:
+https://stackoverflow.com/questions/42123261/programmatically-navigate-using-react-router-v4

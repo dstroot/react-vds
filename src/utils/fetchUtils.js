@@ -13,7 +13,7 @@ export const validateResponse = response => {
     throw Error(response.statusText);
   } else {
     if (response.status >= 200 && response.status < 300) {
-      return response;
+      return response.body;
     } else {
       throw Error(`Request rejected with status ${response.status}`);
     }
