@@ -1,5 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+import * as routes from '../constants/routes';
 
 const Footer = () => {
   const year = new Date(); // evergreen copyright year
@@ -19,13 +20,13 @@ const Footer = () => {
             <h4>Links</h4>
             <ul className="list-unstyled">
               <li>
-                <NavLink to="/contact">Contact Us</NavLink>
+                <NavLink to={routes.CONTACT}>Contact Us</NavLink>
               </li>
               <li>
-                <NavLink to="/privacy">Privacy</NavLink>
+                <NavLink to={routes.PRIVACY}>Privacy</NavLink>
               </li>
               <li>
-                <NavLink to="/terms">Terms of Use</NavLink>
+                <NavLink to={routes.TERMS}>Terms of Use</NavLink>
               </li>
             </ul>
           </div>

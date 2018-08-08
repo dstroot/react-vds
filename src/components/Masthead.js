@@ -3,6 +3,7 @@ import { NavLink } from 'react-router-dom';
 import logo from 'logo.png';
 import Particles from 'react-particles-js';
 import ErrorBoundary from 'ErrorBoundary';
+import * as routes from '../constants/routes';
 
 // import 'animate.css' components
 import 'animate.css/source/_base.css';
@@ -108,7 +109,7 @@ const Masthead = () => {
             </p>
             <div className="d-flex flex-column flex-md-row lead mb-3">
               <NavLink
-                to="/about"
+                to={routes.ABOUT}
                 className="btn btn-lg btn-outline-primary mb-2 mb-md-0 mr-md-2"
               >
                 About Verite Data Science
