@@ -39,6 +39,7 @@ class App extends Component {
     return (
       <div className="site">
         <Navigation className="site-header" />
+
         <div className="site-content site-content--full">
           {/* <Navigation /> */}
           <Switch>
@@ -60,6 +61,7 @@ class App extends Component {
             />
           </Switch>
         </div>
+
         <Footer className="site-footer" />
       </div>
     );
