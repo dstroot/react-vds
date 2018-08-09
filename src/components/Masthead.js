@@ -110,7 +110,7 @@ const Masthead = () => {
             <div className="d-flex flex-column flex-md-row lead mb-3">
               <NavLink
                 to={routes.ABOUT}
-                className="btn btn-lg btn-outline-primary mb-2 mb-md-0 mr-md-2"
+                className="btn btn-lg btn-outline-primary mt-3 mb-2 mb-md-0 mr-md-2"
               >
                 About Verite Data Science
               </NavLink>

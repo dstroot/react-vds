@@ -1,25 +1,61 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Navigation renders a Navbar 1`] = `
-<header
-  className="navbar navbar-expand navbar-light flex-column flex-md-row fixed-top"
+<nav
+  className="navbar fixed-top navbar-expand-sm navbar-light bg-light"
 >
-  <a
-    aria-current="page"
-    className="navbar-brand mr-0 mr-md-2 active"
-    href="/"
-    onClick={[Function]}
-    style={Object {}}
+  <div
+    className="container"
   >
-    <img
-      alt=""
-      className="d-inline-block align-top"
-      height="30"
-      src="logo.png"
-      width="30"
-    />
-     
-    Verite Data Science
-  </a>
-</header>
+    <a
+      aria-current="page"
+      className="navbar-brand active"
+      href="/"
+      onClick={[Function]}
+      style={Object {}}
+    >
+      <img
+        alt=""
+        className="d-inline-block align-top"
+        height="30"
+        src="logo.png"
+        width="30"
+      />
+       
+      Verite Data Science
+    </a>
+    <button
+      aria-label="Toggle navigation"
+      className="navbar-toggler collapsed"
+      onClick={[Function]}
+      type="button"
+    >
+      <span
+        className="navbar-toggler-icon"
+      />
+    </button>
+    <div
+      className="navbar-collapse collapse"
+    >
+      <a
+        aria-current={null}
+        className="nav-link"
+        href="/about"
+        onClick={[Function]}
+        style={undefined}
+      >
+        About
+      </a>
+      <a
+        aria-current={null}
+        className="nav-link"
+        href="/contact"
+        onClick={[Function]}
+        style={undefined}
+      >
+        Contact
+      </a>
+    </div>
+  </div>
+</nav>
 `;

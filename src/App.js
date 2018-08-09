@@ -14,6 +14,9 @@ import PageNotFound from './pages/PageNotFound';
 import PageContact from './pages/PageContact';
 import PageToast from './pages/PageToast';
 
+// routes
+import * as routes from './constants/routes';
+
 // css
 import './scss/main.scss';
 
@@ -40,12 +43,12 @@ class App extends Component {
           {/* <Navigation /> */}
           <Switch>
             {/* if the path matches the component will render */}
-            <Route exact path="/" component={PageLanding} />
-            <Route path="/terms" component={PageTerms} />
-            <Route path="/privacy" component={PagePrivacy} />
-            <Route path="/about" component={PageAbout} />
-            <Route path="/contact" component={PageContact} />
-            <Route path="/toast" component={PageToast} />
+            <Route exact path={routes.HOME} component={PageLanding} />
+            <Route path={routes.TERMS} component={PageTerms} />
+            <Route path={routes.PRIVACY} component={PagePrivacy} />
+            <Route path={routes.ABOUT} component={PageAbout} />
+            <Route path={routes.CONTACT} component={PageContact} />
+            <Route path={routes.TOAST} component={PageToast} />
             {/* when none of the above match, <NoMatch> will be rendered */}
             <Route
               component={props => (

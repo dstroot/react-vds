@@ -61,7 +61,7 @@ exports[`PageLanding renders the landing page 1`] = `
           >
             <a
               aria-current={null}
-              className="btn btn-lg btn-outline-primary mb-2 mb-md-0 mr-md-2"
+              className="btn btn-lg btn-outline-primary mt-3 mb-2 mb-md-0 mr-md-2"
               href="/about"
               onClick={[Function]}
               style={undefined}
