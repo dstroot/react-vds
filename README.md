@@ -14,3 +14,7 @@ This project was bootstrapped with `create-react-app`. To learn about how to use
 
 React Router Info:
 https://stackoverflow.com/questions/42123261/programmatically-navigate-using-react-router-v4
+
+69c3d4b
+
+"react-scripts": "2.0.0-next.3e165448" 69c3d4b

@@ -4,6 +4,7 @@ import logo from 'logo.png';
 import * as routes from '../constants/routes';
 
 class Navigation extends React.PureComponent {
+  buttonRef = React.createRef();
   state = {
     isHidden: true,
   };
@@ -12,7 +13,8 @@ class Navigation extends React.PureComponent {
     this.setState({
       isHidden: !this.state.isHidden,
     });
-    document.activeElement.blur();
+    // blur the button (otherwise it stays pressed)
+    this.buttonRef.current.blur();
   };
 
   render() {
@@ -45,6 +47,7 @@ class Navigation extends React.PureComponent {
             type="button"
             aria-label="Toggle navigation"
             onClick={this.toggleHidden}
+            ref={this.buttonRef}
           >
             <span className="navbar-toggler-icon" />
           </button>
