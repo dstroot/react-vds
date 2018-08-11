@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import { Switch, Route } from 'react-router-dom';
 
 // components
@@ -37,13 +37,11 @@ library.add(faSpinner, faCheck, faCheckCircle, faExclamationTriangle);
 class App extends Component {
   render() {
     return (
-      <div className="site">
-        <Navigation className="site-header" />
+      <Fragment>
+        <Navigation />
 
-        <div className="site-content site-content--full">
-          {/* <Navigation /> */}
+        <main role="main" className="flex-shrink-0 mt-5">
           <Switch>
-            {/* if the path matches the component will render */}
             <Route exact path={routes.HOME} component={PageLanding} />
             <Route path={routes.TERMS} component={PageTerms} />
             <Route path={routes.PRIVACY} component={PagePrivacy} />
@@ -60,10 +58,10 @@ class App extends Component {
               )}
             />
           </Switch>
-        </div>
+        </main>
 
-        <Footer className="site-footer" />
-      </div>
+        <Footer />
+      </Fragment>
     );
   }
 }

@@ -2,7 +2,7 @@
 
 exports[`Footer renders a footer 1`] = `
 <footer
-  className="bg-gray-lighter text-secondary mt-4"
+  className="bg-gray-lighter text-secondary mt-auto py-3"
 >
   <hr />
   <div
