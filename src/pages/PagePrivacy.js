@@ -7,7 +7,6 @@ const PagePrivacy = () => {
     <div>
       <Helmet>
         <title>Verite Data Science &middot; Privacy</title>
-        <link rel="canonical" href="https://veritedatascience.com/privacy" />
       </Helmet>
       <div className="mini-tron">
         <div className="container">

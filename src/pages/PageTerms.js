@@ -6,7 +6,6 @@ const PageTerms = () => {
     <div>
       <Helmet>
         <title>Verite Data Science &middot; Terms</title>
-        <link rel="canonical" href="https://veritedatascience.com/terms" />
       </Helmet>
       <div className="mini-tron">
         <div className="container">

@@ -27,7 +27,6 @@ const PageLanding = () => {
     <div>
       <Helmet>
         <title>Verite Data Science &middot; Welcome!</title>
-        <link rel="canonical" href="https://veritedatascience.com" />
       </Helmet>
       <Masthead />
       <Content />

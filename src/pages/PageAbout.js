@@ -14,7 +14,6 @@ const About = () => {
     <main className="bd-masthead" id="content" role="main">
       <Helmet>
         <title>Verite Data Science &middot; About</title>
-        <link rel="canonical" href="https://veritedatascience.com/about" />
       </Helmet>
       <div className="container">
         <div className="row">

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import ContactUs from 'ContactUs';
+import { Helmet } from 'react-helmet';
 
 // notificatiions
 import ReactNotification from 'react-notifications-component';
@@ -36,6 +37,9 @@ class PageToast extends Component {
   render() {
     return (
       <div>
+        <Helmet>
+          <title>Verite Data Science &middot; Toast</title>
+        </Helmet>
         <ContactUs />
         <div className="container">
           <div className="row">
