@@ -56,7 +56,7 @@ class Navigation extends React.PureComponent {
             <NavLink
               to={routes.ABOUT}
               className="nav-link"
-              activeClassName="active"
+              activeClassName="nav-link active"
               onClick={this.toggleHidden}
             >
               About
@@ -64,7 +64,7 @@ class Navigation extends React.PureComponent {
             <NavLink
               to={routes.CONTACT}
               className="nav-link"
-              activeClassName="active"
+              activeClassName="nav-link active"
               onClick={this.toggleHidden}
             >
               Contact
