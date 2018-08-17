@@ -47,6 +47,11 @@
     rendered into the container. Cool right?
     -->
   <style>
+    .loader {
+       height: 100%;
+       display: flex;
+       flex-direction: column;
+    }
     .loader:empty {
       position: absolute;
       top: calc(50% - 4em);
@@ -92,7 +97,7 @@
 
 <body class="h-100">
   <noscript>You need to enable JavaScript to run this app.</noscript>
-  <div id="root" class="loader d-flex flex-column h-100"></div>
+  <div id="root" class="loader"></div>
   <!-- Needed for IE support :( -->
   <script type='text/javascript' src="https://cdn.polyfill.io/v2/polyfill.min.js"></script>
 </body>

@@ -17,7 +17,7 @@ import PageToast from './pages/PageToast';
 // routes
 import * as routes from './constants/routes';
 
-// css
+// our main css
 import './scss/main.scss';
 
 // Font Awesome
@@ -39,7 +39,6 @@ class App extends Component {
     return (
       <Fragment>
         <Navigation />
-
         <main role="main" className="flex-shrink-0 mt-5">
           <Switch>
             <Route exact path={routes.HOME} component={PageLanding} />
@@ -59,7 +58,6 @@ class App extends Component {
             />
           </Switch>
         </main>
-
         <Footer />
       </Fragment>
     );
