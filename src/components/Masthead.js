@@ -1,5 +1,5 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import logo from 'logo.png';
 import Particles from 'react-particles-js';
 import ErrorBoundary from 'ErrorBoundary';
@@ -108,12 +108,12 @@ const Masthead = () => {
               into place, we can help.
             </p>
             <div className="d-flex flex-column flex-md-row lead mb-3">
-              <NavLink
+              <Link
                 to={routes.ABOUT}
                 className="btn btn-lg btn-outline-primary mt-3 mb-2 mb-md-0 mr-md-2"
               >
                 About Verite Data Science
-              </NavLink>
+              </Link>
             </div>
           </div>
         </div>

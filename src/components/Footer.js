@@ -1,5 +1,5 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import * as routes from '../constants/routes';
 
 const Footer = () => {
@@ -20,13 +20,13 @@ const Footer = () => {
             <h4>Links</h4>
             <ul className="list-unstyled">
               <li>
-                <NavLink to={routes.CONTACT}>Contact Us</NavLink>
+                <Link to={routes.CONTACT}>Contact Us</Link>
               </li>
               <li>
-                <NavLink to={routes.PRIVACY}>Privacy</NavLink>
+                <Link to={routes.PRIVACY}>Privacy</Link>
               </li>
               <li>
-                <NavLink to={routes.TERMS}>Terms of Use</NavLink>
+                <Link to={routes.TERMS}>Terms of Use</Link>
               </li>
             </ul>
           </div>
