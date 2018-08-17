@@ -1,5 +1,5 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, Link } from 'react-router-dom';
 import logo from 'logo.png';
 import * as routes from '../constants/routes';
 
@@ -31,7 +31,7 @@ class Navigation extends React.PureComponent {
     return (
       <nav className="navbar fixed-top navbar-expand-sm navbar-light bg-light">
         <div className="container">
-          <NavLink to="/" className="navbar-brand">
+          <Link to="/" className="navbar-brand">
             <img
               className="d-inline-block align-top"
               src={logo}
@@ -40,7 +40,7 @@ class Navigation extends React.PureComponent {
               alt=""
             />{' '}
             Verite Data Science
-          </NavLink>
+          </Link>
 
           <button
             className={buttonClasses}
