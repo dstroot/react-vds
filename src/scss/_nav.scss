@@ -4,13 +4,17 @@
 
 .navbar {
   box-shadow: 0 2px 40px 0 rgba(0, 0, 0, 0.1);
-  font-weight: 300;
   text-transform: uppercase;
-  // a.active {
-  //   font-weight: 500;
-  //   // color: blue;
-  // }
-  // a:hover {
-  //   font-weight: 600;
-  // }
+  a {
+    text-transform: uppercase;
+    font-weight: 400;
+    // color: theme-color-level('primary', -8);
+    color: gray('500');
+    &:hover {
+      color: theme-color('primary');
+    }
+  }
+  a.active {
+    color: theme-color('primary');
+  }
 }

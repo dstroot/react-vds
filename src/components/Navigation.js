@@ -1,16 +1,16 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { NavLink, Link } from 'react-router-dom';
 import logo from 'logo.png';
 import * as routes from '../constants/routes';
 
-// As you may already know, a common way to tune a React component for performance 
-// is to make it “pure,” which causes it to only re-render when its props change 
-// (instead of every time its parent re-renders). This can be done automatically 
+// As you may already know, a common way to tune a React component for performance
+// is to make it “pure,” which causes it to only re-render when its props change
+// (instead of every time its parent re-renders). This can be done automatically
 // by extending React.PureComponent instead of React.Component.  In this case I tried
 // PureComponent and found that the Navbar didn't update for all navigation activities
-// so I went back to using a standard component.  
+// so I went back to using a standard component.
 
-class Navigation extends React.Component {
+class Navigation extends Component {
   buttonRef = React.createRef();
   state = {
     isHidden: true,
@@ -54,7 +54,7 @@ class Navigation extends React.Component {
             type="button"
             aria-label="Toggle navigation"
             onClick={this.toggleHidden}
-            ref={this.buttonRef}
+            ref={this.buttonRef} // get a reference to the button
           >
             <span className="navbar-toggler-icon" />
           </button>
@@ -68,6 +68,7 @@ class Navigation extends React.Component {
             >
               About
             </NavLink>
+
             <NavLink
               to={routes.CONTACT}
               className="nav-link"
