@@ -34,33 +34,24 @@ exports[`Footer renders a footer 1`] = `
         >
           <li>
             <a
-              aria-current={null}
-              className={undefined}
               href="/contact"
               onClick={[Function]}
-              style={undefined}
             >
               Contact Us
             </a>
           </li>
           <li>
             <a
-              aria-current={null}
-              className={undefined}
               href="/privacy"
               onClick={[Function]}
-              style={undefined}
             >
               Privacy
             </a>
           </li>
           <li>
             <a
-              aria-current={null}
-              className={undefined}
               href="/terms"
               onClick={[Function]}
-              style={undefined}
             >
               Terms of Use
             </a>

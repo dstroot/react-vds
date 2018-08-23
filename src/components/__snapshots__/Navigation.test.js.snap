@@ -8,11 +8,9 @@ exports[`Navigation renders a Navbar 1`] = `
     className="container"
   >
     <a
-      aria-current="page"
-      className="navbar-brand active"
+      className="navbar-brand"
       href="/"
       onClick={[Function]}
-      style={Object {}}
     >
       <img
         alt=""
