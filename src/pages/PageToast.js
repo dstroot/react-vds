@@ -41,7 +41,7 @@ class PageToast extends Component {
           <title>Verite Data Science &middot; Toast</title>
         </Helmet>
         <ContactUs />
-        <div className="container">
+        <div className="container mt-5">
           <div className="row">
             <div className="col mt-5">
               <ReactNotification

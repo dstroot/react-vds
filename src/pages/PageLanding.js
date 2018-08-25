@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import { Helmet } from 'react-helmet';
 import Masthead from 'Masthead';
 import Content from 'Content';
@@ -24,14 +24,14 @@ import ContactUs from 'ContactUs';
 
 const PageLanding = () => {
   return (
-    <div>
+    <Fragment>
       <Helmet>
         <title>Verite Data Science &middot; Welcome!</title>
       </Helmet>
       <Masthead />
       <Content />
       <ContactUs />
-    </div>
+    </Fragment>
   );
 };
 
