@@ -18,10 +18,6 @@
         "source": "**",
         "headers": [
           {
-            "key": "Content-Security-Policy",
-            "value": "script-src 'self' https://cdn.polyfill.io"
-          },
-          {
             "key": "Feature-Policy",
             "value": "camera 'none'; microphone 'none'"
           },

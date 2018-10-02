@@ -15,7 +15,6 @@ Array [
           className="canvas-container"
         >
           <canvas
-            className={undefined}
             style={
               Object {
                 "height": "100%",
@@ -344,7 +343,6 @@ Array [
         className="btn btn-lg btn-outline-secondary"
         href="/contact"
         onClick={[Function]}
-        style={undefined}
       >
         Contact Us
       </a>

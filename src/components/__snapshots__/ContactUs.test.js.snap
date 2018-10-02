@@ -162,7 +162,6 @@ exports[`ContactUs renders some content 1`] = `
       className="btn btn-lg btn-outline-secondary"
       href="/contact"
       onClick={[Function]}
-      style={undefined}
     >
       Contact Us
     </a>

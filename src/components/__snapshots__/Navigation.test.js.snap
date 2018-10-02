@@ -40,7 +40,6 @@ exports[`Navigation renders a Navbar 1`] = `
         className="nav-link"
         href="/about"
         onClick={[Function]}
-        style={undefined}
       >
         About
       </a>
@@ -49,7 +48,6 @@ exports[`Navigation renders a Navbar 1`] = `
         className="nav-link"
         href="/contact"
         onClick={[Function]}
-        style={undefined}
       >
         Contact
       </a>
