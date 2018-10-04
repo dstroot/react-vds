@@ -1621,10 +1621,10 @@ babel-preset-jest@^23.2.0:
     babel-plugin-jest-hoist "^23.2.0"
     babel-plugin-syntax-object-rest-spread "^6.13.0"
 
-babel-preset-react-app@^5.0.2:
-  version "5.0.2"
-  resolved "https://registry.yarnpkg.com/babel-preset-react-app/-/babel-preset-react-app-5.0.2.tgz#b00605ec1ae4f0dee0bde33f5b6896de6f720a15"
-  integrity sha512-ogV5J3o5lxdUwNGNGbVTHhAnWMLhnSv9QR/Kyb0aeeJ4IURdky3Uj8gTb258hyE4jRUMohU9CUUwzHfeuj3qPw==
+babel-preset-react-app@^5.0.3:
+  version "5.0.3"
+  resolved "https://registry.yarnpkg.com/babel-preset-react-app/-/babel-preset-react-app-5.0.3.tgz#ab750bc368e5bbabb45a3dade946660d29dac6bd"
+  integrity sha512-nLeuYPjhOUGKgYCZrGW57glKCwr5ahMsX5gv025bugevHfK2H+wTw8zOIkG/mpiC/vkhFBp8GamOhnpHNFIwmA==
   dependencies:
     "@babel/core" "7.1.0"
     "@babel/plugin-proposal-class-properties" "7.1.0"
@@ -1930,7 +1930,7 @@ browserify-zlib@^0.2.0:
   dependencies:
     pako "~1.0.5"
 
-browserslist@4.1.1, browserslist@^4.0.0, browserslist@^4.1.0, browserslist@^4.1.1:
+browserslist@4.1.1:
   version "4.1.1"
   resolved "https://registry.yarnpkg.com/browserslist/-/browserslist-4.1.1.tgz#328eb4ff1215b12df6589e9ab82f8adaa4fc8cd6"
   integrity sha512-VBorw+tgpOtZ1BYhrVSVTzTt/3+vSE3eFUh0N2GCFK1HffceOaf32YS/bs6WiFhjDAblAFrx85jMy3BG9fBK2Q==
@@ -1938,6 +1938,15 @@ browserslist@4.1.1, browserslist@^4.0.0, browserslist@^4.1.0, browserslist@^4.1.
     caniuse-lite "^1.0.30000884"
     electron-to-chromium "^1.3.62"
     node-releases "^1.0.0-alpha.11"
+
+browserslist@^4.0.0, browserslist@^4.1.0, browserslist@^4.1.1:
+  version "4.1.2"
+  resolved "https://registry.yarnpkg.com/browserslist/-/browserslist-4.1.2.tgz#632feb46d1cbdd6bb1a6eb660eff68f2345ae7e7"
+  integrity sha512-docXmVcYth9AiW5183dEe2IxnbmpXF4jiM6efGBVRAli/iDSS894Svvjenrv5NPqAJ4dEJULmT4MSvmLG9qoYg==
+  dependencies:
+    caniuse-lite "^1.0.30000888"
+    electron-to-chromium "^1.3.73"
+    node-releases "^1.0.0-alpha.12"
 
 bser@^2.0.0:
   version "2.0.0"
@@ -2102,10 +2111,10 @@ caniuse-api@^3.0.0:
     lodash.memoize "^4.1.2"
     lodash.uniq "^4.5.0"
 
-caniuse-lite@^1.0.0, caniuse-lite@^1.0.30000884, caniuse-lite@^1.0.30000887:
-  version "1.0.30000888"
-  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30000888.tgz#22edb50d91dd70612b5898e3b36f460600c6492f"
-  integrity sha512-vftg+5p/lPsQGpnhSo/yBuYL36ai/cyjLvU3dOPJY1kkKrekLWIy8SLm+wzjX0hpCUdFTasC4/ZT7uqw4rKOnQ==
+caniuse-lite@^1.0.0, caniuse-lite@^1.0.30000884, caniuse-lite@^1.0.30000887, caniuse-lite@^1.0.30000888:
+  version "1.0.30000889"
+  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30000889.tgz#53e266c83e725ad3bd2e4a3ea76d5031a8aa4c3e"
+  integrity sha512-MFxcQ6x/LEEoaIhO7Zdb7Eg8YyNONN+WBnS5ERJ0li2yRw51+i4xXUNxnLaveTb/4ZoJqsWKEmlomhG2pYzlQA==
 
 canvas-prebuilt@^1.6.5-prerelease.1:
   version "1.6.11"
@@ -3184,7 +3193,7 @@ ee-first@1.1.1:
   resolved "https://registry.yarnpkg.com/ee-first/-/ee-first-1.1.1.tgz#590c61156b0ae2f4f0255732a158b266bc56b21d"
   integrity sha1-WQxhFWsK4vTwJVcyoViyZrxWsh0=
 
-electron-to-chromium@^1.3.62:
+electron-to-chromium@^1.3.62, electron-to-chromium@^1.3.73:
   version "1.3.73"
   resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.3.73.tgz#aa67787067d58cc3920089368b3b8d6fe0fc12f6"
   integrity sha512-6PIg7v9zRoVGh6EheRF8h6Plti+3Yo/qtHobS4/Htyt53DNHmKKGFqSae1AIk0k1S4gCQvt7I2WgpbuZNcDY+g==
@@ -4161,9 +4170,9 @@ global-prefix@^1.0.1:
     which "^1.2.14"
 
 globals@^11.1.0, globals@^11.7.0:
-  version "11.7.0"
-  resolved "https://registry.yarnpkg.com/globals/-/globals-11.7.0.tgz#a583faa43055b1aca771914bf68258e2fc125673"
-  integrity sha512-K8BNSPySfeShBQXsahYB/AbbWruVOTyVpgoIDnl8odPpeSfP2J5QO2oLFFdl2j7GfDCtZj2bMKar2T49itTPCg==
+  version "11.8.0"
+  resolved "https://registry.yarnpkg.com/globals/-/globals-11.8.0.tgz#c1ef45ee9bed6badf0663c5cb90e8d1adec1321d"
+  integrity sha512-io6LkyPVuzCHBSQV9fmOwxZkUk6nIaGmxheLDgmuFv89j0fm2aqDbIXKAGfzCMHqz3HLF2Zf8WSG6VqMh2qFmA==
 
 globals@^9.18.0:
   version "9.18.0"
@@ -6047,12 +6056,13 @@ math-random@^1.0.1:
   integrity sha1-izqsWIuKZuSXXjzepn97sylgH6w=
 
 md5.js@^1.3.4:
-  version "1.3.4"
-  resolved "https://registry.yarnpkg.com/md5.js/-/md5.js-1.3.4.tgz#e9bdbde94a20a5ac18b04340fc5764d5b09d901d"
-  integrity sha1-6b296UogpawYsENA/Fdk1bCdkB0=
+  version "1.3.5"
+  resolved "https://registry.yarnpkg.com/md5.js/-/md5.js-1.3.5.tgz#b5d07b8e3216e3e27cd728d72f70d1e6a342005f"
+  integrity sha512-xitP+WxNPcTTOgnTJcrhM0xvdPepipPSf3I8EIpGKeFLjt3PlJLIDG3u8EX53ZIubkb+5U2+3rELYpEhHhzdkg==
   dependencies:
     hash-base "^3.0.0"
     inherits "^2.0.1"
+    safe-buffer "^5.1.2"
 
 mdn-data@~1.1.0:
   version "1.1.4"
@@ -6505,7 +6515,7 @@ node-pre-gyp@^0.10.0:
     semver "^5.3.0"
     tar "^4"
 
-node-releases@^1.0.0-alpha.11:
+node-releases@^1.0.0-alpha.11, node-releases@^1.0.0-alpha.12:
   version "1.0.0-alpha.12"
   resolved "https://registry.yarnpkg.com/node-releases/-/node-releases-1.0.0-alpha.12.tgz#32e461b879ea76ac674e511d9832cf29da345268"
   integrity sha512-VPB4rTPqpVyWKBHbSa4YPFme3+8WHsOSpvbp0Mfj0bWsC8TEjt4HQrLl1hsBDELlp1nB4lflSgSuGTYiuyaP7Q==
@@ -7209,11 +7219,11 @@ postcss-custom-media@^7.0.4:
     postcss "^7.0.2"
 
 postcss-custom-properties@^8.0.5:
-  version "8.0.6"
-  resolved "https://registry.yarnpkg.com/postcss-custom-properties/-/postcss-custom-properties-8.0.6.tgz#404d2f0848abef200807ac1587ab7758983416fa"
-  integrity sha512-9lBrDTCQCfe7PesXP4om76mLIuNnBXjdJ5SuVcPZpDtWpC2Y3KVlXfC68ha+wek1R7crWi10xW8Hzw0fi4LIPg==
+  version "8.0.8"
+  resolved "https://registry.yarnpkg.com/postcss-custom-properties/-/postcss-custom-properties-8.0.8.tgz#1812e2553805e1affce93164dd1709ef6b69c53e"
+  integrity sha512-G3U8uSxj0B4jPJ1QBF5WYeW716n5HV/wcH2lOTV1V+EI+F0T0/ZOhl32MLLTMD79bN2mE77IOoclbCoLl4QtPA==
   dependencies:
-    postcss "^7.0.3"
+    postcss "^7.0.5"
     postcss-values-parser "^2.0.0"
 
 postcss-custom-selectors@^5.1.2:
@@ -7738,10 +7748,10 @@ postcss@^6.0.1, postcss@^6.0.23:
     source-map "^0.6.1"
     supports-color "^5.4.0"
 
-postcss@^7.0.0, postcss@^7.0.1, postcss@^7.0.2, postcss@^7.0.3:
-  version "7.0.4"
-  resolved "https://registry.yarnpkg.com/postcss/-/postcss-7.0.4.tgz#b5a059597d2c1a8a9916cb6efb0b294f70b4f309"
-  integrity sha512-Bg1BrMZGKNOI0mkn8NtjJrOrZKgoHrl+geKJ45mTOkeY4WCsYq/mjd1BUWRgRvydHP/lA07Ys2n9m6Va5FsEsw==
+postcss@^7.0.0, postcss@^7.0.1, postcss@^7.0.2, postcss@^7.0.5:
+  version "7.0.5"
+  resolved "https://registry.yarnpkg.com/postcss/-/postcss-7.0.5.tgz#70e6443e36a6d520b0fd4e7593fcca3635ee9f55"
+  integrity sha512-HBNpviAUFCKvEh7NZhw1e8MBPivRszIiUnhrJ+sBFVSYSqubrzwX3KG51mYgcRHX8j/cAgZJedONZcm5jTBdgQ==
   dependencies:
     chalk "^2.4.1"
     source-map "^0.6.1"
@@ -8014,10 +8024,10 @@ react-app-polyfill@^0.1.3:
     raf "3.4.0"
     whatwg-fetch "3.0.0"
 
-react-dev-utils@^6.0.3:
-  version "6.0.3"
-  resolved "https://registry.yarnpkg.com/react-dev-utils/-/react-dev-utils-6.0.3.tgz#78662b5fd7b4441140485e80d04d594116c5b1e3"
-  integrity sha512-3fI6rknX4td1/iFM+RtQh56TgSKUn6lvAmzqtYepk6OrTGwG1bEXv0x0NvaUdTwZHwdcdkuaeOeTzZHSbHk4Ug==
+react-dev-utils@^6.0.4:
+  version "6.0.4"
+  resolved "https://registry.yarnpkg.com/react-dev-utils/-/react-dev-utils-6.0.4.tgz#cd6d2712aa22d67751ef6757dc82787351da8826"
+  integrity sha512-0I+eRcb4RrmlWCKRJhDLi29oTEqpDEbbVGI1DrN/ZTJbvhzycsg03Edi67YQVUjYl690URufowi54+u0TUnQMw==
   dependencies:
     "@babel/code-frame" "7.0.0"
     address "1.0.3"
@@ -8035,7 +8045,7 @@ react-dev-utils@^6.0.3:
     loader-utils "1.1.0"
     opn "5.4.0"
     pkg-up "2.0.0"
-    react-error-overlay "^5.0.3"
+    react-error-overlay "^5.0.4"
     recursive-readdir "2.2.2"
     shell-quote "1.6.1"
     sockjs-client "1.1.5"
@@ -8052,10 +8062,10 @@ react-dom@^16.4.1:
     prop-types "^15.6.2"
     schedule "^0.5.0"
 
-react-error-overlay@^5.0.3:
-  version "5.0.3"
-  resolved "https://registry.yarnpkg.com/react-error-overlay/-/react-error-overlay-5.0.3.tgz#6eae9350144f3cd036e4f968c5a8bfae542af562"
-  integrity sha512-TLMcjJcNy7BalEHN1iNuIK0E6ODYgExcrdaKraT4kzKVztkrBHI1THTAn3qx7GVvtP4TbCqi+mBjsZqoWtuiEQ==
+react-error-overlay@^5.0.4:
+  version "5.0.4"
+  resolved "https://registry.yarnpkg.com/react-error-overlay/-/react-error-overlay-5.0.4.tgz#39cf184d770f98b65a2ee59a779d03b8d092b69e"
+  integrity sha512-grVJtoDzIbSMYgy5rKbSOmt2FvzR4iJnpMBjXmZolSYJM5acQvBHoEbBBNW0FzTE/TLZMZ+gSy0bAHydc1hFEw==
 
 react-helmet@^5.2.0:
   version "5.2.0"
@@ -8110,9 +8120,9 @@ react-router@^4.3.1:
     warning "^4.0.1"
 
 react-scripts@^2.0.1:
-  version "2.0.3"
-  resolved "https://registry.yarnpkg.com/react-scripts/-/react-scripts-2.0.3.tgz#f766839096a7d28b318edcea16e56634243ae04f"
-  integrity sha512-Hw6P9vJ9vXWdo5J752lzN6NpmY3DpEjp5VD+V+N+61TY5+UY/oKtfF+23ZRFBCkULlVvQdo25Sw92HKA2wI8sw==
+  version "2.0.4"
+  resolved "https://registry.yarnpkg.com/react-scripts/-/react-scripts-2.0.4.tgz#244a69abbf5630a80ad81349a6d0d56d91583c6c"
+  integrity sha512-zqsdYYeUqfURac6NEL9/5aImOINuMdm3OjBaIhGxEqJQOtlhsJTrvjY30zJpnCLUMv9B7BLIsmkvvOd0z+x1kQ==
   dependencies:
     "@babel/core" "7.1.0"
     "@svgr/webpack" "2.4.1"
@@ -8121,7 +8131,7 @@ react-scripts@^2.0.1:
     babel-jest "23.6.0"
     babel-loader "8.0.4"
     babel-plugin-named-asset-import "^0.2.2"
-    babel-preset-react-app "^5.0.2"
+    babel-preset-react-app "^5.0.3"
     bfj "6.1.1"
     case-sensitive-paths-webpack-plugin "2.1.2"
     chalk "2.4.1"
@@ -8150,7 +8160,7 @@ react-scripts@^2.0.1:
     postcss-preset-env "6.0.6"
     postcss-safe-parser "4.0.1"
     react-app-polyfill "^0.1.3"
-    react-dev-utils "^6.0.3"
+    react-dev-utils "^6.0.4"
     resolve "1.8.1"
     sass-loader "7.1.0"
     style-loader "0.23.0"
