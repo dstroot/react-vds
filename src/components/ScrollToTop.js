@@ -14,3 +14,15 @@ class ScrollToTop extends PureComponent {
 }
 
 export default withRouter(ScrollToTop);
+
+// import { useEffect } from 'react';
+// import { withRouter } from 'react-router';
+//
+// const ScrollToTop = () => {
+//   useEffect(() => {
+//     window.scrollTo(0, 0);
+//   });
+//   return this.props.children;
+// };
+//
+// export default withRouter(ScrollToTop);

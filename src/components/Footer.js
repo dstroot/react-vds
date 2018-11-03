@@ -6,7 +6,6 @@ const Footer = () => {
   const year = new Date(); // evergreen copyright year
   return (
     <footer className="bg-gray-lighter text-secondary mt-auto py-3">
-      {/* <hr /> */}
       <div className="container font-weight-light">
         <div className="row py-3">
           <div className="col-sm-8">
