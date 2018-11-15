@@ -10,14 +10,14 @@
     "@fortawesome/react-fontawesome": "^0.1.0",
     "animate.css": "^3.6.1",
     "bootstrap": "^4.1.2",
-    "react": "^16.4.1",
+    "react": "^16.7.0-alpha.0",
+    "react-dom": "^16.7.0-alpha.0",
+    "react-scripts": "2.0.4",
     "react-app-polyfill": "^0.0.0",
-    "react-dom": "^16.4.1",
     "react-helmet": "^5.2.0",
     "react-notifications-component": "^0.1.1",
     "react-particles-js": "^2.2.0",
-    "react-router-dom": "^4.3.1",
-    "react-scripts": "^2.0.1"
+    "react-router-dom": "^4.3.1"
   },
   "scripts": {
     "start": "NODE_PATH=src:src/components:src/pages:src/utils:src/media react-scripts start",
