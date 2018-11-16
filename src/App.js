@@ -13,7 +13,7 @@ import * as routes from './constants/routes';
 import PageLanding from './pages/PageLanding';
 // import PageTerms from './pages/PageTerms';
 // import PagePrivacy from './pages/PagePrivacy';
-// import PageAbout from './pages/PageAbout';
+import PageAbout from './pages/PageAbout';
 // import PageNotFound from './pages/PageNotFound';
 // import PageContact from './pages/PageContact';
 // import PageToast from './pages/PageToast';
@@ -37,10 +37,10 @@ import {
 // const PageLanding = LazyImport(() => import('./pages/PageLanding'));
 const PageTerms = LazyImport(() => import('./pages/PageTerms'));
 const PagePrivacy = LazyImport(() => import('./pages/PagePrivacy'));
-const PageAbout = LazyImport(() => import('./pages/PageAbout'));
+// const PageAbout = LazyImport(() => import('./pages/PageAbout'));
 const PageNotFound = LazyImport(() => import('./pages/PageNotFound'));
 const PageContact = LazyImport(() => import('./pages/PageContact'));
-const PageToast = LazyImport(() => import('./pages/PageToast'));
+// const PageToast = LazyImport(() => import('./pages/PageToast'));
 
 // library of Font Awesome Icons
 library.add(faSpinner, faCheck, faCheckCircle, faExclamationTriangle);
@@ -55,7 +55,7 @@ const App = () => (
         <Route path={routes.PRIVACY} component={PagePrivacy} />
         <Route path={routes.ABOUT} component={PageAbout} />
         <Route path={routes.CONTACT} component={PageContact} />
-        <Route path={routes.TOAST} component={PageToast} />
+        {/*<Route path={routes.TOAST} component={PageToast} />*/}
         {/* when none of the above match, <NoMatch> will be rendered */}
         <Route
           component={props => (
