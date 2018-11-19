@@ -27,13 +27,13 @@ const About = () => {
           <h1 className="display-4 mb-3 text-primary">About Us</h1>
           <p className="lead">
             We were formed to help businesses with very specific challenges in
-            today's world. There are three specific challenges that many
+            today&#39;s world. There are three specific challenges that many
             companies face.
           </p>
           <p className="lead">
             Most companies have realized the economics of leveraging cloud
-            infrastructure providers such as Amazon Web Services (AWS) Google's
-            Cloud Platform (GCP) and Micrsoft Azure. However vendor lock-in is
+            infrastructure providers such as Amazon Web Services (AWS) Google&#39;s
+            Cloud Platform (GCP) and Micrsoft Azure. However, vendor lock-in is
             one concern as this migration occurs. Businesses are exploring how
             to leverage containers and container orchestration to allow
             workloads to be shared more easily across cloud providers and to
@@ -43,7 +43,7 @@ const About = () => {
             to a canary deployment.
           </p>
           <p className="lead">
-            Second, companies struggle with employee mobility and te new digital
+            Second, companies struggle with employee mobility and the new digital
             workplace. Businesses are realizing that <strong>identity</strong>{' '}
             is the new perimiter. Liberating identity is the first step to
             liberating employees. Liberating documents and files is the next
