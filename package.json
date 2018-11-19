@@ -15,7 +15,7 @@
     "react-dom": "^16.7.0-alpha.0",
     "react-helmet": "^5.2.0",
     "react-notifications-component": "^0.1.1",
-    "react-particles-js": "^2.2.0",
+    "react-particles-js": "^2.4.0",
     "react-router-dom": "^4.4.0-beta.6",
     "react-scripts": "2.0.4"
   },

@@ -5899,7 +5899,7 @@ lodash.camelcase@^4.3.0:
   resolved "https://registry.yarnpkg.com/lodash.camelcase/-/lodash.camelcase-4.3.0.tgz#b28aa6288a2b9fc651035c7711f65ab6190331a6"
   integrity sha1-soqmKIorn8ZRA1x3EfZathkDMaY=
 
-lodash.clonedeep@^4.3.2, lodash.clonedeep@^4.5.0:
+lodash.clonedeep@^4.3.2:
   version "4.5.0"
   resolved "https://registry.yarnpkg.com/lodash.clonedeep/-/lodash.clonedeep-4.5.0.tgz#e23f3f9c4f8fbdde872529c1071857a086e5ccef"
   integrity sha1-4j8/nE+Pvd6HJSnBBxhXoIblzO8=
@@ -8086,12 +8086,10 @@ react-notifications-component@^0.1.1:
   resolved "https://registry.yarnpkg.com/react-notifications-component/-/react-notifications-component-0.1.1.tgz#f8728fe786fc9f0b69a113330dbfbfecf82f80ea"
   integrity sha512-TlHCYr3WEvxEiiFsf+NNei4m89MIW3VmaXS+wllsalxzEO0lxPX7hm/qJl4E10bqkmYpav8MaafNw+kaHQ7uwg==
 
-react-particles-js@^2.2.0:
-  version "2.3.0"
-  resolved "https://registry.yarnpkg.com/react-particles-js/-/react-particles-js-2.3.0.tgz#2670181eff14f97479b4ae75601f51d9d6c082d7"
-  integrity sha512-QvMLbqGAljhYG8EF3bdqJeIJAdO4Mng6j3yNVKvCn+KstbXYizcwGDzief2olFKHHxFo9C+efu+NFH62sMPvIw==
-  dependencies:
-    lodash.clonedeep "^4.5.0"
+react-particles-js@^2.4.0:
+  version "2.4.0"
+  resolved "https://registry.yarnpkg.com/react-particles-js/-/react-particles-js-2.4.0.tgz#8c95dafb6e9bcf392c96dd30888e76001c748ed3"
+  integrity sha512-J3qd/OxmDJf4wBFnuRPnMFADvnEEEsLjfNX4fGEYUwA77suoVddFVrCy+A2CTvTVfHVlBkxKvn2Tqp5cCGuxug==
 
 react-router-dom@^4.4.0-beta.6:
   version "4.4.0-beta.6"
