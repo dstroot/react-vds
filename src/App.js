@@ -5,6 +5,7 @@ import { Switch, Route } from 'react-router-dom';
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
 import LazyImport from './components/LazyImport';
+import retry from './utils/retry';
 
 // routes
 import * as routes from './constants/routes';
@@ -34,13 +35,19 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 
 // lazy import page for code splitting
-// const PageLanding = LazyImport(() => import('./pages/PageLanding'));
-const PageTerms = LazyImport(() => import('./pages/PageTerms'));
-const PagePrivacy = LazyImport(() => import('./pages/PagePrivacy'));
-// const PageAbout = LazyImport(() => import('./pages/PageAbout'));
-const PageNotFound = LazyImport(() => import('./pages/PageNotFound'));
-const PageContact = LazyImport(() => import('./pages/PageContact'));
-// const PageToast = LazyImport(() => import('./pages/PageToast'));
+// const PageLanding = LazyImport(() => retry(() => import('./pages/PageLanding')));
+const PageTerms = LazyImport(() => retry(() => import('./pages/PageTerms')));
+const PagePrivacy = LazyImport(() =>
+  retry(() => import('./pages/PagePrivacy'))
+);
+// const PageAbout = LazyImport(() => retry(() => import('./pages/PageAbout')));
+const PageNotFound = LazyImport(() =>
+  retry(() => import('./pages/PageNotFound'))
+);
+const PageContact = LazyImport(() =>
+  retry(() => import('./pages/PageContact'))
+);
+// const PageToast = LazyImport(() => retry(() => import('./pages/PageToast')));
 
 // library of Font Awesome Icons
 library.add(faSpinner, faCheck, faCheckCircle, faExclamationTriangle);
