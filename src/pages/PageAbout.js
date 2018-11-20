@@ -1,5 +1,5 @@
-import React, { useEffect } from 'react';
-// import { Helmet } from 'react-helmet';
+import React from 'react';
+import { Helmet } from 'react-helmet';
 
 // The simplest way to define a component is to write a JavaScript function.
 // We call such components “functional” because they are literally JavaScript
@@ -10,18 +10,11 @@ import React, { useEffect } from 'react';
 // components starting with lowercase letters as DOM tags.
 
 const About = () => {
-  
-  // Set the page title using the useEffect hook
-  useEffect(() => {
-    document.title = `Verite Data Science &middot; About`;
-  });
-  
-  
   return (
     <div className="container mt-5">
-    {/*<Helmet>
+      <Helmet>
         <title>Verite Data Science &middot; About</title>
-      </Helmet>*/}
+      </Helmet>
       <div className="row">
         <div className="col">
           <h1 className="display-4 mb-3 text-primary">About Us</h1>
@@ -32,23 +25,23 @@ const About = () => {
           </p>
           <p className="lead">
             Most companies have realized the economics of leveraging cloud
-            infrastructure providers such as Amazon Web Services (AWS) Google&#39;s
-            Cloud Platform (GCP) and Micrsoft Azure. However, vendor lock-in is
-            one concern as this migration occurs. Businesses are exploring how
-            to leverage containers and container orchestration to allow
-            workloads to be shared more easily across cloud providers and to
-            avoid vendor lock-in. The industry has put momentum behind
+            infrastructure providers such as Amazon Web Services (AWS)
+            Google&#39;s Cloud Platform (GCP) and Micrsoft Azure. However,
+            vendor lock-in is one concern as this migration occurs. Businesses
+            are exploring how to leverage containers and container orchestration
+            to allow workloads to be shared more easily across cloud providers
+            and to avoid vendor lock-in. The industry has put momentum behind
             Kubernetes to perform this role. We understand the new ways of
             leveraging continuous integration directly into a container and then
             to a canary deployment.
           </p>
           <p className="lead">
-            Second, companies struggle with employee mobility and the new digital
-            workplace. Businesses are realizing that <strong>identity</strong>{' '}
-            is the new perimiter. Liberating identity is the first step to
-            liberating employees. Liberating documents and files is the next
-            step. How do you do this securely, and manage the process through
-            the transition?
+            Second, companies struggle with employee mobility and the new
+            digital workplace. Businesses are realizing that{' '}
+            <strong>identity</strong> is the new perimiter. Liberating identity
+            is the first step to liberating employees. Liberating documents and
+            files is the next step. How do you do this securely, and manage the
+            process through the transition?
           </p>
           <p className="lead">
             Finally, big data is big money. We began with the process of
