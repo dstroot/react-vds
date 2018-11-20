@@ -1,5 +1,4 @@
-import React from 'react';
-import { Helmet } from 'react-helmet';
+import React, { useEffect } from 'react';
 
 // The simplest way to define a component is to write a JavaScript function.
 // We call such components “functional” because they are literally JavaScript
@@ -10,11 +9,13 @@ import { Helmet } from 'react-helmet';
 // components starting with lowercase letters as DOM tags.
 
 const About = () => {
+  // Set the page title using the useEffect hook
+  useEffect(() => {
+    document.title = `Verite Data Science • About`;
+  });
+
   return (
     <div className="container mt-5">
-      <Helmet>
-        <title>Verite Data Science &middot; About</title>
-      </Helmet>
       <div className="row">
         <div className="col">
           <h1 className="display-4 mb-3 text-primary">About Us</h1>

@@ -1,12 +1,13 @@
-import React from 'react';
-import { Helmet } from 'react-helmet';
+import React, { useEffect } from 'react';
 
 const PageTerms = () => {
+  // Set the page title using the useEffect hook
+  useEffect(() => {
+    document.title = `Verite Data Science • Terms`;
+  });
+
   return (
     <div className="container mt-5">
-      <Helmet>
-        <title>Verite Data Science &middot; Terms</title>
-      </Helmet>
       <div className="row mb-3">
         <div className="col">
           <h1 className="display-4 text-primary">

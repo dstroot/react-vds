@@ -1,13 +1,16 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 import ContactUs from 'ContactUs';
-import { Helmet } from 'react-helmet';
 
 // notificatiions
 import ReactNotification from 'react-notifications-component';
 import 'react-notifications-component/dist/theme.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-class PageToast extends Component {
+class PageToast extends PureComponent {
+  componentDidMount() {
+    document.title = `Verite Data Science • Toast`;
+  }
+
   addNotification = event => {
     this.notificationDOMRef.addNotification({
       width: 330,
@@ -37,9 +40,6 @@ class PageToast extends Component {
   render() {
     return (
       <div>
-        <Helmet>
-          <title>Verite Data Science &middot; Toast</title>
-        </Helmet>
         <ContactUs />
         <div className="container mt-5">
           <div className="row">

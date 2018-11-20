@@ -1,7 +1,6 @@
 import React, { PureComponent } from 'react';
 import { validateResponse } from '../utils/fetchUtils';
 import { formToJSONString, matchPattern } from 'formUtils';
-import { Helmet } from 'react-helmet';
 import Button from 'Button';
 
 // https://medium.com/@everdimension/how-to-handle-forms-with-just-react-ac066c48bd4f
@@ -30,6 +29,10 @@ class PageContact extends PureComponent {
     success: 'wait', // 'wait', 'yes', 'no'
     message: '',
   };
+
+  componentDidMount() {
+    document.title = `Verite Data Science • Contact`;
+  }
 
   // This function will enable the pattern attribute
   // on a textarea and trigger HTML5 validation.
@@ -105,9 +108,6 @@ class PageContact extends PureComponent {
 
     return (
       <div className="container">
-        <Helmet>
-          <title>Verite Data Science &middot; Contact</title>
-        </Helmet>
         <div className="row">
           <div className="col-md-8 offset-md-2 text-center mt-5">
             <h2 className="font-weight-light text-primary">

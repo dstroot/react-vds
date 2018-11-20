@@ -1,13 +1,14 @@
-import React from 'react';
-import { Helmet } from 'react-helmet';
+import React, { useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const PagePrivacy = () => {
+  // Set the page title using the useEffect hook
+  useEffect(() => {
+    document.title = `Verite Data Science • Privacy`;
+  });
+
   return (
     <div className="container mt-5">
-      <Helmet>
-        <title>Verite Data Science &middot; Privacy</title>
-      </Helmet>
       <div className="row mb-3">
         <div className="col">
           <h1 className="display-4 text-primary">
@@ -124,9 +125,11 @@ const PagePrivacy = () => {
           <h5 className="text-muted">Basically,</h5>
           <h5 className="text-primary">
             We collect information to make the Verite Data Science, LLC website
-            useful for you such as your registration and user profile data.<br />
-            <br />Our servers also collect log information used to make the
-            website faster and better.
+            useful for you such as your registration and user profile data.
+            <br />
+            <br />
+            Our servers also collect log information used to make the website
+            faster and better.
           </h5>
         </div>
       </div>
