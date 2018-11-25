@@ -11,13 +11,21 @@ import App from './App';
 // NOTE: For routes to work properly in React, you need
 // to wrap your whole application in a Router.
 
-ReactDOM.render(
+// ReactDOM.render(
+//   <Router>
+//     <ScrollToTop>
+//       <App />
+//     </ScrollToTop>
+//   </Router>,
+//   document.getElementById('root')
+// );
+
+ReactDOM.createRoot(document.getElementById('root')).render(
   <Router>
     <ScrollToTop>
       <App />
     </ScrollToTop>
-  </Router>,
-  document.getElementById('root')
+  </Router>
 );
 
 // If you want your app to work offline and load faster, you can change

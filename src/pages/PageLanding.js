@@ -1,5 +1,4 @@
-import React, { Fragment } from 'react';
-import { Helmet } from 'react-helmet';
+import React, { useEffect } from 'react';
 import Masthead from 'Masthead';
 import Content from 'Content';
 import ContactUs from 'ContactUs';
@@ -23,15 +22,17 @@ import ContactUs from 'ContactUs';
 //  - They are easy to reuse
 
 const PageLanding = () => {
+  // Set the page title using the useEffect hook
+  useEffect(() => {
+    document.title = `Verite Data Science • Welcome`;
+  });
+
   return (
-    <Fragment>
-      <Helmet>
-        <title>Verite Data Science &middot; Welcome!</title>
-      </Helmet>
+    <>
       <Masthead />
       <Content />
       <ContactUs />
-    </Fragment>
+    </>
   );
 };
 

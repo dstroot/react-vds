@@ -1,7 +1,12 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
 
 const PageNotFound = ({ image }) => {
+  // Set the page title using the useEffect hook
+  useEffect(() => {
+    document.title = `Verite Data Science • 404`;
+  });
+
   return (
     <div className="hero" style={{ backgroundImage: `url(${image})` }}>
       <div className="d-flex justify-content-center color-wash">

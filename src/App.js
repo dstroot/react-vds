@@ -4,18 +4,20 @@ import { Switch, Route } from 'react-router-dom';
 // components
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
-
-// pages
-import PageLanding from './pages/PageLanding';
-import PageTerms from './pages/PageTerms';
-import PagePrivacy from './pages/PagePrivacy';
-import PageAbout from './pages/PageAbout';
-import PageNotFound from './pages/PageNotFound';
-import PageContact from './pages/PageContact';
-import PageToast from './pages/PageToast';
+import LazyImport from './components/LazyImport';
+import retry from './utils/retry';
 
 // routes
 import * as routes from './constants/routes';
+
+// pages
+import PageLanding from './pages/PageLanding';
+// import PageTerms from './pages/PageTerms';
+// import PagePrivacy from './pages/PagePrivacy';
+import PageAbout from './pages/PageAbout';
+// import PageNotFound from './pages/PageNotFound';
+// import PageContact from './pages/PageContact';
+// import PageToast from './pages/PageToast';
 
 // our main css
 import './scss/main.scss';
@@ -31,6 +33,22 @@ import {
   faCheckCircle,
   faExclamationTriangle,
 } from '@fortawesome/free-solid-svg-icons';
+
+// lazy import page for code splitting
+// const PageLanding = LazyImport(() => retry(() => import('./pages/PageLanding')));
+const PageTerms = LazyImport(() => retry(() => import('./pages/PageTerms')));
+const PagePrivacy = LazyImport(() =>
+  retry(() => import('./pages/PagePrivacy'))
+);
+// const PageAbout = LazyImport(() => retry(() => import('./pages/PageAbout')));
+const PageNotFound = LazyImport(() =>
+  retry(() => import('./pages/PageNotFound'))
+);
+const PageContact = LazyImport(() =>
+  retry(() => import('./pages/PageContact'))
+);
+// const PageToast = LazyImport(() => retry(() => import('./pages/PageToast')));
+
 // library of Font Awesome Icons
 library.add(faSpinner, faCheck, faCheckCircle, faExclamationTriangle);
 
@@ -44,7 +62,7 @@ const App = () => (
         <Route path={routes.PRIVACY} component={PagePrivacy} />
         <Route path={routes.ABOUT} component={PageAbout} />
         <Route path={routes.CONTACT} component={PageContact} />
-        <Route path={routes.TOAST} component={PageToast} />
+        {/*<Route path={routes.TOAST} component={PageToast} />*/}
         {/* when none of the above match, <NoMatch> will be rendered */}
         <Route
           component={props => (

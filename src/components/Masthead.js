@@ -9,81 +9,17 @@ import * as routes from '../constants/routes';
 import 'animate.css/source/_base.css';
 import 'animate.css/source/fading_entrances/fadeInDown.css';
 
+// particles configuration
+// https://vincentgarreau.com/particles.js/
+import config from './particles-config.json';
+
 const Masthead = () => {
   return (
     <div className="container mt-5">
       <div className="row">
         <div className="col-5 mx-auto col-md-5 order-md-2 d-none d-md-block">
           <ErrorBoundary>
-            <Particles
-              params={{
-                particles: {
-                  number: {
-                    value: 55,
-                    density: {
-                      enable: true,
-                      value_area: 500,
-                    },
-                  },
-                  color: {
-                    value: '#7256ad',
-                  },
-                  shape: {
-                    type: 'circle',
-                    stroke: {
-                      width: 1,
-                      color: '#7256ad',
-                    },
-                    polygon: {
-                      nb_sides: 5,
-                    },
-                  },
-                  opacity: {
-                    value: 0.9,
-                    random: false,
-                    anim: {
-                      enable: false,
-                      speed: 0.5,
-                      opacity_min: 0.1,
-                      sync: false,
-                    },
-                  },
-                  size: {
-                    value: 3,
-                    random: true,
-                    anim: {
-                      enable: false,
-                      speed: 30,
-                      size_min: 0.1,
-                      sync: false,
-                    },
-                  },
-                  line_linked: {
-                    enable: true,
-                    distance: 110,
-                    color: '#7256ad',
-                    opacity: 0.9,
-                    width: 1,
-                  },
-                  move: {
-                    enable: true,
-                    speed: 2,
-                    direction: 'none',
-                    random: true,
-                    straight: false,
-                    out_mode: 'out',
-                    bounce: false,
-                    attract: {
-                      enable: false,
-                      rotateX: 600,
-                      rotateY: 1200,
-                    },
-                  },
-                },
-                retina_detect: true,
-              }}
-              className={'canvas-container'}
-            />
+            <Particles params={config} className={'canvas-container'} />
           </ErrorBoundary>
         </div>
         <div className="col-md-7 order-md-1 text-center text-md-left pr-md-5">
