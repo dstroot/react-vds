@@ -23,17 +23,17 @@ exports[`PageAbout renders the about page 1`] = `
       <p
         className="lead"
       >
-        Most companies have realized the economics of leveraging cloud infrastructure providers such as Amazon Web Services (AWS) Google's Cloud Platform (GCP) and Micrsoft Azure. However vendor lock-in is one concern as this migration occurs. Businesses are exploring how to leverage containers and container orchestration to allow workloads to be shared more easily across cloud providers and to avoid vendor lock-in. The industry has put momentum behind Kubernetes to perform this role. We understand the new ways of leveraging continuous integration directly into a container and then to a canary deployment.
+        Most companies have realized the economics of leveraging cloud infrastructure providers such as Amazon Web Services (AWS) Google's Cloud Platform (GCP) and Micrsoft Azure. However, vendor lock-in is one concern as this migration occurs. Businesses are exploring how to leverage containers and container orchestration to allow workloads to be shared more easily across cloud providers and to avoid vendor lock-in. The industry has put momentum behind Kubernetes to perform this role. We understand the new ways of leveraging continuous integration directly into a container and then to a canary deployment.
       </p>
       <p
         className="lead"
       >
-        Second, companies struggle with employee mobility and te new digital workplace. Businesses are realizing that 
+        Second, companies struggle with employee mobility and the new digital workplace. Businesses are realizing that
+         
         <strong>
           identity
         </strong>
-         
-        is the new perimiter. Liberating identity is the first step to liberating employees. Liberating documents and files is the next step. How do you do this securely, and manage the process through the transition?
+         is the new perimiter. Liberating identity is the first step to liberating employees. Liberating documents and files is the next step. How do you do this securely, and manage the process through the transition?
       </p>
       <p
         className="lead"

@@ -12,9 +12,11 @@ import * as routes from './constants/routes';
 
 // pages
 import PageLanding from './pages/PageLanding';
+import PageAbout from './pages/PageAbout';
+
+// --- these are now lazy loaded ---
 // import PageTerms from './pages/PageTerms';
 // import PagePrivacy from './pages/PagePrivacy';
-import PageAbout from './pages/PageAbout';
 // import PageNotFound from './pages/PageNotFound';
 // import PageContact from './pages/PageContact';
 // import PageToast from './pages/PageToast';
@@ -34,23 +36,20 @@ import {
   faExclamationTriangle,
 } from '@fortawesome/free-solid-svg-icons';
 
+// library of Font Awesome Icons
+library.add(faSpinner, faCheck, faCheckCircle, faExclamationTriangle);
+
 // lazy import page for code splitting
-// const PageLanding = LazyImport(() => retry(() => import('./pages/PageLanding')));
 const PageTerms = LazyImport(() => retry(() => import('./pages/PageTerms')));
 const PagePrivacy = LazyImport(() =>
   retry(() => import('./pages/PagePrivacy'))
 );
-// const PageAbout = LazyImport(() => retry(() => import('./pages/PageAbout')));
 const PageNotFound = LazyImport(() =>
   retry(() => import('./pages/PageNotFound'))
 );
 const PageContact = LazyImport(() =>
   retry(() => import('./pages/PageContact'))
 );
-// const PageToast = LazyImport(() => retry(() => import('./pages/PageToast')));
-
-// library of Font Awesome Icons
-library.add(faSpinner, faCheck, faCheckCircle, faExclamationTriangle);
 
 const App = () => (
   <Fragment>
