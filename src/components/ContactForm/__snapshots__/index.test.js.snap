@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ContactForm renders some content 1`] = `
+<div
+  className="position-relative overflow-hidden p-2 p-md-5 m-md-3 text-center"
+>
+  <div
+    className="col-md-7 p-lg-2 mx-auto my-5"
+  >
+    <h1
+      className="display-4 text-primary"
+    >
+      Get in Touch
+    </h1>
+    <p
+      className="lead"
+    >
+      Verite Data Science is providing customized solutions for both startups and Fortune 100 companies. Get in touch to see how we can help.
+    </p>
+    <div
+      className="svg-container mx-auto"
+    >
+      <svg>
+        robot.svg
+      </svg>
+    </div>
+    <br />
+    <a
+      className="btn btn-lg btn-outline-secondary"
+      href="/contact"
+      onClick={[Function]}
+    >
+      Contact Us
+    </a>
+  </div>
+</div>
+`;

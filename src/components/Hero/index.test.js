@@ -1,9 +1,9 @@
 import React from 'react';
-import PageToast from './PageToast';
+import Hero from '../Hero';
 import renderer from 'react-test-renderer';
 
-test('PageToast renders the toast page', () => {
-  const component = renderer.create(<PageToast />);
+test('Hero renders some content', () => {
+  const component = renderer.create(<Hero />);
   let tree = component.toJSON();
   expect(tree).toMatchSnapshot();
 });

@@ -8,6 +8,7 @@
     "@fortawesome/free-regular-svg-icons": "^5.1.0",
     "@fortawesome/free-solid-svg-icons": "^5.1.0",
     "@fortawesome/react-fontawesome": "^0.1.0",
+    "@reach/router": "^1.2.1",
     "@sentry/browser": "^4.4.1",
     "animate.css": "^3.6.1",
     "bootstrap": "^4.1.2",
@@ -16,8 +17,17 @@
     "react-dom": "^16.7.0-alpha.0",
     "react-notifications-component": "^0.1.1",
     "react-particles-js": "^2.4.0",
-    "react-router-dom": "^4.4.0-beta.6",
-    "react-scripts": "2.0.4"
+    "react-scripts": "2.1.1"
+  },
+  "devDependencies": {
+    "enzyme": "^3.8.0",
+    "enzyme-adapter-react-16": "^1.7.1",
+    "eslint-plugin-prettier": "^2.6.1",
+    "jest-canvas-mock": "^1.1.0",
+    "node-sass": "^4.9.1",
+    "prettier": "^1.13.7",
+    "prop-types": "^15.6.2",
+    "react-test-renderer": "^16.7.0-alpha.2"
   },
   "scripts": {
     "start": "NODE_PATH=src:src/components:src/pages:src/utils:src/media react-scripts start",
@@ -25,13 +35,14 @@
     "test": "NODE_PATH=src:src/components:src/pages:src/utils:src/media react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   },
-  "devDependencies": {
-    "canvas": "^2.2.0",
-    "eslint-plugin-prettier": "^2.6.1",
-    "node-sass": "^4.9.1",
-    "prettier": "^1.13.7",
-    "prop-types": "^15.6.2",
-    "react-test-renderer": "^16.7.0-alpha.2"
+  "jest": {
+    "collectCoverageFrom": [
+      "src/**/*.{js,jsx}",
+      "!src/index.js",
+      "!src/setupTests.js",
+      "!src/serviceWorker.js",
+      "!src/stories/*.{js,jsx}"
+    ]
   },
   "browserslist": {
     "development": [

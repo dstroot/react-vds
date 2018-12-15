@@ -1,5 +1,5 @@
 import React, { PureComponent } from 'react';
-import ContactUs from 'ContactUs';
+import ContactForm from 'ContactForm';
 
 // notificatiions
 import ReactNotification from 'react-notifications-component';
@@ -9,6 +9,9 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 class PageToast extends PureComponent {
   componentDidMount() {
     document.title = `Verite Data Science • Toast`;
+    requestAnimationFrame(() => {
+      window.scrollTo(0, 0);
+    });
   }
 
   addNotification = event => {
@@ -40,7 +43,7 @@ class PageToast extends PureComponent {
   render() {
     return (
       <div>
-        <ContactUs />
+        <ContactForm />
         <div className="container mt-5">
           <div className="row">
             <div className="col mt-5">

@@ -3,8 +3,6 @@ import 'react-app-polyfill/ie11';
 
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { BrowserRouter as Router } from 'react-router-dom';
-import ScrollToTop from './components/ScrollToTop';
 import * as serviceWorker from './serviceWorker';
 import * as Sentry from '@sentry/browser';
 import App from './App';
@@ -14,16 +12,7 @@ Sentry.init({
   integrations: [new Sentry.Integrations.Breadcrumbs({ console: false })],
 });
 
-// NOTE: For routes to work properly in React, you need
-// to wrap your whole application in a Router.
-
-ReactDOM.createRoot(document.getElementById('root')).render(
-  <Router>
-    <ScrollToTop>
-      <App />
-    </ScrollToTop>
-  </Router>
-);
+ReactDOM.createRoot(document.getElementById('root')).render(<App />);
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
@@ -37,4 +26,4 @@ serviceWorker.register();
 // doesn’t preserve state between reloads. See:
 // https://daveceddia.com/hot-reloading-create-react-app/
 
-if (module.hot) module.hot.accept();
+// if (module.hot) module.hot.accept();

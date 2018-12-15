@@ -1,9 +1,10 @@
 import React from 'react';
-import PageToast from './PageToast';
 import renderer from 'react-test-renderer';
 
-test('PageToast renders the toast page', () => {
-  const component = renderer.create(<PageToast />);
+import NavBar from '../NavBar';
+
+test('NavBar renders a Navbar', () => {
+  const component = renderer.create(<NavBar />);
   let tree = component.toJSON();
   expect(tree).toMatchSnapshot();
 });

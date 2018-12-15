@@ -1,13 +1,13 @@
-import React, { Fragment } from 'react';
-import { Switch, Route } from 'react-router-dom';
+import React from 'react';
 
 // components
-import Navigation from './components/Navigation';
+import NavBar from './components/NavBar';
 import Footer from './components/Footer';
-import LazyImport from './components/LazyImport';
+import LazyImport from './utils/LazyImport';
 import retry from './utils/retry';
 
 // routes
+import { Router } from '@reach/router';
 import * as routes from './constants/routes';
 
 // pages
@@ -52,29 +52,24 @@ const PageContact = LazyImport(() =>
 );
 
 const App = () => (
-  <Fragment>
-    <Navigation />
+  <>
+    <NavBar />
     <main role="main" className="flex-shrink-0 mt-5">
-      <Switch>
-        <Route exact path={routes.HOME} component={PageLanding} />
-        <Route path={routes.TERMS} component={PageTerms} />
-        <Route path={routes.PRIVACY} component={PagePrivacy} />
-        <Route path={routes.ABOUT} component={PageAbout} />
-        <Route path={routes.CONTACT} component={PageContact} />
-        {/*<Route path={routes.TOAST} component={PageToast} />*/}
-        {/* when none of the above match, <NoMatch> will be rendered */}
-        <Route
-          component={props => (
-            <PageNotFound
-              {...props}
-              image={'https://i.giphy.com/media/sMABNWsUWPC1y/giphy.gif'}
-            />
-          )}
+      <Router>
+        <PageLanding path={routes.HOME} />
+        <PageAbout path={routes.ABOUT} />
+        <PageTerms path={routes.TERMS} />
+        <PagePrivacy path={routes.PRIVACY} />
+        <PageAbout path={routes.ABOUT} />
+        <PageContact path={routes.CONTACT} />
+        <PageNotFound
+          default
+          image="https://i.giphy.com/media/sMABNWsUWPC1y/giphy.gif"
         />
-      </Switch>
+      </Router>
     </main>
     <Footer />
-  </Fragment>
+  </>
 );
 
 export default App;

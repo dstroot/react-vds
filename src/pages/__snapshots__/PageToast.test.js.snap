@@ -27,7 +27,6 @@ exports[`PageToast renders the toast page 1`] = `
       </div>
       <br />
       <a
-        aria-current={null}
         className="btn btn-lg btn-outline-secondary"
         href="/contact"
         onClick={[Function]}
