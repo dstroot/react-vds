@@ -1,4 +1,16 @@
-Stuff I have tweaked, learned, added:
+# Verite Data Science web site
+
+Information about the firm is on the website. This is Information **about** the website and how it was created.
+
+This project was bootstrapped with `create-react-app`. To learn about how to use create-react-app check out this [guide](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md).
+
+### Components Used
+
+- Switched from react-router to reach router: https://reach.tech/router
+- Using `react-particles-js`
+- Using Font Awesome: https://fontawesome.com/how-to-use/on-the-web/using-with/react
+
+### Stuff I have tweaked, learned, added:
 
 https://daveceddia.com/hot-reloading-create-react-app/
 https://daveceddia.com/react-project-structure/
@@ -10,16 +22,8 @@ https://github.com/facebook/create-react-app/pull/4195
 Icons:
 https://www.emergeinteractive.com/insights/detail/The-Essentials-of-FavIcons-in-2017
 
-This project was bootstrapped with `create-react-app`. To learn about how to use create-react-app check out this [guide](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md).
+#### Adding SVGs
 
-React Router Info:
-https://stackoverflow.com/questions/42123261/programmatically-navigate-using-react-router-v4
-
-69c3d4b
-
-"react-scripts": "2.0.0-next.3e165448" 69c3d4b
-
-Adding SVGs
 One way to add SVG files was described in the section above. However react-scripts@2.0.0 added an ability to import SVGs as React components through the fantastic @svgr/webpack. You can use either of the two approaches. In your code it would look like:
 
 ```js
@@ -32,7 +36,7 @@ const App = () => (
     {/* logoUrl is the URL of your SVG file */}
     <img src={logoUrl} alt="Logo" />
 
-    {/* Logo is an actual React component */}
+    {/* Logo is an actual React component - this can be styled! You can set the color, etc. */}
     <Logo />
   </div>
 );

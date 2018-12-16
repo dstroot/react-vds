@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import Masthead from 'Masthead';
 import Content from 'Content';
-import ContactForm from 'ContactForm';
+import ContactSection from 'ContactSection';
 
 // React also allows us to create pure, stateless components using a normal
 // JavaScript function. A Pure component can replace a component that
@@ -34,7 +34,7 @@ const PageLanding = () => {
     <>
       <Masthead />
       <Content />
-      <ContactForm />
+      <ContactSection />
     </>
   );
 };
