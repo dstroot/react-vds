@@ -106,6 +106,7 @@ class ContactForm extends PureComponent {
   // not be able to respond to submit events triggered from the keyboard
   // (by pressing enter). That’s bad UX. By using the onSubmit callback
   // we cover both cases.
+  // https://www.reddit.com/r/reactjs/comments/acitl7/nice_forms_a11yux_trick_from_wes_bos_advanced/
   render() {
     const { valid, submitted, success, message } = this.state;
     return (
@@ -117,77 +118,81 @@ class ContactForm extends PureComponent {
         >
           <div className="form-row">
             <div className="col-md-6 offset-md-3">
-              {/* hidden inputs */}
-              <input type="text" name="_gotcha" className="invisible" />
-              <input type="hidden" name="_subject" value="Website Contact" />
+              <fieldset disabled={submitted} aria-busy={submitted}>
+                {/* hidden inputs */}
+                <input type="text" name="_gotcha" className="invisible" />
+                <input type="hidden" name="_subject" value="Website Contact" />
 
-              <h3 className="mt-3 font-weight-light">Contact Us:</h3>
+                <h3 className="mt-3 font-weight-light">Contact Us:</h3>
 
-              {/* Name */}
-              <div className="form-group">
-                <label htmlFor="email">Name</label>
-                <input
-                  name="name"
-                  type="text"
-                  className="form-control"
-                  placeholder="Please enter your name"
-                  pattern=".*\S+.*"
-                  data-parse="trim"
-                  required
-                />
-                <div className="invalid-feedback">Please enter your name.</div>
-                <div className="valid-feedback">Looks good!</div>
-              </div>
-
-              {/* email address */}
-              <div className="form-group">
-                <label htmlFor="email">Email address</label>
-                <input
-                  name="email"
-                  type="email"
-                  className="form-control"
-                  placeholder="you@youremail.com"
-                  required
-                />
-                <div className="invalid-feedback">
-                  Please enter a valid email address.
+                {/* Name */}
+                <div className="form-group">
+                  <label htmlFor="email">Name</label>
+                  <input
+                    name="name"
+                    type="text"
+                    className="form-control"
+                    placeholder="Please enter your name"
+                    pattern=".*\S+.*"
+                    data-parse="trim"
+                    required
+                  />
+                  <div className="invalid-feedback">
+                    Please enter your name.
+                  </div>
+                  <div className="valid-feedback">Looks good!</div>
                 </div>
-                <div className="valid-feedback">Looks good!</div>
-              </div>
 
-              {/* phone */}
-              <div className="form-group">
-                <label htmlFor="email">Phone Number</label>
-                <input
-                  name="phone"
-                  type="tel"
-                  pattern="^[0-9-+s()]*$"
-                  className="form-control"
-                  placeholder="(123) 456-7890"
-                />
-                <div className="invalid-feedback">
-                  Please enter a valid phone number.
+                {/* email address */}
+                <div className="form-group">
+                  <label htmlFor="email">Email address</label>
+                  <input
+                    name="email"
+                    type="email"
+                    className="form-control"
+                    placeholder="you@youremail.com"
+                    required
+                  />
+                  <div className="invalid-feedback">
+                    Please enter a valid email address.
+                  </div>
+                  <div className="valid-feedback">Looks good!</div>
                 </div>
-                <div className="valid-feedback">Optional</div>
-              </div>
 
-              {/* message area */}
-              <div className="form-group">
-                <label htmlFor="email">Short Message</label>
-                <textarea
-                  name="message"
-                  className="form-control"
-                  placeholder="Please enter a short message"
-                  pattern=".*\S+.*"
-                  data-parse="trim"
-                  required
-                  onChange={this.handleTextarea}
-                />
-                <div className="invalid-feedback">
-                  Please let us know how we can help!
+                {/* phone */}
+                <div className="form-group">
+                  <label htmlFor="email">Phone Number</label>
+                  <input
+                    name="phone"
+                    type="tel"
+                    pattern="^[0-9-+s()]*$"
+                    className="form-control"
+                    placeholder="(123) 456-7890"
+                  />
+                  <div className="invalid-feedback">
+                    Please enter a valid phone number.
+                  </div>
+                  <div className="valid-feedback">Optional</div>
                 </div>
-                <div className="valid-feedback">Looks good!</div>
-              </div>
+
+                {/* message area */}
+                <div className="form-group">
+                  <label htmlFor="email">Short Message</label>
+                  <textarea
+                    name="message"
+                    className="form-control"
+                    placeholder="Please enter a short message"
+                    pattern=".*\S+.*"
+                    data-parse="trim"
+                    required
+                    onChange={this.handleTextarea}
+                  />
+                  <div className="invalid-feedback">
+                    Please let us know how we can help!
+                  </div>
+                  <div className="valid-feedback">Looks good!</div>
+                </div>
+              </fieldset>
 
               {/* Submit button */}
               <div className="form-row">

@@ -13,129 +13,134 @@ Array [
       <div
         className="col-md-6 offset-md-3"
       >
-        <input
-          className="invisible"
-          name="_gotcha"
-          type="text"
-        />
-        <input
-          name="_subject"
-          type="hidden"
-          value="Website Contact"
-        />
-        <h3
-          className="mt-3 font-weight-light"
+        <fieldset
+          aria-busy={false}
+          disabled={false}
         >
-          Contact Us:
-        </h3>
-        <div
-          className="form-group"
-        >
-          <label
-            htmlFor="email"
-          >
-            Name
-          </label>
           <input
-            className="form-control"
-            data-parse="trim"
-            name="name"
-            pattern=".*\\\\S+.*"
-            placeholder="Please enter your name"
-            required={true}
+            className="invisible"
+            name="_gotcha"
             type="text"
           />
-          <div
-            className="invalid-feedback"
-          >
-            Please enter your name.
-          </div>
-          <div
-            className="valid-feedback"
-          >
-            Looks good!
-          </div>
-        </div>
-        <div
-          className="form-group"
-        >
-          <label
-            htmlFor="email"
-          >
-            Email address
-          </label>
           <input
-            className="form-control"
-            name="email"
-            placeholder="you@youremail.com"
-            required={true}
-            type="email"
+            name="_subject"
+            type="hidden"
+            value="Website Contact"
           />
-          <div
-            className="invalid-feedback"
+          <h3
+            className="mt-3 font-weight-light"
           >
-            Please enter a valid email address.
+            Contact Us:
+          </h3>
+          <div
+            className="form-group"
+          >
+            <label
+              htmlFor="email"
+            >
+              Name
+            </label>
+            <input
+              className="form-control"
+              data-parse="trim"
+              name="name"
+              pattern=".*\\\\S+.*"
+              placeholder="Please enter your name"
+              required={true}
+              type="text"
+            />
+            <div
+              className="invalid-feedback"
+            >
+              Please enter your name.
+            </div>
+            <div
+              className="valid-feedback"
+            >
+              Looks good!
+            </div>
           </div>
           <div
-            className="valid-feedback"
+            className="form-group"
           >
-            Looks good!
-          </div>
-        </div>
-        <div
-          className="form-group"
-        >
-          <label
-            htmlFor="email"
-          >
-            Phone Number
-          </label>
-          <input
-            className="form-control"
-            name="phone"
-            pattern="^[0-9-+s()]*$"
-            placeholder="(123) 456-7890"
-            type="tel"
-          />
-          <div
-            className="invalid-feedback"
-          >
-            Please enter a valid phone number.
-          </div>
-          <div
-            className="valid-feedback"
-          >
-            Optional
-          </div>
-        </div>
-        <div
-          className="form-group"
-        >
-          <label
-            htmlFor="email"
-          >
-            Short Message
-          </label>
-          <textarea
-            className="form-control"
-            data-parse="trim"
-            name="message"
-            onChange={[Function]}
-            pattern=".*\\\\S+.*"
-            placeholder="Please enter a short message"
-            required={true}
-          />
-          <div
-            className="invalid-feedback"
-          >
-            Please let us know how we can help!
+            <label
+              htmlFor="email"
+            >
+              Email address
+            </label>
+            <input
+              className="form-control"
+              name="email"
+              placeholder="you@youremail.com"
+              required={true}
+              type="email"
+            />
+            <div
+              className="invalid-feedback"
+            >
+              Please enter a valid email address.
+            </div>
+            <div
+              className="valid-feedback"
+            >
+              Looks good!
+            </div>
           </div>
           <div
-            className="valid-feedback"
+            className="form-group"
           >
-            Looks good!
+            <label
+              htmlFor="email"
+            >
+              Phone Number
+            </label>
+            <input
+              className="form-control"
+              name="phone"
+              pattern="^[0-9-+s()]*$"
+              placeholder="(123) 456-7890"
+              type="tel"
+            />
+            <div
+              className="invalid-feedback"
+            >
+              Please enter a valid phone number.
+            </div>
+            <div
+              className="valid-feedback"
+            >
+              Optional
+            </div>
           </div>
-        </div>
+          <div
+            className="form-group"
+          >
+            <label
+              htmlFor="email"
+            >
+              Short Message
+            </label>
+            <textarea
+              className="form-control"
+              data-parse="trim"
+              name="message"
+              onChange={[Function]}
+              pattern=".*\\\\S+.*"
+              placeholder="Please enter a short message"
+              required={true}
+            />
+            <div
+              className="invalid-feedback"
+            >
+              Please let us know how we can help!
+            </div>
+            <div
+              className="valid-feedback"
+            >
+              Looks good!
+            </div>
+          </div>
+        </fieldset>
         <div
           className="form-row"
         >
