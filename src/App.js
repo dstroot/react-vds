@@ -56,27 +56,25 @@ const PageContact = LazyImport(() =>
 );
 
 const App = () => (
-  <>
-    <FlashProvider>
-      <NavBar />
-      <main role="main" className="flex-shrink-0 mt-5">
-        <FlashMessage />
-        <Router>
-          <PageLanding path={routes.HOME} />
-          <PageAbout path={routes.ABOUT} />
-          <PageTerms path={routes.TERMS} />
-          <PagePrivacy path={routes.PRIVACY} />
-          <PageAbout path={routes.ABOUT} />
-          <PageContact path={routes.CONTACT} />
-          <PageNotFound
-            default
-            image="https://i.giphy.com/media/sMABNWsUWPC1y/giphy.gif"
-          />
-        </Router>
-      </main>
-      <Footer />
-    </FlashProvider>
-  </>
+  <FlashProvider>
+    <NavBar />
+    <main role="main" className="flex-shrink-0">
+      <FlashMessage />
+      <Router>
+        <PageLanding path={routes.HOME} />
+        <PageAbout path={routes.ABOUT} />
+        <PageTerms path={routes.TERMS} />
+        <PagePrivacy path={routes.PRIVACY} />
+        <PageAbout path={routes.ABOUT} />
+        <PageContact path={routes.CONTACT} />
+        <PageNotFound
+          default
+          image="https://i.giphy.com/media/sMABNWsUWPC1y/giphy.gif"
+        />
+      </Router>
+    </main>
+    <Footer />
+  </FlashProvider>
 );
 
 export default App;

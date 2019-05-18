@@ -1,8 +1,5 @@
 import React, { useEffect } from 'react';
 
-// context
-// import FlashContext from '../../components/FlashContext';
-
 // The simplest way to define a component is to write a JavaScript function.
 // We call such components “functional” because they are literally JavaScript
 // functions. They can also accept a single “props” (which stands for
@@ -19,8 +16,6 @@ const About = () => {
       window.scrollTo(0, 0);
     });
   });
-
-  // const { setMessage } = useContext(FlashContext);
 
   return (
     <div className="container mt-5">
@@ -74,12 +69,6 @@ const About = () => {
           </p>
         </div>
       </div>
-      {/* <button
-        className="btn btn-danger"
-        onClick={() => setMessage('Hi there loser!', 'success')}
-      >
-        Button
-      </button> */}
     </div>
   );
 };

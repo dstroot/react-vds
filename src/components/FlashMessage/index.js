@@ -1,33 +1,29 @@
-import React, { useContext } from 'react';
-import PropTypes from 'prop-types';
-import './styles.scss';
-
-// context
-import FlashContext from '../FlashContext';
+import React from 'react';
+import { useFlashContext } from '../FlashContext';
 
 const FlashMessage = () => {
-  const { showFlash, message, type, dismiss } = useContext(FlashContext);
+  const [state, dispatch] = useFlashContext();
 
   let classes;
-  if (type === 'warning') {
+  if (state.style === 'warning') {
     classes = 'alert alert-warning';
   }
-  if (type === 'error') {
+  if (state.style === 'error') {
     classes = 'alert alert-danger';
   }
-  if (type === 'success') {
+  if (state.style === 'success') {
     classes = 'alert alert-success';
   }
 
-  if (showFlash) {
+  if (state.showFlash) {
     return (
       <div className={classes} role="alert">
-        <strong>{message}</strong>
+        <strong>{state.message}</strong>
         <button
           type="button"
           className="close"
           aria-label="Close"
-          onClick={dismiss}
+          onClick={() => dispatch({ type: 'dismiss' })}
         >
           <span aria-hidden="true">&times;</span>
         </button>
@@ -39,8 +35,3 @@ const FlashMessage = () => {
 };
 
 export default FlashMessage;
-
-FlashMessage.propTypes = {
-  show: PropTypes.bool,
-  dismiss: PropTypes.func,
-};

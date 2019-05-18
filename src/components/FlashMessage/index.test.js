@@ -1,6 +1,8 @@
 import React from 'react';
 import { create } from 'react-test-renderer';
 import { mount } from 'enzyme';
+
+import { FlashProvider } from '../FlashContext';
 import FlashMessage from '../FlashMessage';
 
 describe('FlashMessage', () => {
@@ -8,7 +10,11 @@ describe('FlashMessage', () => {
   let mountedComponent;
   const getMountedComponent = () => {
     if (!mountedComponent) {
-      mountedComponent = mount(<FlashMessage />);
+      mountedComponent = mount(
+        <FlashProvider>
+          <FlashMessage />
+        </FlashProvider>
+      );
     }
     return mountedComponent;
   };
@@ -18,7 +24,11 @@ describe('FlashMessage', () => {
   });
 
   it('it should render', () => {
-    let tree = create(<FlashMessage />);
+    let tree = create(
+      <FlashProvider>
+        <FlashMessage />
+      </FlashProvider>
+    );
     expect(tree.toJSON()).toMatchSnapshot();
   });
 
