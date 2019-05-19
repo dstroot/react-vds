@@ -32,6 +32,7 @@ import './scss/main.scss';
 // https://fontawesome.com/icons?d=gallery
 // https://github.com/FortAwesome/react-fontawesome
 // https://fontawesome.com/how-to-use/on-the-web/using-with/react
+// This might be better: https://www.npmjs.com/package/react-icons
 import { library } from '@fortawesome/fontawesome-svg-core';
 import {
   faSpinner,

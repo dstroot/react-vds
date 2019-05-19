@@ -4,6 +4,7 @@ import { useFlashContext } from '../FlashContext';
 const FlashExample = () => {
   // use our context hook to get state and the dispatch function
   const [state, dispatch] = useFlashContext();
+  // destructure our state
   const { showFlash, message, style } = state;
 
   // 3000 milliseconds = 3 seconds

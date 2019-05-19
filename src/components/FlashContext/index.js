@@ -3,24 +3,25 @@ import React, { useReducer, useContext } from 'react';
 /**
  * Context lets us pass values deep into the component tree. This
  * example allows us to create a "flash message" that can be initiated
- * and viewed from anywhere in our app. First lets create a new context.
+ * and viewed from anywhere in our app. First lets create a new context:
  */
 
 const FlashContext = React.createContext({});
 
 /**
  * Using a functional or class component we could pass (via context)
- * both the state and some functions to update state. Howevere, using
+ * both the state and functions to update state. Howevere, using
  * a reducer it's cleaner because state is managed through actions,
- * and we can pass state and the dispatch function viaccontaxt so you
- * can read the state and dispatch "updates" from anywhere in you app.
+ * and we can pass state and the dispatch function via contaxt so you
+ * can read the state and dispatch updates from anywhere in you app.
  * https://medium.freecodecamp.org/hooked-on-hooks-how-to-use-reacts-usereducer-2fe8f486b963
+ * https://kentcdodds.com/blog/how-to-optimize-your-context-value
  */
 
 const initialState = {
-  showFlash: false, // whether or not to return html or null
-  message: '', // The message within the notification
-  style: '', // Success or error notification type
+  showFlash: false, // Show flash message or not
+  message: '', // The message to display
+  style: '', // Notification type: "success", "error" or "warning"
 };
 
 const reducer = (state, action) => {
@@ -56,6 +57,9 @@ const reducer = (state, action) => {
 
 export const useFlashContext = () => {
   const contextValue = useContext(FlashContext);
+  if (!contextValue) {
+    throw new Error('useCount must be used within a FlashProvider');
+  }
   return contextValue;
 };
 
@@ -68,7 +72,8 @@ export const useFlashContext = () => {
 export const FlashProvider = ({ children }) => {
   // useReducer gives us an array - the current state and
   // the dispatch function [state, dispatch] which we share
-  // via context.
+  // via context. Passing output of useReducer to context
+  // is the "magic".
   const contextValue = useReducer(reducer, initialState);
   return (
     <FlashContext.Provider value={contextValue}>
@@ -76,52 +81,3 @@ export const FlashProvider = ({ children }) => {
     </FlashContext.Provider>
   );
 };
-
-/**
- * Here's an example how to use our context in a componnent
- */
-
-/*
-
-import React from 'react';
-import { useFlashContext } from '../FlashContext';
-
-const FlashExample = () => {
-  // use our context hook to get state and the dispatch function
-  const [state, dispatch] = useFlashContext();
-
-  // 3000 milliseconds = 3 seconds
-  const delay = ({ time = 3000 }) => {
-    return new Promise(resolve => {
-      setTimeout(() => {
-        resolve(true);
-      }, time);
-    });
-  };
-
-  return (
-    <div className="container">
-      <div className="row">
-        <div className="col">
-          <h1>Example Flash Message</h1>
-          <p>Press the button to see a flash message!</p>
-          <p>{state}</p>
-        </div>
-        <button
-          className="btn btn-primary"
-          onClick={async () => {
-            dispatch({ type: 'flash', message: 'Hi there!', style: 'success' });
-            await delay(3000);
-            dispatch({ type: 'dismiss' });
-          }}
-        >
-          Button
-        </button>
-      </div>
-    </div>
-  );
-};
-
-export default FlashExample;
-
-*/
