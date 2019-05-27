@@ -16,6 +16,7 @@ const FlashContext = React.createContext({});
  * can read the state and dispatch updates from anywhere in you app.
  * https://medium.freecodecamp.org/hooked-on-hooks-how-to-use-reacts-usereducer-2fe8f486b963
  * https://kentcdodds.com/blog/how-to-optimize-your-context-value
+ * https://www.robinwieruch.de/react-state-usereducer-usestate-usecontext/
  */
 
 const initialState = {
