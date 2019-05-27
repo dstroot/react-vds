@@ -1,3 +1,5 @@
+[![Dependabot Status](https://api.dependabot.com/badges/status?host=github&repo=dstroot/react-vds)](https://dependabot.com)
+
 # Verite Data Science web site
 
 Information about the firm is on the website. This is Information **about** the website and how it was created.
