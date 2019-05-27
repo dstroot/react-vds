@@ -1,7 +1,7 @@
 import React, { PureComponent } from 'react';
-import { validateResponse } from 'fetchUtils';
-import { formToJSONString, matchPattern } from 'formUtils';
-import Button from 'Button';
+import { validateResponse } from 'utils/fetchUtils';
+import { formToJSONString, matchPattern } from 'utils/formUtils';
+import Button from 'components/Button';
 
 // https://medium.com/@everdimension/how-to-handle-forms-with-just-react-ac066c48bd4f
 // https://developer.mozilla.org/en-US/docs/Web/API/FormData

@@ -1,6 +1,6 @@
 import React from 'react';
 import Particles from 'react-particles-js';
-import ErrorBoundary from 'ErrorBoundary';
+import ErrorBoundary from 'utils/ErrorBoundary';
 
 // particles configuration
 // https://vincentgarreau.com/particles.js/
