@@ -1,4 +1,4 @@
-import React, { useReducer, useContext } from 'react';
+import React, { useReducer, useContext, useMemo } from 'react';
 
 /**
  * Context lets us pass values deep into the component tree. This
@@ -17,6 +17,7 @@ const FlashContext = React.createContext({});
  * https://medium.freecodecamp.org/hooked-on-hooks-how-to-use-reacts-usereducer-2fe8f486b963
  * https://kentcdodds.com/blog/how-to-optimize-your-context-value
  * https://www.robinwieruch.de/react-state-usereducer-usestate-usecontext/
+ * https://hswolff.com/blog/how-to-usecontext-with-usereducer/
  */
 
 const initialState = {
@@ -59,7 +60,7 @@ const reducer = (state, action) => {
 export const useFlashContext = () => {
   const contextValue = useContext(FlashContext);
   if (!contextValue) {
-    throw new Error('useCount must be used within a FlashProvider');
+    throw new Error('useFlashContext must be used within a FlashProvider');
   }
   return contextValue;
 };
@@ -76,9 +77,13 @@ export const FlashProvider = ({ children }) => {
   // via context. Passing output of useReducer to context
   // is the "magic".
   const contextValue = useReducer(reducer, initialState);
+
+  // memo so we don't re-render every time app renders
+  const value = useMemo(() => {
+    return contextValue;
+  }, [contextValue]);
+
   return (
-    <FlashContext.Provider value={contextValue}>
-      {children}
-    </FlashContext.Provider>
+    <FlashContext.Provider value={value}>{children}</FlashContext.Provider>
   );
 };

@@ -32,7 +32,7 @@ const FlashExample = () => {
       <div className="row">
         <div className="col">
           <button
-            className="btn btn-primary"
+            className="btn btn-success mr-2"
             onClick={async () => {
               dispatch({
                 type: 'flash',
@@ -43,7 +43,35 @@ const FlashExample = () => {
               dispatch({ type: 'dismiss' });
             }}
           >
-            Button
+            Success message
+          </button>
+          <button
+            className="btn btn-warning mr-2"
+            onClick={async () => {
+              dispatch({
+                type: 'flash',
+                message: 'Hi there!',
+                style: 'warning',
+              });
+              await delay(3000);
+              dispatch({ type: 'dismiss' });
+            }}
+          >
+            Warning message{' '}
+          </button>
+          <button
+            className="btn btn-danger"
+            onClick={async () => {
+              dispatch({
+                type: 'flash',
+                message: 'Hi there!',
+                style: 'error',
+              });
+              await delay(3000);
+              dispatch({ type: 'dismiss' });
+            }}
+          >
+            Error message
           </button>
         </div>
       </div>
