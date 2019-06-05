@@ -20,7 +20,7 @@
   },
   "devDependencies": {
     "enzyme": "^3.10.0",
-    "enzyme-adapter-react-16": "^1.13.2",
+    "enzyme-adapter-react-16": "^1.14.0",
     "jest-canvas-mock": "^2.1.0",
     "node-sass": "^4.9.1",
     "prettier": "^1.13.7",
