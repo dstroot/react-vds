@@ -1,5 +1,6 @@
 [![Dependabot Status](https://api.dependabot.com/badges/status?host=github&repo=dstroot/react-vds)](https://dependabot.com)
 [![Build Status](https://travis-ci.com/dstroot/react-vds.svg?branch=master)](https://travis-ci.com/dstroot/react-vds)
+[![Test](https://flat.badgen.net/dependabot/dstroot/react-vds?icon=dependabot)](https://dependabot.com)
 
 # Verite Data Science web site
 
