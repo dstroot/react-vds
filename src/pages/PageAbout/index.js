@@ -1,5 +1,7 @@
 import React, { useEffect } from 'react';
 
+import ContactSection from 'components/ContactSection';
+
 // The simplest way to define a component is to write a JavaScript function.
 // We call such components “functional” because they are literally JavaScript
 // functions. They can also accept a single “props” (which stands for
@@ -67,6 +69,9 @@ const About = () => {
             that can analyze credit card transations and identify possible
             fraudm or retention risk.
           </p>
+          <div className="row">
+            <ContactSection />
+          </div>
         </div>
       </div>
     </div>
