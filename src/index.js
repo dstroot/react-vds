@@ -12,10 +12,16 @@ Sentry.init({
   integrations: [new Sentry.Integrations.Breadcrumbs({ console: false })],
 });
 
-// ReactDOM.render(<App />, document.getElementById('root'));
+// turn on strict mode
+ReactDOM.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>,
+  document.getElementById('root')
+);
 
 // this turns on react concurrent mode
-ReactDOM.unstable_createRoot(document.getElementById('root')).render(<App />);
+// ReactDOM.unstable_createRoot(document.getElementById('root')).render(<App />);
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
