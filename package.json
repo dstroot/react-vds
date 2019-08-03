@@ -10,6 +10,8 @@
     "@fortawesome/react-fontawesome": "^0.1.4",
     "@reach/router": "^1.2.1",
     "@sentry/browser": "^5.5.0",
+    "@testing-library/jest-dom": "^4.0.0",
+    "@testing-library/react": "^8.0.7",
     "animate.css": "^3.7.2",
     "bootstrap": "^4.3.1",
     "react": "^16.8.6",
