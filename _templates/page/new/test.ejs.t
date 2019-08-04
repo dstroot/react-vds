@@ -7,7 +7,7 @@ import { create } from "react-test-renderer";
 import { mount } from "enzyme";
 import <%= name %> from "../<%= name %>";
 
-describe("<%= name %>", () => {
+describe("Test page <%= name %>", () => {
   // mount the component
   let mountedComponent;
   const getMountedComponent = () => {

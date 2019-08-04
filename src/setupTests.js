@@ -1,15 +1,14 @@
 // mock canvas
 import 'jest-canvas-mock';
 
+// setup react-testing-library: https://testing-library.com/docs/react-testing-library/setup#cleanup
+import '@testing-library/react/cleanup-after-each';
+import '@testing-library/jest-dom/extend-expect';
+
 // setup enzyme
 import { configure } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 configure({ adapter: new Adapter() });
-
-// setup react-testing-library: https://testing-library.com/docs/react-testing-library/setup#cleanup
-import '@testing-library/react/cleanup-after-each';
-import '@testing-library/jest-dom/extend-expect';
-// NOTE: jest-dom adds handy assertions to Jest and is recommended, but not required
 
 // If some code uses a method which JSDOM (the DOM implementation used
 // by Jest) hasn't implemented yet, testing it is not easily possible. T
