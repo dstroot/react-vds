@@ -17,6 +17,7 @@ $theme-colors: (
 
 // then import Bootstrap
 @import 'bootstrap';
+$enable-responsive-font-sizes: true;
 
 // then load custom components
 @import '../components/Hero/styles';
