@@ -167,7 +167,7 @@ class ContactForm extends PureComponent {
                     type="tel"
                     pattern="^[0-9-+s()]*$"
                     className="form-control"
-                    placeholder="(123) 456-7890"
+                    placeholder="+1 (123) 456-7890"
                   />
                   <div className="invalid-feedback">
                     Please enter a valid phone number.

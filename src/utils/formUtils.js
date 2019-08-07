@@ -82,7 +82,7 @@ export const formToJSONString = form => {
 // `Textarea` does not implement pattern validation like `text` does.
 // A "required" value passes validation with *only* spaces. This function
 // will enable the pattern attribute on a textarea and trigger
-// HTML5 validation. Cool right!å
+// HTML5 validation. Cool right!
 export const matchPattern = event => {
   const errorMessage = 'input does not match the required pattern';
   const pattern = event.target.getAttribute('pattern');
