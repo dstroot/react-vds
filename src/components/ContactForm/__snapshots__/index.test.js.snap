@@ -98,7 +98,7 @@ Array [
               className="form-control"
               name="phone"
               pattern="^[0-9-+s()]*$"
-              placeholder="(123) 456-7890"
+              placeholder="+1 (123) 456-7890"
               type="tel"
             />
             <div
