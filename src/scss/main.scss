@@ -14,10 +14,10 @@ $theme-colors: (
   'primary': #7256ad,
   'special': #000,
 );
+$enable-responsive-font-sizes: true;
 
 // then import Bootstrap
 @import 'bootstrap';
-$enable-responsive-font-sizes: true;
 
 // then load custom components
 @import '../components/Hero/styles';
