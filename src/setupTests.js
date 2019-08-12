@@ -2,7 +2,6 @@
 import 'jest-canvas-mock';
 
 // setup react-testing-library: https://testing-library.com/docs/react-testing-library/setup#cleanup
-import '@testing-library/react/cleanup-after-each';
 import '@testing-library/jest-dom/extend-expect';
 
 // setup enzyme
