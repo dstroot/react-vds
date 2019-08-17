@@ -51,7 +51,7 @@ class NavBar extends React.PureComponent {
     return (
       <nav className="navbar fixed-top navbar-expand-sm navbar-light bg-light">
         <div className="container">
-          <Link to="/" className="navbar-brand">
+          <Link to="/" className="navbar-brand" onClick={this.toggleHidden}>
             <img
               className="d-inline-block align-top"
               src={logo}
