@@ -1,5 +1,5 @@
 # Stage 1 - the build process
-FROM node:12.9 as build-deps
+FROM node:12.9-alpine as build-deps
 WORKDIR /usr/src/app
 COPY package.json yarn.lock ./
 RUN yarn
@@ -12,5 +12,8 @@ COPY --from=build-deps /usr/src/app/build /usr/share/nginx/html
 EXPOSE 80
 CMD ["nginx", "-g", "daemon off;"]
 
-#
-# https://mherman.org/blog/dockerizing-a-react-app/
+# build the Docker image:
+# $ docker build -t sample:app .
+
+# run the container:
+# $ docker run -it -p 80:80 --rm sample:app
