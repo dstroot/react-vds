@@ -50,15 +50,4 @@ const App = () => (
 );
 ```
 
-<!-- Needed for IE support :( -->
-<script type='text/javascript' src="https://cdn.polyfill.io/v2/polyfill.min.js"
-      integrity="sha256-GgRxrVOKNdB4LrRsVPDSbzvfdV4UqglmviH9GoBJ5jk="
-      crossorigin="anonymous">
-</script>
-
-{
-"key": "Content-Security-Policy",
-"value": "script-src 'self' 'unsafe-inline'"
-},
-
 https://github.com/facebook/create-react-app/tree/master/packages/react-app-polyfill
