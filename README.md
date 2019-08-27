@@ -8,6 +8,8 @@ Information about the firm is on the website. This is Information **about** the 
 
 This project was bootstrapped with `create-react-app`. To learn about how to use create-react-app check out this [guide](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md).
 
+You can deploy a docker container of this application on Google Cloud with one single click below:
+
 [![Run on Google Cloud](https://storage.googleapis.com/cloudrun/button.svg)](https://console.cloud.google.com/cloudshell/editor?shellonly=true&cloudshell_image=gcr.io/cloudrun/button&cloudshell_git_repo=https://github.com/dstroot/react-vds.git)
 
 ### Components Used
