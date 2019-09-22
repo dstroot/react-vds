@@ -1,0 +1,49 @@
+//
+// Main navbar
+//
+
+$height: 75px;
+
+.navbar {
+  // box-shadow: 0 2px 40px 0 rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(200, 200, 200, 1);
+  text-transform: uppercase;
+  height: $height;
+  a {
+    text-transform: uppercase;
+    font-weight: 400;
+    // color: theme-color-level('primary', -8);
+    color: gray('700');
+    &:hover {
+      color: theme-color('primary');
+    }
+  }
+  a.active {
+    color: theme-color('primary');
+  }
+}
+
+.overlay {
+  padding-top: $height;
+  box-shadow: 0 2px 20px 0 rgba(0, 0, 0, 0.1);
+
+  a {
+    font-weight: 400;
+    // background: white;
+    color: gray('700');
+    font-size: 22px;
+    padding: 10px;
+    padding-right: 20px;
+    border-bottom: 1px solid rgba(200, 200, 200, 1);
+    &:hover {
+      color: theme-color('primary');
+    }
+  }
+  a.active {
+    color: theme-color('primary');
+  }
+}
+
+main {
+  margin-top: $height; // same as navbar height
+}

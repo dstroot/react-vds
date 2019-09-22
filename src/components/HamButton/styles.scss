@@ -1,0 +1,102 @@
+@charset "UTF-8";
+/*!
+ * Hamburgers
+ * @description Tasty CSS-animated hamburgers
+ * @author Jonathan Suh @jonsuh
+ * @site https://jonsuh.com/hamburgers
+ * @link https://github.com/jonsuh/hamburgers
+ */
+
+// Settings
+// ==================================================
+$hamburger-padding-x: 15px !default;
+$hamburger-padding-y: 15px !default;
+$hamburger-layer-width: 30px !default;
+$hamburger-layer-height: 3px !default;
+$hamburger-layer-spacing: 6px !default;
+$hamburger-layer-color: #000 !default;
+$hamburger-layer-border-radius: 4px !default;
+$hamburger-hover-opacity: 0.7 !default;
+$hamburger-active-layer-color: $hamburger-layer-color !default;
+$hamburger-active-hover-opacity: $hamburger-hover-opacity !default;
+
+// To use CSS filters as the hover effect instead of opacity,
+// set $hamburger-hover-use-filter as true and
+// change the value of $hamburger-hover-filter accordingly.
+$hamburger-hover-use-filter: false !default;
+$hamburger-hover-filter: opacity(50%) !default;
+$hamburger-active-hover-filter: $hamburger-hover-filter !default;
+
+// Types (Remove or comment out what you don’t need)
+// ==================================================
+$hamburger-types: (
+  // 3dx,
+    // 3dx-r,
+    // 3dy,
+    // 3dy-r,
+    // 3dxy,
+    // 3dxy-r,
+    // arrow,
+    // arrow-r,
+    // arrowalt,
+    // arrowalt-r,
+    // arrowturn,
+    // arrowturn-r,
+    // boring,
+    // collapse,
+    // collapse-r,
+    // elastic,
+    // elastic-r,
+    // emphatic,
+    // emphatic-r,
+    // minus,
+    // slider,
+    // slider-r,
+    // spin,
+    // spin-r,
+    // spring,
+    // spring-r,
+    // stand,
+    // stand-r,
+    squeeze,
+  // vortex,
+    // vortex-r
+) !default;
+
+// Base Hamburger (We need this)
+// ==================================================
+@import './scss/base';
+
+// Hamburger types
+// ==================================================
+// @import './scss/types/3dx';
+// @import './scss/types/3dx-r';
+// @import './scss/types/3dy';
+// @import './scss/types/3dy-r';
+// @import './scss/types/3dxy';
+// @import './scss/types/3dxy-r';
+// @import './scss/types/arrow';
+// @import './scss/types/arrow-r';
+// @import './scss/types/arrowalt';
+// @import './scss/types/arrowalt-r';
+// @import './scss/types/arrowturn';
+// @import './scss/types/arrowturn-r';
+// @import './scss/types/boring';
+// @import './scss/types/collapse';
+// @import './scss/types/collapse-r';
+// @import './scss/types/elastic';
+// @import './scss/types/elastic-r';
+// @import './scss/types/emphatic';
+// @import './scss/types/emphatic-r';
+// @import './scss/types/minus';
+// @import './scss/types/slider';
+// @import './scss/types/slider-r';
+// @import './scss/types/spin';
+// @import './scss/types/spin-r';
+// @import './scss/types/spring';
+// @import './scss/types/spring-r';
+// @import './scss/types/stand';
+// @import './scss/types/stand-r';
+@import './scss/types/squeeze';
+// @import './scss/types/vortex';
+// @import './scss/types/vortex-r';

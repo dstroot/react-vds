@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`HamButton it should render 1`] = `
+<div
+  className="hamburger hamburger--squeeze"
+  onClick={[MockFunction]}
+>
+  <span
+    className="hamburger-box"
+  >
+    <span
+      className="hamburger-inner"
+    />
+  </span>
+</div>
+`;
+
+exports[`HamButton it should render clicked 1`] = `
+<div
+  className="hamburger hamburger--squeeze is-active"
+  onClick={[MockFunction]}
+>
+  <span
+    className="hamburger-box"
+  >
+    <span
+      className="hamburger-inner"
+    />
+  </span>
+</div>
+`;

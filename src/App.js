@@ -1,7 +1,8 @@
 import React from 'react';
 
 // components
-import NavBar from './components/NavBar';
+// import NavBar from './components/NavBar';
+import NavBarNew from './components/NavBarNew';
 import FlashMessage from './components/FlashMessage';
 import Footer from './components/Footer';
 import LazyImport from './utils/LazyImport';
@@ -58,7 +59,7 @@ const PageContact = LazyImport(() =>
 
 const App = () => (
   <FlashProvider>
-    <NavBar />
+    <NavBarNew />
     <main role="main" className="flex-shrink-0">
       <FlashMessage />
       <Router>
