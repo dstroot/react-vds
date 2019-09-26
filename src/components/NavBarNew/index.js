@@ -25,6 +25,7 @@ const useBoolean = initialValue => {
   const [status, setStatus] = useState(initialValue);
   const clicked = () => setStatus(true);
   const notClicked = () => setStatus(false);
+  window.scrollTo(0, 0);
   return [status, clicked, notClicked];
 };
 
