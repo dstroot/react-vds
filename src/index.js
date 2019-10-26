@@ -1,27 +1,31 @@
 // This must be the first line in src/index.js
 import 'react-app-polyfill/ie11';
 
-import React from 'react';
+import React, { StrictMode } from 'react';
 import ReactDOM from 'react-dom';
 import * as serviceWorker from './serviceWorker';
-import * as Sentry from '@sentry/browser';
+
+// app
 import App from './App';
+
+import * as Sentry from '@sentry/browser';
 
 Sentry.init({
   dsn: 'https://06204478c5534bb9b2eac6a0315895c0@sentry.io/1342447',
-  integrations: [new Sentry.Integrations.Breadcrumbs({ console: false })],
+  integrations: [
+    new Sentry.Integrations.Breadcrumbs({
+      console: false,
+    }),
+  ],
 });
 
-// turn on strict mode
-ReactDOM.render(
-  <React.StrictMode>
+// strict  mode *and* concurrent mode
+const rootElement = document.getElementById('root');
+ReactDOM.createRoot(rootElement).render(
+  <StrictMode>
     <App />
-  </React.StrictMode>,
-  document.getElementById('root')
+  </StrictMode>
 );
-
-// this turns on react concurrent mode
-// ReactDOM.unstable_createRoot(document.getElementById('root')).render(<App />);
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
