@@ -26,7 +26,7 @@
     "enzyme-adapter-react-16": "^1.15.1",
     "jest-canvas-mock": "^2.1.2",
     "node-sass": "^4.13.0",
-    "prettier": "^1.18.2",
+    "prettier": "^1.19.1",
     "prop-types": "^15.7.2",
     "react-test-renderer": "^16.11.0"
   },
