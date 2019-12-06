@@ -19,7 +19,7 @@
     "react-app-polyfill": "^1.0.5",
     "react-dom": "^0.0.0-experimental-b53ea6ca0",
     "react-particles-js": "^2.7.0",
-    "react-scripts": "^3.2.0"
+    "react-scripts": "^3.3.0"
   },
   "devDependencies": {
     "enzyme": "^3.10.0",
