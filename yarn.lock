@@ -1548,9 +1548,9 @@
     "@fortawesome/fontawesome-common-types" "^0.2.25"
 
 "@fortawesome/react-fontawesome@^0.1.7":
-  version "0.1.7"
-  resolved "https://registry.yarnpkg.com/@fortawesome/react-fontawesome/-/react-fontawesome-0.1.7.tgz#c004ca75c15c5a1218101e8f042b8da8dec0c4b5"
-  integrity sha512-AHWSzOsHBe5vqOkrvs+CKw+8eLl+0XZsVixOWhTPpGpOA8WQUbVU6J9cmtAvTaxUU5OIf+rgxxF8ZKc3BVldxg==
+  version "0.1.8"
+  resolved "https://registry.yarnpkg.com/@fortawesome/react-fontawesome/-/react-fontawesome-0.1.8.tgz#cb6d4dd3aeec45b6ff2d48c812317a6627618511"
+  integrity sha512-I5h9YQg/ePA3Br9ISS18fcwOYmzQYDSM1ftH03/8nHkiqIVHtUyQBw482+60dnzvlr82gHt3mGm+nDUp159FCw==
   dependencies:
     prop-types "^15.5.10"
 
@@ -1759,55 +1759,55 @@
     warning "^3.0.0"
 
 "@sentry/browser@^5.9.1":
-  version "5.9.1"
-  resolved "https://registry.yarnpkg.com/@sentry/browser/-/browser-5.9.1.tgz#b2ec27ead501a49f26807a9c0774f44f4292f236"
-  integrity sha512-7AOabwp9yAH9h6Xe6TfDwlLxHbUSWs+SPWHI7bPlht2yDSAqkXYGSzRr5X0XQJX9oBQdx2cEPMqHyJrbNaP/og==
+  version "5.10.1"
+  resolved "https://registry.yarnpkg.com/@sentry/browser/-/browser-5.10.1.tgz#4751b67716a0e606d0d36fe50f7b584c58bb6733"
+  integrity sha512-ti/8l/iinCVDZtNHxRVacfGAWDJ1xnLYjcodAh+SVZ7xAm1XApN2YvpggVRYVUbKRmrGQEW4yp4rhxNI9Z/06A==
   dependencies:
-    "@sentry/core" "5.8.0"
-    "@sentry/types" "5.7.1"
-    "@sentry/utils" "5.8.0"
+    "@sentry/core" "5.10.1"
+    "@sentry/types" "5.10.0"
+    "@sentry/utils" "5.10.1"
     tslib "^1.9.3"
 
-"@sentry/core@5.8.0":
-  version "5.8.0"
-  resolved "https://registry.yarnpkg.com/@sentry/core/-/core-5.8.0.tgz#bbfd2f4711491951a8e3a0e8fa8b172fdf7bff6f"
-  integrity sha512-aAh2KLidIXJVGrxmHSVq2eVKbu7tZiYn5ylW6yzJXFetS5z4MA+JYaSBaG2inVYDEEqqMIkb17TyWxxziUDieg==
+"@sentry/core@5.10.1":
+  version "5.10.1"
+  resolved "https://registry.yarnpkg.com/@sentry/core/-/core-5.10.1.tgz#356551f111d4df38e60852607cc8cde0ed8ccc76"
+  integrity sha512-MbiasA/cuMB0+9zVBGi5YLWRj7CdFQJOM29Vp8rm3xMaQDH0KHarpny1gOgMiLu/O/r8itjiZwKu+9pxOWGbeA==
   dependencies:
-    "@sentry/hub" "5.8.0"
-    "@sentry/minimal" "5.8.0"
-    "@sentry/types" "5.7.1"
-    "@sentry/utils" "5.8.0"
+    "@sentry/hub" "5.10.1"
+    "@sentry/minimal" "5.10.1"
+    "@sentry/types" "5.10.0"
+    "@sentry/utils" "5.10.1"
     tslib "^1.9.3"
 
-"@sentry/hub@5.8.0":
-  version "5.8.0"
-  resolved "https://registry.yarnpkg.com/@sentry/hub/-/hub-5.8.0.tgz#56aaeb7324cb66d90db838011cb0127f5558007f"
-  integrity sha512-VdApn1ZCNwH1wwQwoO6pu53PM/qgHG+DQege0hbByluImpLBhAj9w50nXnF/8KzV4UoMIVbzCb6jXzMRmqqp9A==
+"@sentry/hub@5.10.1":
+  version "5.10.1"
+  resolved "https://registry.yarnpkg.com/@sentry/hub/-/hub-5.10.1.tgz#3be4a0705cd0cd074be0aab0dc418ecb72885989"
+  integrity sha512-g+P+0cj6vKdf6Ct4S47MxHwSMIjtIadOwBhb4Lqwij5YPtQ4LpVr10peKbE+FMMvCNQSvQnJEhTDko+AE7AoYw==
   dependencies:
-    "@sentry/types" "5.7.1"
-    "@sentry/utils" "5.8.0"
+    "@sentry/types" "5.10.0"
+    "@sentry/utils" "5.10.1"
     tslib "^1.9.3"
 
-"@sentry/minimal@5.8.0":
-  version "5.8.0"
-  resolved "https://registry.yarnpkg.com/@sentry/minimal/-/minimal-5.8.0.tgz#b7ad5113504ab67f1ef2b0f465b7ba608e6b8dc5"
-  integrity sha512-MIlFOgd+JvAUrBBmq7vr9ovRH1HvckhnwzHdoUPpKRBN+rQgTyZy1o6+kA2fASCbrRqFCP+Zk7EHMACKg8DpIw==
+"@sentry/minimal@5.10.1":
+  version "5.10.1"
+  resolved "https://registry.yarnpkg.com/@sentry/minimal/-/minimal-5.10.1.tgz#37104f81ef3b333c0f9e77ac94bfed348070dea3"
+  integrity sha512-oKrLvKaah0xGVIYbS1I7dVbo73aWssfiT2ypl9DYt8MAFiwfiiXz68FlG4z9dPZ2jSz9Jm2SAYHFaYLvU26TBQ==
   dependencies:
-    "@sentry/hub" "5.8.0"
-    "@sentry/types" "5.7.1"
+    "@sentry/hub" "5.10.1"
+    "@sentry/types" "5.10.0"
     tslib "^1.9.3"
 
-"@sentry/types@5.7.1":
-  version "5.7.1"
-  resolved "https://registry.yarnpkg.com/@sentry/types/-/types-5.7.1.tgz#4c4c1d4d891b6b8c2c3c7b367d306a8b1350f090"
-  integrity sha512-tbUnTYlSliXvnou5D4C8Zr+7/wJrHLbpYX1YkLXuIJRU0NSi81bHMroAuHWILcQKWhVjaV/HZzr7Y/hhWtbXVQ==
+"@sentry/types@5.10.0":
+  version "5.10.0"
+  resolved "https://registry.yarnpkg.com/@sentry/types/-/types-5.10.0.tgz#4f0ba31b6e4d5371112c38279f11f66c73b43746"
+  integrity sha512-TW20GzkCWsP6uAxR2JIpIkiitCKyIOfkyDsKBeLqYj4SaZjfvBPnzgNCcYR0L0UsP1/Es6oHooZfIGSkp6GGxQ==
 
-"@sentry/utils@5.8.0":
-  version "5.8.0"
-  resolved "https://registry.yarnpkg.com/@sentry/utils/-/utils-5.8.0.tgz#34683088159b9935f973b6e6cad1a1cc26bbddac"
-  integrity sha512-KDxUvBSYi0/dHMdunbxAxD3389pcQioLtcO6CI6zt/nJXeVFolix66cRraeQvqupdLhvOk/el649W4fCPayTHw==
+"@sentry/utils@5.10.1":
+  version "5.10.1"
+  resolved "https://registry.yarnpkg.com/@sentry/utils/-/utils-5.10.1.tgz#eeb3ede85a9b5b1cd1aad7e3157052bee0d42551"
+  integrity sha512-zdv03sINfJ8QXSHP49845qhkbdNUrX20AagUY+Arq2zxmM4XxnRVA7dtWDkyy55bTt0ziRuSikBxR3266t8mDg==
   dependencies:
-    "@sentry/types" "5.7.1"
+    "@sentry/types" "5.10.0"
     tslib "^1.9.3"
 
 "@sheerun/mutationobserver-shim@^0.3.2":
@@ -9725,7 +9725,7 @@ rc@^1.2.7:
     minimist "^1.2.0"
     strip-json-comments "~2.0.1"
 
-react-app-polyfill@^1.0.4, react-app-polyfill@^1.0.5:
+react-app-polyfill@^1.0.5:
   version "1.0.5"
   resolved "https://registry.yarnpkg.com/react-app-polyfill/-/react-app-polyfill-1.0.5.tgz#59c7377a0b9ed25692eeaca7ad9b12ef2d064709"
   integrity sha512-RcbV6+msbvZJZUIK/LX3UafPtoaDSJgUWu4sqBxHKTVmBsnlU2QWCKJRBRmgjxu+ivW/GPINbPWRM4Ppa6Lbgw==
@@ -9782,10 +9782,15 @@ react-error-overlay@^6.0.4:
   resolved "https://registry.yarnpkg.com/react-error-overlay/-/react-error-overlay-6.0.4.tgz#0d165d6d27488e660bc08e57bdabaad741366f7a"
   integrity sha512-ueZzLmHltszTshDMwyfELDq8zOA803wQ1ZuzCccXa1m57k1PxSHfflPD5W9YIiTXLs0JTLzoj6o1LuM5N6zzNA==
 
-react-is@^16.10.2, react-is@^16.8.1, react-is@^16.8.4, react-is@^16.8.6, react-is@^16.9.0:
+react-is@^16.10.2, react-is@^16.8.4, react-is@^16.8.6, react-is@^16.9.0:
   version "16.11.0"
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.11.0.tgz#b85dfecd48ad1ce469ff558a882ca8e8313928fa"
   integrity sha512-gbBVYR2p8mnriqAwWx9LbuUrShnAuSCNnuPGyc7GJrMVQtPDAh8iLpv7FRuMPFb56KkaVZIYSz1PrjI9q0QPCw==
+
+react-is@^16.8.1:
+  version "16.12.0"
+  resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.12.0.tgz#2cc0fe0fba742d97fd527c42a13bec4eeb06241c"
+  integrity sha512-rPCkf/mWBtKc97aLL9/txD8DZdemK0vkA3JMLShjlJB3Pj3s+lpf1KaBzMfQrAmhMQB0n1cU/SUGgKKBCe837Q==
 
 react-lifecycles-compat@^3.0.4:
   version "3.0.4"
