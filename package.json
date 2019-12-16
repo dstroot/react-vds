@@ -11,7 +11,7 @@
     "@reach/router": "^1.2.1",
     "@sentry/browser": "^5.10.2",
     "@testing-library/jest-dom": "^4.2.4",
-    "@testing-library/react": "^9.3.3",
+    "@testing-library/react": "^9.4.0",
     "animate.css": "^3.7.2",
     "bootstrap": "^4.4.1",
     "hamburgers": "^1.1.3",
