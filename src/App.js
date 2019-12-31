@@ -46,7 +46,8 @@ import {
 library.add(faSpinner, faCheck, faCheckCircle, faExclamationTriangle);
 
 // lazy import pages and use code splitting.
-// Webpack’s way to configure the chunks we’re loading is through so called "magic comments".
+// ------------------------------------------------
+// NOTE: Webpack’s way to configure the chunks we’re loading is through "magic comments".
 // Preloaded chunks will be loaded with higher priority in parallel to its parent chunk. 
 // Prefetched chunks have lower priority and will be loaded in the browser’s idle time.
 const PageTerms = LazyImport(() =>
