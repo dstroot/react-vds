@@ -16,7 +16,7 @@
     "bootstrap": "^4.4.1",
     "hamburgers": "^1.1.3",
     "react": "^0.0.0-experimental-f42431abe",
-    "react-app-polyfill": "^1.0.5",
+    "react-app-polyfill": "^1.0.6",
     "react-dom": "^0.0.0-experimental-f42431abe",
     "react-particles-js": "^2.7.0",
     "react-scripts": "^3.3.0"
