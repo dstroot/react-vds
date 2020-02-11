@@ -18,7 +18,7 @@
     "react": "^0.0.0-experimental-241c4467e",
     "react-app-polyfill": "^1.0.5",
     "react-dom": "^0.0.0-experimental-241c4467e",
-    "react-particles-js": "^2.7.0",
+    "react-particles-js": "^2.7.1",
     "react-scripts": "^3.3.0"
   },
   "devDependencies": {
