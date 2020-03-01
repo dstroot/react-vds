@@ -24,7 +24,7 @@ $enable-responsive-font-sizes: true;
 // then load custom components
 @import '../components/Hero/styles';
 @import '../components/Footer/styles';
-// @import '../components/NavBar/styles';
+@import '../components/NavBar/styles';
 @import '../components/NavBarNew/styles';
 @import '../components/ParticlesPanel/styles';
 @import '../components/ContactSection/styles';
