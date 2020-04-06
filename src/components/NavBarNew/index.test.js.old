@@ -3,7 +3,7 @@ import renderer from 'react-test-renderer';
 import { mount } from 'enzyme';
 
 // component to test
-import NavBarNew from '../NavBarNew';
+import NavBarNew from '.';
 
 // simulate window resize
 const fireResize = width => {

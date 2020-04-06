@@ -3,7 +3,7 @@ import { create } from 'react-test-renderer';
 import { mount } from 'enzyme';
 
 import { FlashProvider } from '../FlashContext';
-import FlashExample from '../FlashExample';
+import FlashExample from '.';
 
 describe('FlashExample', () => {
   // mount the component

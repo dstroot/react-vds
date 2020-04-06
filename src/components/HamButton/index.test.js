@@ -1,47 +1,55 @@
 import React from 'react';
-import { create } from 'react-test-renderer';
-import { mount } from 'enzyme';
-import HamButton from '../HamButton';
+import { render, fireEvent } from '@testing-library/react';
+
+import HamButton from '.';
 
 let clicked = false;
 const mockToggler = jest.fn(() => (clicked = true));
 
 describe('HamButton', () => {
-  // mount the component
-  let mountedComponent;
-  const getMountedComponent = () => {
-    if (!mountedComponent) {
-      mountedComponent = mount(
-        <HamButton toggler={mockToggler} clicked={clicked} />
-      );
-    }
-    return mountedComponent;
-  };
+  it('renders', () => {
+    // arrange
 
-  beforeEach(() => {
-    mountedComponent = undefined;
-    clicked = false;
+    // act
+    const { asFragment } = render(
+      <HamButton toggler={mockToggler} clicked={false} />
+    );
+
+    // assert
+    expect(asFragment()).not.toBeNull();
+    expect(asFragment()).toMatchSnapshot();
   });
 
-  it('it should render', () => {
-    let tree = create(<HamButton toggler={mockToggler} clicked={false} />);
-    expect(tree.toJSON()).toMatchSnapshot();
-  });
+  it('renders as clicked', () => {
+    // arrange
 
-  it('it should render clicked', () => {
-    let tree = create(<HamButton toggler={mockToggler} clicked={true} />);
-    expect(tree.toJSON()).toMatchSnapshot();
+    // act
+    const { asFragment } = render(
+      <HamButton toggler={mockToggler} clicked={true} />
+    );
+
+    // assert
+    expect(asFragment()).not.toBeNull();
+    expect(asFragment()).toMatchSnapshot();
   });
 
   it('clicking should call toggler function', () => {
-    let div = getMountedComponent()
-      .find('div')
-      .first();
-
-    expect(div.hasClass('is-active')).toBe(false);
+    // arrange
+    const { container } = render(
+      <HamButton toggler={mockToggler} clicked={true} />
+    );
+    const button = container.querySelector('div');
+    expect(button).not.toBe(null);
+    expect(button).toHaveClass('is-active');
 
     // now click the button
-    div.simulate('click');
+    fireEvent(
+      button,
+      new MouseEvent('click', {
+        bubbles: true,
+        cancelable: true,
+      })
+    );
 
     // The mock function is called once
     expect(mockToggler.mock.calls.length).toBe(1);

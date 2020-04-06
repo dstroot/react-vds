@@ -1,31 +1,33 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`HamButton it should render 1`] = `
-<div
-  className="hamburger hamburger--squeeze"
-  onClick={[MockFunction]}
->
-  <span
-    className="hamburger-box"
+exports[`HamButton renders 1`] = `
+<DocumentFragment>
+  <div
+    class="hamburger hamburger--squeeze"
   >
     <span
-      className="hamburger-inner"
-    />
-  </span>
-</div>
+      class="hamburger-box"
+    >
+      <span
+        class="hamburger-inner"
+      />
+    </span>
+  </div>
+</DocumentFragment>
 `;
 
-exports[`HamButton it should render clicked 1`] = `
-<div
-  className="hamburger hamburger--squeeze is-active"
-  onClick={[MockFunction]}
->
-  <span
-    className="hamburger-box"
+exports[`HamButton renders as clicked 1`] = `
+<DocumentFragment>
+  <div
+    class="hamburger hamburger--squeeze is-active"
   >
     <span
-      className="hamburger-inner"
-    />
-  </span>
-</div>
+      class="hamburger-box"
+    >
+      <span
+        class="hamburger-inner"
+      />
+    </span>
+  </div>
+</DocumentFragment>
 `;
