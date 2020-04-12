@@ -1,0 +1,53 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FlashExample renders 1`] = `
+<DocumentFragment>
+  <div
+    class="container"
+  >
+    <div
+      class="row"
+    >
+      <div
+        class="col"
+      >
+        <h1>
+          Example Flash Message
+        </h1>
+        <p>
+          Press the button to see a flash message!
+        </p>
+        <h3>
+          State
+        </h3>
+        <p>
+          Show Flash: false, Message: , Style: 
+        </p>
+      </div>
+    </div>
+    <div
+      class="row"
+    >
+      <div
+        class="col"
+      >
+        <button
+          class="btn btn-success mr-2"
+        >
+          Success message
+        </button>
+        <button
+          class="btn btn-warning mr-2"
+        >
+          Warning message 
+        </button>
+        <button
+          class="btn btn-danger"
+        >
+          Error message
+        </button>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

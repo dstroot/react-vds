@@ -5,9 +5,9 @@ import 'jest-canvas-mock';
 import '@testing-library/jest-dom/extend-expect';
 
 // setup enzyme
-import { configure } from 'enzyme';
-import Adapter from 'enzyme-adapter-react-16';
-configure({ adapter: new Adapter() });
+// import { configure } from 'enzyme';
+// import Adapter from 'enzyme-adapter-react-16';
+// configure({ adapter: new Adapter() });
 
 // If some code uses a method which JSDOM (the DOM implementation used
 // by Jest) hasn't implemented yet, testing it is not easily possible. T
