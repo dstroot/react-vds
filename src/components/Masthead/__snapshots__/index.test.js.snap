@@ -12,6 +12,7 @@ exports[`Masthead renders a masthead 1`] = `
     >
       <div
         className="canvas-container"
+        id="tsparticles"
       >
         <canvas
           style={

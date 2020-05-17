@@ -3,6 +3,7 @@
 exports[`ParticlesPanel renders 1`] = `
 <div
   className="canvas-container"
+  id="tsparticles"
 >
   <canvas
     style={
