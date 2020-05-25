@@ -7,3 +7,20 @@ it('renders without crashing', () => {
   ReactDOM.render(<App />, div);
   ReactDOM.unmountComponentAtNode(div);
 });
+
+
+// import React from "react";
+// import { render } from "@testing-library/react";
+// import App from "./App";
+
+// test("renders learn react link", () => {
+//   const { getByText } = render(<App />);
+//   const linkElement = getByText(/learn react/i);
+//   expect(linkElement).toBeInTheDocument();
+// });
+
+// test('renders text "save to reload"', () => {
+//   const { getByText } = render(<App />);
+//   const testText = getByText(/save to reload/i);
+//   expect(testText).toBeInTheDocument();
+// });
