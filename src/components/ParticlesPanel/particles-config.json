@@ -1,7 +1,7 @@
 {
   "particles": {
     "number": {
-      "value": 30,
+      "value": 40,
       "density": {
         "enable": true,
         "value_area": 100
@@ -23,14 +23,14 @@
     },
     "line_linked": {
       "enable": true,
-      "distance": 110,
+      "distance": 150,
       "color": "#7256ad",
       "opacity": 1,
       "width": 1
     },
     "move": {
       "enable": true,
-      "speed": 3
+      "speed": 2
     }
   },
   "retina_detect": true
