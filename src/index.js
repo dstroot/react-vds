@@ -21,10 +21,18 @@ Sentry.init({
 
 // strict  mode *and* concurrent mode
 const rootElement = document.getElementById('root');
-ReactDOM.unstable_createRoot(rootElement).render(
+// ReactDOM.createRoot(rootElement).render(
+//   <StrictMode>
+//     <App />
+//   </StrictMode>
+// );
+
+// React 17 Approach
+ReactDOM.render(
   <StrictMode>
     <App />
-  </StrictMode>
+  </StrictMode>,
+  rootElement
 );
 
 // If you want your app to work offline and load faster, you can change
