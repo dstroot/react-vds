@@ -19,15 +19,7 @@ Sentry.init({
   ],
 });
 
-// strict  mode *and* concurrent mode
 const rootElement = document.getElementById('root');
-// ReactDOM.createRoot(rootElement).render(
-//   <StrictMode>
-//     <App />
-//   </StrictMode>
-// );
-
-// React 17 Approach
 ReactDOM.render(
   <StrictMode>
     <App />

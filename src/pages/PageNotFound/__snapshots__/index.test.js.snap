@@ -14,9 +14,15 @@ Array [
       className="d-flex justify-content-center color-wash"
     >
       <h1
-        className="mt-5 display-3 text-white"
+        className="mt-5 display-4 text-white"
       >
-        Oops... 404
+        Oops... We can't find:
+         
+        <code
+          className="text-danger"
+        >
+          /
+        </code>
       </h1>
     </div>
   </div>,
@@ -37,9 +43,15 @@ exports[`PageNotFound renders a 404 page 2`] = `
     className="d-flex justify-content-center color-wash"
   >
     <h1
-      className="mt-5 display-3 text-white"
+      className="mt-5 display-4 text-white"
     >
-      Oops... 404
+      Oops... We can't find:
+       
+      <code
+        className="text-danger"
+      >
+        /
+      </code>
     </h1>
   </div>
 </div>
