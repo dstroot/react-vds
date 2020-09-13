@@ -8,6 +8,7 @@ import { render, fireEvent, screen, waitFor } from '@testing-library/react';
 import { renderHook, act } from '@testing-library/react-hooks';
 
 // component to test
+import { MemoryRouter } from 'react-router-dom';
 import NavBarNew from '.';
 
 describe('NavBarNew', () => {
@@ -15,7 +16,11 @@ describe('NavBarNew', () => {
     // arrange
 
     // act
-    const { asFragment } = render(<NavBarNew />);
+    const { asFragment } = render(
+      <MemoryRouter>
+        <NavBarNew />
+      </MemoryRouter>
+    );
 
     // assert
     expect(asFragment()).not.toBeNull();
@@ -24,7 +29,11 @@ describe('NavBarNew', () => {
 
   it('it should be at the top of the page', () => {
     // arrange
-    const { container } = render(<NavBarNew />);
+    const { container } = render(
+      <MemoryRouter>
+        <NavBarNew />
+      </MemoryRouter>
+    );
     const nav = container.querySelector('nav');
 
     //act
@@ -55,7 +64,11 @@ describe('NavBarNew', () => {
     expect(window.innerWidth).toBe(319);
     expect(window.innerHeight).toBe(500);
 
-    const { asFragment } = render(<NavBarNew />);
+    const { asFragment } = render(
+      <MemoryRouter>
+        <NavBarNew />
+      </MemoryRouter>
+    );
     // await waitFor(() => expect(asFragment()).not.toBeNull());
     // await waitFor(() => expect(asFragment()).toMatchSnapshot());
     expect(asFragment()).not.toBeNull();

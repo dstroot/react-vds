@@ -1,7 +1,9 @@
 import React from 'react';
-import { Link } from '@reach/router';
 import logo from 'media/logo.png';
 import ParticlesPanel from 'components/ParticlesPanel';
+
+// router
+import { Link } from 'react-router-dom';
 import * as routes from 'constants/routes';
 
 // import 'animate.css' components

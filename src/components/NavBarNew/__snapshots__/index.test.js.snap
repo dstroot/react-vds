@@ -9,7 +9,6 @@ exports[`NavBarNew it should render small 1`] = `
       class="container"
     >
       <a
-        aria-current="page"
         class="navbar-brand"
         href="/"
       >
@@ -55,7 +54,6 @@ exports[`NavBarNew renders 1`] = `
       class="container"
     >
       <a
-        aria-current="page"
         class="navbar-brand"
         href="/"
       >

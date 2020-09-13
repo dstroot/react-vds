@@ -1,5 +1,8 @@
 import React from 'react';
-import { Link } from '@reach/router';
+
+// router
+import { Link } from 'react-router-dom';
+import * as routes from 'constants/routes';
 
 // import SVG files directly as React components. The ReactComponent import
 // name is special and tells Create React App that you want a React
@@ -18,7 +21,7 @@ const ContactSection = () => (
         <Robot />
       </div>
       <br />
-      <Link className="btn btn-lg btn-outline-secondary" to="/contact">
+      <Link className="btn btn-lg btn-outline-secondary" to={routes.CONTACT}>
         Contact Us
       </Link>
     </div>

@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
-import { Link } from '@reach/router';
 import logo from 'media/logo.png';
+
+// routing
+import { Link, NavLink } from 'react-router-dom';
 import * as routes from 'constants/routes';
 
 // components
@@ -9,19 +11,9 @@ import HamButton from '../HamButton';
 // hooks
 import useMediaQuery from '../../hooks/useMediaQuery';
 
-// isCurrent - true if the location.pathname is exactly the same as the anchor’s href.
-const isActive = ({ isCurrent }) => {
-  return isCurrent
-    ? { className: 'active nav-link' }
-    : { className: 'nav-link' };
-};
-
-// `getProps` Calls up to you to get props for the underlying anchor element.
-// Useful for styling the anchor as active.
-const ExactNavLink = props => <Link getProps={isActive} {...props} />;
-
 // use a boolean, not a toggle.  This prevents odd menu states.
-const useBoolean = initialValue => {
+// TODO - use tested hooks file - remove hook from here
+const useBoolean = (initialValue) => {
   const [status, setStatus] = useState(initialValue);
   const clicked = () => setStatus(true);
   const notClicked = () => setStatus(false);
@@ -60,12 +52,22 @@ const NavBarNew = () => {
 
         {status ? (
           <div className="overlay bg-light text-right">
-            <ExactNavLink to={routes.ABOUT} onClick={notClicked}>
+            <NavLink
+              className="nav-link"
+              activeClassName="active"
+              to={routes.ABOUT}
+              onClick={notClicked}
+            >
               About
-            </ExactNavLink>
-            <ExactNavLink to={routes.CONTACT} onClick={notClicked}>
+            </NavLink>
+            <NavLink
+              className="nav-link"
+              activeClassName="active"
+              to={routes.CONTACT}
+              onClick={notClicked}
+            >
               Contact
-            </ExactNavLink>
+            </NavLink>
           </div>
         ) : null}
       </>
@@ -90,8 +92,20 @@ const NavBarNew = () => {
         {/* Links */}
         <div className="navbar-collapse collapse">
           <div className="mx-auto" />
-          <ExactNavLink to={routes.ABOUT}>About</ExactNavLink>
-          <ExactNavLink to={routes.CONTACT}>Contact</ExactNavLink>
+          <NavLink
+            className="nav-link"
+            activeClassName="active"
+            to={routes.ABOUT}
+          >
+            About
+          </NavLink>
+          <NavLink
+            className="nav-link"
+            activeClassName="active"
+            to={routes.CONTACT}
+          >
+            Contact
+          </NavLink>
         </div>
       </div>
     </nav>

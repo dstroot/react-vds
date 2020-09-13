@@ -8,8 +8,8 @@ import Footer from './components/Footer';
 import LazyImport from './utils/LazyImport';
 import retry from './utils/retry';
 
-// routes
-import { Router } from '@reach/router';
+// page routing
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import * as routes from './constants/routes';
 
 // context
@@ -69,23 +69,37 @@ const PageContact = LazyImport(() =>
 
 const App = () => (
   <FlashProvider>
-    <NavBarNew />
-    <main role="main" className="flex-shrink-0">
-      <FlashMessage />
-      <Router>
-        <PageLanding path={routes.HOME} />
-        <PageAbout path={routes.ABOUT} />
-        <PageTerms path={routes.TERMS} />
-        <PagePrivacy path={routes.PRIVACY} />
-        <PageAbout path={routes.ABOUT} />
-        <PageContact path={routes.CONTACT} />
-        <PageNotFound
-          default
-          image="https://i.giphy.com/media/sMABNWsUWPC1y/giphy.gif"
-        />
-      </Router>
-    </main>
-    <Footer />
+    <Router>
+      <NavBarNew />
+      <main role="main" className="flex-shrink-0">
+        <FlashMessage />
+        {/* page routing */}
+        <Switch>
+          <Route exact path={routes.HOME}>
+            <PageLanding />
+          </Route>
+          <Route path={routes.ABOUT}>
+            <PageAbout />
+          </Route>
+          <Route path={routes.TERMS}>
+            <PageTerms />
+          </Route>
+          <Route path={routes.PRIVACY}>
+            <PagePrivacy />
+          </Route>
+          <Route path={routes.CONTACT}>
+            <PageContact />
+          </Route>
+          <Route path="*">
+            <PageNotFound
+              default
+              image="https://i.giphy.com/media/sMABNWsUWPC1y/giphy.gif"
+            />
+          </Route>
+        </Switch>
+      </main>
+      <Footer />
+    </Router>
   </FlashProvider>
 );
 
