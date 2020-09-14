@@ -1,7 +1,6 @@
 import React from 'react';
 
 // components
-// import NavBar from './components/NavBar';
 import NavBarNew from './components/NavBarNew';
 import FlashMessage from './components/FlashMessage';
 import Footer from './components/Footer';
@@ -91,10 +90,7 @@ const App = () => (
             <PageContact />
           </Route>
           <Route path="*">
-            <PageNotFound
-              default
-              image="https://i.giphy.com/media/sMABNWsUWPC1y/giphy.gif"
-            />
+            <PageNotFound />
           </Route>
         </Switch>
       </main>
