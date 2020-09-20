@@ -7,9 +7,10 @@ import * as serviceWorker from './serviceWorker';
 
 // app
 import App from './App';
+import { BrowserRouter as Router } from 'react-router-dom';
 
+// error handling
 import * as Sentry from '@sentry/browser';
-
 Sentry.init({
   dsn: 'https://06204478c5534bb9b2eac6a0315895c0@sentry.io/1342447',
   integrations: [
@@ -22,7 +23,9 @@ Sentry.init({
 const rootElement = document.getElementById('root');
 ReactDOM.render(
   <StrictMode>
-    <App />
+    <Router>
+      <App />
+    </Router>
   </StrictMode>,
   rootElement
 );

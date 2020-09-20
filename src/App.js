@@ -8,8 +8,9 @@ import LazyImport from './utils/LazyImport';
 import retry from './utils/retry';
 
 // page routing
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { Switch, Route } from 'react-router-dom';
 import * as routes from './constants/routes';
+import usePageViews from './hooks/usePageViews';
 
 // context
 import { FlashProvider } from './components/FlashContext';
@@ -66,13 +67,13 @@ const PageContact = LazyImport(() =>
   )
 );
 
-const App = () => (
-  <FlashProvider>
-    <Router>
+const App = () => {
+  usePageViews();
+  return (
+    <FlashProvider>
       <NavBarNew />
       <main role="main" className="flex-shrink-0">
         <FlashMessage />
-        {/* page routing */}
         <Switch>
           <Route exact path={routes.HOME}>
             <PageLanding />
@@ -95,8 +96,8 @@ const App = () => (
         </Switch>
       </main>
       <Footer />
-    </Router>
-  </FlashProvider>
-);
+    </FlashProvider>
+  );
+};
 
 export default App;
