@@ -13,17 +13,56 @@ Array [
     <div
       className="d-flex justify-content-center color-wash"
     >
-      <h1
-        className="mt-5 display-4 text-white"
-      >
-        Oops... We can't find:
-         
-        <code
-          className="text-danger"
+      <div>
+        <h1
+          className="mt-5 display-4 text-white display-block"
         >
-          /
-        </code>
-      </h1>
+          Oops... We can't find:
+           
+          <code
+            className="text-danger"
+          >
+            /
+          </code>
+        </h1>
+        <h3
+          className="mt-5 display-5 text-white"
+        >
+          Try these pages instead:
+        </h3>
+        <h4
+          className="text-white"
+        >
+          <a
+            href="/"
+            onClick={[Function]}
+          >
+            Home
+          </a>
+             
+          <span
+            className="text-secondary font-weight-light"
+          >
+            Ours, not yours
+          </span>
+        </h4>
+        <h4
+          className="text-white"
+        >
+          <a
+            href="/contact"
+            onClick={[Function]}
+          >
+            Contact Us
+          </a>
+             
+          <span
+            className="text-secondary font-weight-light"
+          >
+            Reach out, we are pretty cool
+          </span>
+        </h4>
+      </div>
     </div>
   </div>,
   " ",
@@ -42,17 +81,56 @@ exports[`PageNotFound renders a 404 page 2`] = `
   <div
     className="d-flex justify-content-center color-wash"
   >
-    <h1
-      className="mt-5 display-4 text-white"
-    >
-      Oops... We can't find:
-       
-      <code
-        className="text-danger"
+    <div>
+      <h1
+        className="mt-5 display-4 text-white display-block"
       >
-        /
-      </code>
-    </h1>
+        Oops... We can't find:
+         
+        <code
+          className="text-danger"
+        >
+          /
+        </code>
+      </h1>
+      <h3
+        className="mt-5 display-5 text-white"
+      >
+        Try these pages instead:
+      </h3>
+      <h4
+        className="text-white"
+      >
+        <a
+          href="/"
+          onClick={[Function]}
+        >
+          Home
+        </a>
+           
+        <span
+          className="text-secondary font-weight-light"
+        >
+          Ours, not yours
+        </span>
+      </h4>
+      <h4
+        className="text-white"
+      >
+        <a
+          href="/contact"
+          onClick={[Function]}
+        >
+          Contact Us
+        </a>
+           
+        <span
+          className="text-secondary font-weight-light"
+        >
+          Reach out, we are pretty cool
+        </span>
+      </h4>
+    </div>
   </div>
 </div>
 `;
