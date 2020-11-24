@@ -66,9 +66,9 @@
     source-map "^0.5.0"
 
 "@babel/core@^7.9.0":
-  version "7.12.7"
-  resolved "https://registry.yarnpkg.com/@babel/core/-/core-7.12.7.tgz#bf55363c08c8352a37691f7216ec30090bf7e3bf"
-  integrity sha512-tRKx9B53kJe8NCGGIxEQb2Bkr0riUIEuN7Sc1fxhs5H8lKlCWUvQCSNMVIB0Meva7hcbCRJ76de15KoLltdoqw==
+  version "7.12.8"
+  resolved "https://registry.yarnpkg.com/@babel/core/-/core-7.12.8.tgz#8ad76c1a7d2a6a3beecc4395fa4f7b4cb88390e6"
+  integrity sha512-ra28JXL+5z73r1IC/t+FT1ApXU5LsulFDnTDntNfLQaScJUJmcHL5Qxm/IWanCToQk3bPWQo5bflbplU5r15pg==
   dependencies:
     "@babel/code-frame" "^7.10.4"
     "@babel/generator" "^7.12.5"
@@ -76,7 +76,7 @@
     "@babel/helpers" "^7.12.5"
     "@babel/parser" "^7.12.7"
     "@babel/template" "^7.12.7"
-    "@babel/traverse" "^7.12.7"
+    "@babel/traverse" "^7.12.8"
     "@babel/types" "^7.12.7"
     convert-source-map "^1.7.0"
     debug "^4.1.0"
@@ -1267,10 +1267,10 @@
     globals "^11.1.0"
     lodash "^4.17.19"
 
-"@babel/traverse@^7.12.1", "@babel/traverse@^7.12.5", "@babel/traverse@^7.12.7":
-  version "7.12.7"
-  resolved "https://registry.yarnpkg.com/@babel/traverse/-/traverse-7.12.7.tgz#572a722408681cef17d6b0bef69ef2e728ca69f1"
-  integrity sha512-nMWaqsQEeSvMNypswUDzjqQ+0rR6pqCtoQpsqGJC4/Khm9cISwPTSpai57F6/jDaOoEGz8yE/WxcO3PV6tKSmQ==
+"@babel/traverse@^7.12.1", "@babel/traverse@^7.12.5", "@babel/traverse@^7.12.8":
+  version "7.12.8"
+  resolved "https://registry.yarnpkg.com/@babel/traverse/-/traverse-7.12.8.tgz#c1c2983bf9ba0f4f0eaa11dff7e77fa63307b2a4"
+  integrity sha512-EIRQXPTwFEGRZyu6gXbjfpNORN1oZvwuzJbxcXjAgWV0iqXYDszN1Hx3FVm6YgZfu1ZQbCVAk3l+nIw95Xll9Q==
   dependencies:
     "@babel/code-frame" "^7.10.4"
     "@babel/generator" "^7.12.5"
@@ -1352,9 +1352,9 @@
     "@fortawesome/fontawesome-common-types" "^0.2.32"
 
 "@fortawesome/react-fontawesome@^0.1.9":
-  version "0.1.12"
-  resolved "https://registry.yarnpkg.com/@fortawesome/react-fontawesome/-/react-fontawesome-0.1.12.tgz#fbdea86e8b73032895e6ded1ee1dbb1874902d1a"
-  integrity sha512-kV6HtqotM3K4YIXlTVvomuIi6QgGCvYm++ImyEx2wwgmSppZ6kbbA29ASwjAUBD63j2OFU0yoxeXpZkjrrX0qQ==
+  version "0.1.13"
+  resolved "https://registry.yarnpkg.com/@fortawesome/react-fontawesome/-/react-fontawesome-0.1.13.tgz#ce9654bf4e537108014ec022f2423dbe8114fd62"
+  integrity sha512-/HrLnIft5Ks2511Pz6TxHBIctC9QalVscAC64sufQ4sJH/sXaQlG3uR9LCu6VpEwkBemgcBLrz/QPNP/ddbjDg==
   dependencies:
     prop-types "^15.7.2"
 
@@ -1574,55 +1574,55 @@
   integrity sha512-shAmDyaQC4H92APFoIaVDHCx5bStIocgvbwQyxPRrbUY20V1EYTbSDchWbuwlMG3V17cprZhA6+78JfB+3DTPw==
 
 "@sentry/browser@^5.16.1":
-  version "5.27.4"
-  resolved "https://registry.yarnpkg.com/@sentry/browser/-/browser-5.27.4.tgz#241dedc7d82d3ed2769bfc8e4fb193d10e6a1d4d"
-  integrity sha512-L8Fsnkl3PIak4zJ1pcGDmV92XTQjS2/H6EBgp1rhuOF4OE3L59K8RR73C9w+wVtsIi7nyfYg/FIe8lvG++3Mow==
+  version "5.27.6"
+  resolved "https://registry.yarnpkg.com/@sentry/browser/-/browser-5.27.6.tgz#54fe177e9986246586b0761eb38cbad1ad07ecb5"
+  integrity sha512-pqrojE2ZmLUVz7l/ogtogK0+M2pK3bigYm0fja7vG7F7kXnCAwqAHDYfkFXEvFI8WvNwH+niy28lSoV95lnm0Q==
   dependencies:
-    "@sentry/core" "5.27.4"
-    "@sentry/types" "5.27.4"
-    "@sentry/utils" "5.27.4"
+    "@sentry/core" "5.27.6"
+    "@sentry/types" "5.27.6"
+    "@sentry/utils" "5.27.6"
     tslib "^1.9.3"
 
-"@sentry/core@5.27.4":
-  version "5.27.4"
-  resolved "https://registry.yarnpkg.com/@sentry/core/-/core-5.27.4.tgz#4155ee09ee4deed7364918094bf81654dcf681c0"
-  integrity sha512-IbI37cIZU/qBQouuUXaLbGF/9xYFp5STqmj1Gv64l0IZe4JnEp06V3yD5GxQ/mJ78vSfOqfwLooVCUw9FA61sQ==
+"@sentry/core@5.27.6":
+  version "5.27.6"
+  resolved "https://registry.yarnpkg.com/@sentry/core/-/core-5.27.6.tgz#3ceeb58acd857f1e17d52d3087bfecb506adc1f7"
+  integrity sha512-izCS5iyc6HAfpW1AsGXLAKetx82C1Sq1siAh97tOlSK58PVJAEH/WMiej9WuZJxCDTOtj94QtoLflssrZyAtFg==
   dependencies:
-    "@sentry/hub" "5.27.4"
-    "@sentry/minimal" "5.27.4"
-    "@sentry/types" "5.27.4"
-    "@sentry/utils" "5.27.4"
+    "@sentry/hub" "5.27.6"
+    "@sentry/minimal" "5.27.6"
+    "@sentry/types" "5.27.6"
+    "@sentry/utils" "5.27.6"
     tslib "^1.9.3"
 
-"@sentry/hub@5.27.4":
-  version "5.27.4"
-  resolved "https://registry.yarnpkg.com/@sentry/hub/-/hub-5.27.4.tgz#15db6f504672edd70b793e4b3d370dca9cb2fef6"
-  integrity sha512-Ba1AqcjvSd2S+fpdXtXCrVXdrzq9E2Etb2eHUOkEYwSsq7StMOw7E8YHDPAo+to8zUbpMPz/Z9XGhFkyAbImGQ==
+"@sentry/hub@5.27.6":
+  version "5.27.6"
+  resolved "https://registry.yarnpkg.com/@sentry/hub/-/hub-5.27.6.tgz#a94adbe32c45dda7ad5adf742b82e0a022eb9c2f"
+  integrity sha512-bOMky3iu7zEghSaWmTayfme5tCpUok841qDCGxGKuyAtOhBDsgGNS/ApNEEDF2fyX0oo4G1cHYPWhX90ZFf/xA==
   dependencies:
-    "@sentry/types" "5.27.4"
-    "@sentry/utils" "5.27.4"
+    "@sentry/types" "5.27.6"
+    "@sentry/utils" "5.27.6"
     tslib "^1.9.3"
 
-"@sentry/minimal@5.27.4":
-  version "5.27.4"
-  resolved "https://registry.yarnpkg.com/@sentry/minimal/-/minimal-5.27.4.tgz#2b331ed43d5f8999606fe9f8bf26a85155e8286c"
-  integrity sha512-biw5YfIQwvDoaRhLarfeRQ6MJ9UJOoDTmu8Kgg18prJy4rtfDowNJP0OBs5XAsTk6SWAXiE3g7vqUJBXgs7BWA==
+"@sentry/minimal@5.27.6":
+  version "5.27.6"
+  resolved "https://registry.yarnpkg.com/@sentry/minimal/-/minimal-5.27.6.tgz#783012ed94668be168f2b521e0ea6295c76ce2b0"
+  integrity sha512-pKhzVQX9nL4m1dcnb2i2Y47IWVNs+K3wiYLgCB9hl9+ApxppfOc+fquiFoCloST3IuaD4yly2TtbOJgAMWcMxQ==
   dependencies:
-    "@sentry/hub" "5.27.4"
-    "@sentry/types" "5.27.4"
+    "@sentry/hub" "5.27.6"
+    "@sentry/types" "5.27.6"
     tslib "^1.9.3"
 
-"@sentry/types@5.27.4":
-  version "5.27.4"
-  resolved "https://registry.yarnpkg.com/@sentry/types/-/types-5.27.4.tgz#ba7cefae6f77bb39a0ac59aeba1bb23ce4ad5216"
-  integrity sha512-41h3c7tgtSS8UBmfvEckSr+7V7/IVOjt/EiydyOd6s0N18zSFfGY5HdA6g+eFtIJK3DhWkUHCHZNanD5IY5YCQ==
+"@sentry/types@5.27.6":
+  version "5.27.6"
+  resolved "https://registry.yarnpkg.com/@sentry/types/-/types-5.27.6.tgz#b5054eafcb8ac11d4bc4787c7bc7fc113cad8b80"
+  integrity sha512-XOW9W8DrMk++4Hk7gWi9o5VR0o/GrqGfTKyFsHSIjqt2hL6kiMPvKeb2Hhmp7Iq37N2bDmRdWpM5m+68S2Jk6w==
 
-"@sentry/utils@5.27.4":
-  version "5.27.4"
-  resolved "https://registry.yarnpkg.com/@sentry/utils/-/utils-5.27.4.tgz#d57ccd72a56e2f97e109d632957f6cd11806e992"
-  integrity sha512-shV1I/q+Tob3hUxRj11DfMhe9PNDiv85hUUoRloZGGwu275dMwpswb2uwgSmjc2Ao4pnMKVx8TL1hC3kGLVHTQ==
+"@sentry/utils@5.27.6":
+  version "5.27.6"
+  resolved "https://registry.yarnpkg.com/@sentry/utils/-/utils-5.27.6.tgz#cd8486469ae9716a21a4bc7e828e5aeee0ed9727"
+  integrity sha512-/QMVLv+zrTfiIj2PU+SodSbSzD5MmamMOaljkDsRIVsj6gpkm1/VG1g2+40TZ0FbQ4hCW2F+iR7cnqzZBNmchA==
   dependencies:
-    "@sentry/types" "5.27.4"
+    "@sentry/types" "5.27.6"
     tslib "^1.9.3"
 
 "@svgr/babel-plugin-add-jsx-attribute@^4.2.0":
@@ -9251,9 +9251,9 @@ prepend-http@^1.0.0:
   integrity sha1-1PRWKwzjaW5BrFLQ4ALlemNdxtw=
 
 prettier@^2.0.5:
-  version "2.1.2"
-  resolved "https://registry.yarnpkg.com/prettier/-/prettier-2.1.2.tgz#3050700dae2e4c8b67c4c3f666cdb8af405e1ce5"
-  integrity sha512-16c7K+x4qVlJg9rEbXl7HEGmQyZlG4R9AgP+oHKRMsMsuk8s+ATStlf1NpDqyBI1HpVyfjLOeMhH2LvuNvV5Vg==
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/prettier/-/prettier-2.2.0.tgz#8a03c7777883b29b37fb2c4348c66a78e980418b"
+  integrity sha512-yYerpkvseM4iKD/BXLYUkQV5aKt4tQPqaGW6EsZjzyu0r7sVZZNPJW4Y8MyKmicp6t42XUPcBVA+H6sB3gqndw==
 
 pretty-bytes@^5.1.0:
   version "5.4.1"
