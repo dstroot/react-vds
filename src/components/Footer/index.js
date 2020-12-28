@@ -30,6 +30,9 @@ const Footer = () => {
               <li>
                 <Link to={routes.TERMS}>Terms of Use</Link>
               </li>
+              <li>
+                <a href="https://dstroot.github.io/VDS_uptime/">Uptime</a>
+              </li>
             </ul>
           </div>
         </div>

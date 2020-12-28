@@ -55,6 +55,13 @@ exports[`Footer renders a footer 1`] = `
               Terms of Use
             </a>
           </li>
+          <li>
+            <a
+              href="https://dstroot.github.io/VDS_uptime/"
+            >
+              Uptime
+            </a>
+          </li>
         </ul>
       </div>
     </div>
