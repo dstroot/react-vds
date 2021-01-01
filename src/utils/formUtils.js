@@ -102,12 +102,3 @@ export const matchPattern = event => {
     }
   }
 };
-
-export default {
-  enumerateFormInputs,
-  inputParsers,
-  formDataParser,
-  formToJSON,
-  formToJSONString,
-  matchPattern,
-};

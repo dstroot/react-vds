@@ -27,11 +27,3 @@ export const readResponseAsJSON = response => {
 export const readResponseAsText = response => {
   return response.text();
 };
-
-export default {
-  logResult,
-  logError,
-  validateResponse,
-  readResponseAsJSON,
-  readResponseAsText,
-};
