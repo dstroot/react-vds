@@ -75,7 +75,7 @@ exports[`Footer renders a footer 1`] = `
           className="small"
         >
           Copyright © 
-          2020
+          2021
            Verite Data Science, LLC, all rights reserved.
         </p>
       </div>
