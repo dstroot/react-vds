@@ -57,7 +57,7 @@ exports[`Footer renders a footer 1`] = `
           </li>
           <li>
             <a
-              href="https://dstroot.github.io/VDS_uptime/"
+              href="https://dstroot.github.io/vds_uptime/"
             >
               Uptime
             </a>
