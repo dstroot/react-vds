@@ -12,7 +12,7 @@
     "@sentry/browser": "^5.16.1",
     "@testing-library/jest-dom": "^5.11.8",
     "@testing-library/react": "^11.2.2",
-    "@testing-library/react-hooks": "^3.3.0",
+    "@testing-library/react-hooks": "^4.0.1",
     "animate.css": "^4.1.0",
     "bluebird": "^3.7.2",
     "bootstrap": "^4.5.0",
